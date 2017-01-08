@@ -1,0 +1,34 @@
+/*CSS Document*/
+
+/*公用*/
+.comWidth {width: 1000px; margin-left: auto; margin-right: auto;}
+.leftArea {float: left;}
+.rightArea {float: right;}
+
+/*topBar*/
+.topBar {height: 31px; background-color: #f7f7f7; line-height: 31px;}
+.collection {background:url(../images/icon/star.jpg) left center no-repeat;
+padding-left: 19px; font-weight: bold;}
+.topBar a:hover {color:red;}
+
+ /*logo*/
+.logoBar {height:85px; background-color: #1D7AD9;}
+.logo {padding-left:41px; padding-top:13px;}
+
+/*search*/
+.search {width: 430px;padding-top: 23px; padding-left: 115px;}
+.searchText {width: 350px; height: 35px; padding: 0 5px;border: 0;}
+.searchBtn {width: 70px; height: 35px; font-size:14px; font-family:"Microsoft YAHEI","微软雅黑";
+background: #ff8c00;color: #FFF; border: 0;}
+
+/*shopCar*/
+.shopCar {width: 148px;height: 35px; margin:23px auto; background-color: #ff8c00; line-height: 35px;
+font-family: "Microsoft YAHEI";color: #FFF;font-size: 14px;margin-right: 58px;}
+.shopText {background:url(../images/icon/shopCar.jpg) 10px center no-repeat;height: 35px;padding-left: 38px;}
+.shopNum {padding-right:28px;background: url(../images/icon/arrows.jpg) 30px center no-repeat;}
+
+
+
+
+
+
