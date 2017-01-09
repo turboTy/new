@@ -1,6 +1,6 @@
 /*CSS Document*/
 
-/*公用*/
+/*¹«ÓÃ*/
 .comWidth {width: 1000px; margin-left: auto; margin-right: auto;}
 .leftArea {float: left;}
 .rightArea {float: right;}
@@ -18,18 +18,33 @@ padding-left: 19px; font-weight: bold;}
 /*search*/
 .search {width: 430px;padding-top: 23px; padding-left: 115px;}
 .searchText {width: 350px; height: 35px; padding: 0 5px;border: 0;}
-.searchBtn {width: 70px; height: 35px; font-size:14px; font-family:"Microsoft YAHEI","微软雅黑";
+.searchBtn {width: 70px; height: 35px; font-size:14px; font-family:"Microsoft YAHEI","Î¢ÈíÑÅºÚ";
 background: #ff8c00;color: #FFF; border: 0;}
 
 /*shopCar*/
 .shopCar {width: 148px;height: 35px; margin:23px auto; background-color: #ff8c00; line-height: 35px;
 font-family: "Microsoft YAHEI";color: #FFF;font-size: 14px;margin-right: 58px;}
 .shopText {background:url(../images/icon/shopCar.jpg) 10px center no-repeat;height: 35px;padding-left: 38px;}
-.shopNum {padding-right:28px;background: url(../images/icon/arrows.jpg) right center no-repeat;}
-.shopCar div.fr {border-left:1px solid #fcbe45;width: 58px; height: 35px;}
-.shopCar div.fl {border-right: 1px solid #af7403;width: 88px;height: 35px;}
+.shopNum {padding-right:28px;background: url(../images/icon/arrows.jpg) 30px center no-repeat;}
+.shopNum>div{border-left:1px solid }
 
-
-
+/*导航*/
+.navBox {height: 35px; background-color: #1369c0; color: #FFF;}
+.shopClass {width: 190px; position: relative;}
+.shopClass i {width: 11px; height: 7px;overflow: hidden; background: url(../images/icon/down.jpg)
+left center no-repeat;display: inline-block;margin-left: 11px;}
+.nav,.shopClass{font-family: "Microsoft YAHEI";}
+.nav {line-height: 35px}
+.nav li {float: left;}
+.nav a {height: 35px; display: inline-block; padding: 0 35px;color: #FFF; font-size: 13px;}
+.nav .active {background-color: #4593fd; }
+.navBox h3 {background: url(../images/icon/class_sj.jpg) right center no-repeat;line-height: 35px;
+ text-align: center; }
+.shopClass_show {background: url(../images/icon/show_sj.jpg) 165px center no-repeat; background-color: #4593fd;
+height: 63px; width: 190px; border-top:1px solid #3487f2; border-bottom:1px solid #5aa1fe;}
+.shopClass_item {padding: 10px 15px ; line-height: 22px;}
+.shopClass_show a {color: #FFF;}
+.shopClass_show .b {font-weight: bold; font-size: 14px; }
+.shopClass_show .aLink {background: url(../images/icon/aLink.jpg) left center no-repeat;}
 
 
