@@ -25,8 +25,9 @@ background: #ff8c00;color: #FFF; border: 0;}
 .shopCar {width: 148px;height: 35px; margin:23px auto; background-color: #ff8c00; line-height: 35px;
 font-family: "Microsoft YAHEI";color: #FFF;font-size: 14px;margin-right: 58px;}
 .shopText {background:url(../images/icon/shopCar.jpg) 10px center no-repeat;height: 35px;padding-left: 38px;}
-.shopNum {padding-right:28px;background: url(../images/icon/arrows.jpg) 30px center no-repeat;}
-
+.shopNum {padding-right:28px;background: url(../images/icon/arrows.jpg) right center no-repeat;}
+.shopCar div.fr {border-left:1px solid #fcbe45;width: 58px; height: 35px;}
+.shopCar div.fl {border-right: 1px solid #af7403;width: 88px;height: 35px;}
 
 
 
