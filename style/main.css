@@ -47,4 +47,6 @@ height: 63px; width: 190px; border-top:1px solid #3487f2; border-bottom:1px soli
 .shopClass_show .b {font-weight: bold; font-size: 14px; }
 .shopClass_show .aLink {background: url(../images/icon/aLink.jpg) left center no-repeat;}
 
+/*弹出的菜单*/
+.shopClass_list {width: 568px; height: 378px; border: 1px solid #CCC;position: absolute;left: 190px;top: 35px;}
 
