@@ -51,7 +51,8 @@ padding-left: 6px;}
 /*弹出的菜单*/
 .shopClass_list {width: 568px; height: 378px; border: 1px solid #CCC;position: absolute;
 left: 190px;top: 35px;padding: 0 10px;}
-.shopClass_list a:visited {color: #000;}
+.shopClass_list a:visited {color:#000;}
+.shopClass_list a:link {color: #000;}
 .shopClass_list a:hover {color:#ff8c00;}
 .shopClass_list dd{color: #000;float: left;display: inline-block;margin: 5px 5px;}
 /*shopList_computer*/
@@ -59,10 +60,10 @@ left: 190px;top: 35px;padding: 0 10px;}
 .shopList_computer  {color: #1369c0; font-weight: bold;float: left;display: inline-block;margin: 5px 15px;}*/
 /*shopList_install*/
 .shopList_install {height: 55px;width:550px;border-bottom: 1px solid #ccc;padding-top: 10px;}
-.shopList_install dt{height: 57px;display: inline-block;font-weight: bold;color: #1369c0;float: left;margin: 0 15px;}/*深蓝*/
+.shopList_install dt{height: 53px;display: inline-block;font-weight: bold;color: #1369c0;float: left;margin: 4px 15px;}/*深蓝*/
 /*shopList_net*/
 .shopList_net {height: 32px;width:550px;border-bottom: 1px solid #ccc;padding-top: 10px;}
-.shopList_net dt{height: 32px;display: inline-block;font-weight: bold;color: #1369c0;float: left;margin: 5px 15px;}
+.shopList_net dt{height: 28px;display: inline-block;font-weight: bold;color: #1369c0;float: left;margin: 5px 15px;}
 /*shopList_rect*/
 .shopList_rect {height: 35px;border-bottom: 1px solid #ccc;padding-top: 10px;}
 .shopList_rect #rect1,.shopList_rect #rect2 {width: 105px; height: 25px;background-color: #2785e6;float: left;margin:0 15px;
