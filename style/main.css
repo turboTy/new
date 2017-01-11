@@ -1,9 +1,11 @@
 /*CSS Document*/
 
-/*¹«ÓÃ*/
+/*public*/
 .comWidth {width: 1000px; margin-left: auto; margin-right: auto;}
 .leftArea {float: left;}
 .rightArea {float: right;}
+.hide {display: none;}
+.show {display: block;}
 
 /*topBar*/
 .topBar {height: 31px; background-color: #f7f7f7; line-height: 31px;}
@@ -30,6 +32,7 @@ font-family: "Microsoft YAHEI";color: #FFF;font-size: 14px;margin-right: 58px;}
 
 /*导航*/
 .navBox {height: 35px; background-color: #1369c0; color: #FFF;}
+.navBox a:hover {text-decoration: underline;}
 .shopClass {width: 190px; position: relative;}
 .shopClass i {width: 11px; height: 7px;overflow: hidden; background: url(../images/icon/down.jpg)
 left center no-repeat;display: inline-block;margin-left: 11px;}
@@ -45,15 +48,23 @@ height: 63px; width: 190px; border-top:1px solid #3487f2; border-bottom:1px soli
 .shopClass_item {padding: 10px 15px ; line-height: 22px;}
 .shopClass_show a {color: #FFF;}
 .shopClass_show .b {font-weight: bold; font-size: 14px; }
-.shopClass_show .aLink {background: url(../images/icon/aLink.jpg) left center no-repeat;display: inline-block;width: 40px;
-padding-left: 6px;}
+.shopClass_show .aLink {background: url(../images/icon/aLink.jpg) left center no-repeat;display: inline-block;
+width: 40px;padding-left: 6px;}
+/*.shopClass_active*/
+.shopClass_active {background: none;color: #fff;border-left: 1px solid #4593fd; }
+.shopClass_active .b {font-weight: bold;font-size: 14px;}
+.shopClass_active a:visited {color:#000;}
+.shopClass_active a:link {color: #FFF;}
+.shopClass_active a:hover {color: #ff8c00;text-decoration: underline;}
+.shopClass_active .aLink {width: 40px;background: url(../images/icon/aLink.jpg) left center no-repeat;
+display: inline-block; padding-left: 6px; }
 
 /*弹出的菜单*/
 .shopClass_list {width: 568px; height: 378px; border: 1px solid #CCC;position: absolute;
 left: 190px;top: 35px;padding: 0 10px;}
 .shopClass_list a:visited {color:#000;}
 .shopClass_list a:link {color: #000;}
-.shopClass_list a:hover {color:#ff8c00;}
+.shopClass_list a:hover {color:#ff8c00;text-decoration: underline;}
 .shopClass_list dd{color: #000;float: left;display: inline-block;margin: 5px 5px;}
 /*shopList_computer*/
 /*.shopList_computer {height: 32px; width: 550px;border-bottom: 1px solid #ccc;}
@@ -66,10 +77,10 @@ left: 190px;top: 35px;padding: 0 10px;}
 .shopList_net dt{height: 28px;display: inline-block;font-weight: bold;color: #1369c0;float: left;margin: 5px 15px;}
 /*shopList_rect*/
 .shopList_rect {height: 35px;border-bottom: 1px solid #ccc;padding-top: 10px;}
-.shopList_rect #rect1,.shopList_rect #rect2 {width: 105px; height: 25px;background-color: #2785e6;float: left;margin:0 15px;
-}
-.shopList_rect a {height: 25px;width: 104px; display:inline-block; line-height: 25px;margin-left: 6px;background: url(../images/icon/triangle.jpg) 
-78px center no-repeat;}
+.shopList_rect #rect1,.shopList_rect #rect2 {width: 105px; height: 25px;background-color: #2785e6;float: left;
+margin:0 15px;}
+.shopList_rect a {height: 25px;width: 104px; display:inline-block; line-height: 25px;margin-left: 6px;
+background: url(../images/icon/triangle.jpg) 78px center no-repeat;}
 .shopList_rect a:visited {color: #fff;}
 
 
