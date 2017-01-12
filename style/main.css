@@ -94,6 +94,14 @@ background: url(../images/icon/triangle.jpg) 78px center no-repeat;}
 .banner_num a {display: inline-block; width: 20px;margin-right: 15px; height: 5px; background-color: #FFF;
 overflow: hidden;}
 .banner_num .active {background-color: #F70;}
+/*banner_title*/
+.banner_title {height: 75px;}
+.banner_title h1 {display: inline-block;background: url(../images/banner/banner_title.jpg) left center no-repeat;
+width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "Microsoft YAHEI"; font-weight: normal;}
+.banner_title a {display: inline-block; height: 66px;padding-top: 40px; font-size: 13px;}
+.banner_title a:link {color: #000;}
+.banner_title a:visited {color: #000;}
+.banner_title a:hover {text-decoration: underline;}
 
 
 
