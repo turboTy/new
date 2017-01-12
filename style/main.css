@@ -8,7 +8,8 @@
 .show {display: block;}
 
 /*topBar*/
-.topBar {height: 31px; background-color: #f7f7f7; line-height: 31px;}
+.topBar {height: 31px; background-color: #f7f7f7; line-height: 31px; color: #555;}
+.topBar a:visited {color: #555; }
 .collection {background:url(../images/icon/star.jpg) left center no-repeat;
 padding-left: 19px; font-weight: bold;}
 .topBar a:hover {color:red;}
@@ -31,10 +32,10 @@ font-family: "Microsoft YAHEI";color: #FFF;font-size: 14px;margin-right: 58px;}
 .shopNum>div{border-left:1px solid }
 
 /*导航*/
-.navBox {height: 35px; background-color: #1369c0; color: #FFF;}
+.navBox {height: 35px; background-color: #1369c0; color: #FFF;border-bottom: 1px solid #4593fd; }
 .navBox a:hover {text-decoration: underline;}
 .shopClass {width: 190px; position: relative;}
-.shopClass i {width: 11px; height: 7px;overflow: hidden; background: url(../images/icon/down.jpg)
+.shopClass i {width: 11px; height: 7px;overflow: hidden;)
 left center no-repeat;display: inline-block;margin-left: 11px;}
 .nav,.shopClass{font-family: "Microsoft YAHEI";}
 .nav {line-height: 35px}
@@ -44,7 +45,7 @@ left center no-repeat;display: inline-block;margin-left: 11px;}
 .navBox h3 {background: url(../images/icon/class_sj.jpg) right center no-repeat;line-height: 35px;
  text-align: center; }
 .shopClass_show {background: url(../images/icon/show_sj.jpg) 165px center no-repeat; background-color: #4593fd;/*浅蓝*/
-height: 63px; width: 190px; border-top:1px solid #3487f2; border-bottom:1px solid #5aa1fe;}
+height: 63px; width: 190px;  border-bottom:1px solid #5aa1fe;}
 .shopClass_item {padding: 10px 15px ; line-height: 22px;}
 .shopClass_show a {color: #FFF;}
 .shopClass_show .b {font-weight: bold; font-size: 14px; }
@@ -82,6 +83,22 @@ margin:0 15px;}
 .shopList_rect a {height: 25px;width: 104px; display:inline-block; line-height: 25px;margin-left: 6px;
 background: url(../images/icon/triangle.jpg) 78px center no-repeat;}
 .shopList_rect a:visited {color: #fff;}
+
+/*banner部分*/
+.banner_bar {height: 320px; width: 810px; float: right; position: relative; overflow: hidden; }
+.banner_img {height: 320px; width: 1620px; position: absolute; top: 0; left: 0;}
+.banner_img li {float: left;}
+.banner_img img {display: block; width: 810px; height: 319px;}
+/*banner_num*/
+.banner_num {position: absolute;left: 0; top: 450px; width: 100%;text-align: center;}
+.banner_num a {display: inline-block; width: 20px;margin-right: 15px; height: 5px; background-color: #FFF;
+overflow: hidden;}
+.banner_num .active {background-color: #F70;}
+
+
+
+
+
 
 
 
