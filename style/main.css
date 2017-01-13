@@ -98,7 +98,7 @@ overflow: hidden;}
 .banner_title {height: 75px;clear: right;}
 .banner_title h1 {display: inline-block;background: url(../images/banner/banner_title.jpg) left center no-repeat;
 width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "Microsoft YAHEI"; font-weight: normal;}
-.banner_title a {display: inline-block; height: 66px;padding-top: 40px; font-size: 13px;}
+.banner_title a {display: inline-block;height: 10px; margin-top: 40px; font-size: 13px;}
 .banner_title a:link {color: #000;}
 .banner_title a:visited {color: #000;}
 .banner_title a:hover {text-decoration: underline;}
@@ -114,7 +114,12 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .elec_num a {display: inline-block;width: 20px; height: 5px; background-color: #FFF;margin-right: 5px;margin-bottom: 15px;}
 .elec_num .active {background-color: #F70;}
 /*elec_goods 右边部分*/
-.elec_goodsList {width:808px; height:396px; border: 1px solid #F70;position:}
+.elec_goodsList {width:808px; height:397px; border-bottom: 3px solid #F70; text-align: center;}
+.elec_goodsItem {width: 202px; height:397px; font-family: "Microsoft YAHEI";}
+.elec_goodsItem .top {height: 286px; border-right: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.elec_goodsItem a {display: inline-block;margin-top: 45px;}
+.elec_goodsItem h3 {font-size: 16px; margin-top: 20px;}
+.elec_goodsItem P {font-size: 14px; color: #F70;line-height: 21px;}
 
 
 
