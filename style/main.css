@@ -105,7 +105,7 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 
 /*elec_goods*/
 /*elec_goods 左边部分*/
-.elec_goods {border: 1px solid #ccc;height: 400px;}
+.elec_goods {border: 1px solid #ccc; height: 400px;}
 .elec_banner { width: 190px; height: 400px; float: left; position: relative; overflow: hidden; }
 .elec_img {height: 400px; width: 570px; position: absolute; top: 0; left: 0;}
 .elec_img li {float: left;}
@@ -114,6 +114,7 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .elec_num a {display: inline-block;width: 20px; height: 5px; background-color: #FFF;margin-right: 5px;margin-bottom: 15px;}
 .elec_num .active {background-color: #F70;}
 /*elec_goods 右边部分*/
+.elec_goodsList {width:808px; height:396px; border: 1px solid #F70;position:}
 
 
 
