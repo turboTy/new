@@ -28,7 +28,7 @@ background: #ff8c00;color: #FFF; border: 0;}
 .shopCar {width: 148px;height: 35px; margin:23px auto; background-color: #ff8c00; line-height: 35px;
 font-family: "Microsoft YAHEI";color: #FFF;font-size: 14px;margin-right: 58px;}
 .shopText {background:url(../images/icon/shopCar.jpg) 10px center no-repeat;height: 35px;padding-left: 38px;}
-.shopNum {padding-right:28px;background: url(../images/icon/arrows.jpg) 30px center no-repeat;}
+.shopNum {padding-right:28px;background: url(../images/icon/arrows.jpg) right center no-repeat;}
 .shopNum>div{border-left:1px solid }
 
 /*导航*/
@@ -95,13 +95,30 @@ background: url(../images/icon/triangle.jpg) 78px center no-repeat;}
 overflow: hidden;}
 .banner_num .active {background-color: #F70;}
 /*banner_title*/
-.banner_title {height: 75px;}
+.banner_title {height: 75px;clear: right;}
 .banner_title h1 {display: inline-block;background: url(../images/banner/banner_title.jpg) left center no-repeat;
 width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "Microsoft YAHEI"; font-weight: normal;}
 .banner_title a {display: inline-block; height: 66px;padding-top: 40px; font-size: 13px;}
 .banner_title a:link {color: #000;}
 .banner_title a:visited {color: #000;}
 .banner_title a:hover {text-decoration: underline;}
+
+/*elec_goods*/
+/*elec_goods 左边部分*/
+.elec_goods {border: 1px solid #ccc;height: 400px;}
+.elec_banner { width: 190px; height: 400px; float: left; position: relative; overflow: hidden; }
+.elec_img {height: 400px; width: 570px; position: absolute; top: 0; left: 0;}
+.elec_img li {float: left;}
+.elec_img img {display: block;width: 190px; height: 400px;}
+.elec_num {position: absolute;text-align: center; left: 0; bottom: 0;width: 150px;}
+.elec_num a {display: inline-block;width: 20px; height: 5px; background-color: #FFF;margin-right: 5px;margin-bottom: 15px;}
+.elec_num .active {background-color: #F70;}
+/*elec_goods 右边部分*/
+
+
+
+
+
 
 
 
