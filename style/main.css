@@ -105,7 +105,8 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 
 /*elec_goods*/
 /*elec_goods 左边部分*/
-.elec_goods {border-top: 1px solid #ccc; height: 400px;}
+.elec_goods,.foods_goods {border-top: 1px solid #ccc; height: 400px;}
+.foods_goods {margin-bottom: 40px;}
 .elec_banner { width: 190px; height: 400px; float: left; position: relative; overflow: hidden; }
 .elec_img {height: 400px; width: 570px; position: absolute; top: 0; left: 0;}
 .elec_img li {float: left;}
@@ -120,14 +121,25 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .elec_goodsItem>.top a {display: inline-block;margin-top: 45px;}
 .elec_goodsItem>.top h3 {font-size: 16px; margin-top: 20px;}
 .elec_goodsItem>.top P {font-size: 14px; color: #F70;line-height: 21px;}
-.elec_goodsItem .bottom {vertical-align: middle;}
+.elec_goodsItem .bottom {margin-top:10px;}
 .elec_goodsItem>.bottom h4 {display: inline-block;margin-top: 20px;color:#f70;margin-right: 10px;}
 .elec_goodsItem>.bottom a {margin-left: 10px;}
 .elec_goodsItem>.bottom p {font-size: 18px;line-height: 35px;}
-.elec_goodsItem>.bottom1 a {margin-top: 25px;margin-left: 10px;}
-.elec_goodsItem>.bottom2 a {margin-top: 20px;margin-left:25px;}
-.elec_goodsItem>.bottom3 a {margin-top: 15px;margin-left:25px;}
-.elec_goodsItem>.bottom4 a {margin-top: 35px;margin-left:15px;}
+.elec_goodsItem>.bottom1 a {margin-top: 15px;}
+.elec_goodsItem>.bottom2 a {margin-top: 10px;margin-left:10px;}
+.elec_goodsItem>.bottom3 a {margin-top: 5px;margin-left:10px;}
+.elec_goodsItem>.bottom4 a {margin-top: 25px;}
+
+/*bottomInfo部分*/
+.bottomInfo {height: 220px;background-color: #ccc;}
+.mooke_info,.copyRight_info,.img_info {text-align: center;}
+.mooke_info a{display: inline-block; margin:50px 8px 10px 8px;}
+.mooke_info a:link,.copyRight_info a:link {color: #000;}
+.mooke_info a:visited,.copyRight_info a:visited {color: #000;}
+.mooke_info a:hover {text-decoration: underline;color: #000;}
+.copyRight_info a {margin:0 8px;}
+.img_info img {margin: 30px 8px;}
+
 
 
 
