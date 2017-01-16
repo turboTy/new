@@ -35,9 +35,8 @@ font-family: "Microsoft YAHEI";color: #FFF;font-size: 14px;margin-right: 58px;}
 /*导航*/
 .navBox {height: 35px; background-color: #1369c0; color: #FFF;border-bottom: 1px solid #4593fd; }
 .navBox a:hover {text-decoration: underline;}
-.shopClass {width: 190px; position: relative;}
-.shopClass i {width: 11px; height: 7px;overflow: hidden;)
-left center no-repeat;display: inline-block;margin-left: 11px;}
+.shopClass {width: 190px; position: relative; }
+.shopClass i {width: 11px; height: 7px;overflow: hidden;display: inline-block;margin-left: 11px;}
 .nav,.shopClass{font-family: "Microsoft YAHEI";}
 .nav {line-height: 35px}
 .nav li {float: left;}
@@ -86,12 +85,11 @@ background: url(../images/icon/triangle.jpg) 78px center no-repeat;}
 .shopList_rect a:visited {color: #fff;}
 
 /*banner部分*/
-.banner_bar {height: 320px; width: 810px; float: right; position: relative; overflow: hidden; }
-.banner_img {height: 320px; width: 1620px; position: absolute; top: 0; left: 0;}
-.banner_img li {float: left;}
-.banner_img img {display: block; width: 810px; height: 319px;}
+.banner_bar {height: 319px; width: 810px; float: right; position: relative; overflow: hidden;  }
+.banner .banner_img {height: 322px; width: 1620px; position: absolute; top: 0; left: 0;}
+.banner .banner_img img {display: block; width: 810px; height: 320px;}
 /*banner_num*/
-.banner_num {position: absolute;left: 0; top: 450px; width: 100%;text-align: center;}
+.banner_num {position: absolute; top: 450px; width: 810px;text-align: center;margin-left: 186px;}
 .banner_num a {display: inline-block; width: 20px;margin-right: 15px; height: 5px; background-color: #FFF;
 overflow: hidden;}
 .banner_num .active {background-color: #F70;}
@@ -146,13 +144,38 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .productsList {border: 1px solid #ccc; width: 185px; height: 835px; color: #444; float: left; }
 .productsList div {border-bottom: 1px solid #ccc;}
 .products_main { height: 36px; line-height: 36px; text-align: center;}
-.products_phone dl { width: 100%; line-height: 26px;  margin-left: 25px; padding:5px 0; }
+/*.products_phone dl { width: 100%; line-height: 26px;  margin-left: 25px; padding:5px 0; }
 .products_phone dt {font-weight: bold;}
 .products_phone a {display: inline-block;margin-right: 33px;}
 .products_phone a:link {color: #444;}
 .products_phone a:visited {color: #444;}
-.products_phone a:hover {text-decoration: underline;}
-
+.products_phone a:hover {text-decoration: underline;}*/
+.productsList dl { width: 100%; line-height: 23px;  margin-left: 25px; padding:4px 0; }
+.productsList dt {font-weight: bold;}
+.productsList a {display: inline-block; width: 80px; }
+.productsList a:link {color: #444;}
+.productsList a:visited {color: #444;}
+.productsList a:hover {text-decoration: underline;}
+/*banner_img部分*/
+.productsBanner {width: 810px; height: 325px; overflow: hidden; position: relative; float: right;}
+.productsBanner .banner_img {width: 1620px; height: 325px; position: absolute; top: 0; left: 5px;}
+.img_num {width: 810px; text-align: center;position: absolute; bottom: 15px;}
+.img_num li {float: left;} 
+.img_num a {display: inline-block; width: 20px; height: 5px; margin-right: 15px;background-color: #fff; overflow: hidden;} 
+.img_num .active {background-color:#F70; }
+/*productsTitle部分*/
+.productsTitle {margin-left: 5px;}
+.productsTitle .fl {height: 40px; width: 180px; margin-left: 5px; padding-left: 5px; border-bottom: 2px solid #1e90ff;
+line-height: 40px;}
+.productsTitle .fr {height: 40px; width: 623px; border-bottom: 2px solid #ccc;
+line-height: 40px;}
+/*products*/
+.products_demo { height: 565px;  font-family: "Microsoft YAHEI";}
+.products_top {margin: 5px 8px; position: relative; height: 250px; }
+.IXUS,.fujifilm {display: block; margin-top: 25px;}
+.EOS60D {margin-top: 20px;}
+.powershot {margin-top: 10px;}
+.products_bottom {position: absolute; bottom: 0;}
 
 
 
