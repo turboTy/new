@@ -10,6 +10,7 @@
 /*topBar*/
 .topBar {height: 31px; background-color: #f7f7f7; line-height: 31px; color: #555;}
 .topBar a:visited {color: #555; }
+.topBar a:link {color: #555; }
 .collection {background:url(../images/icon/star.jpg) left center no-repeat;
 padding-left: 19px; font-weight: bold;}
 .topBar a:hover {color:red;}
@@ -131,7 +132,7 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .elec_goodsItem>.bottom4 a {margin-top: 25px;}
 
 /*bottomInfo部分*/
-.bottomInfo {height: 220px;background-color: #ccc;}
+.bottomInfo {height: 220px;background-color: #ccc; clear: both;}
 .mooke_info,.copyRight_info,.img_info {text-align: center;}
 .mooke_info a{display: inline-block; margin:50px 8px 10px 8px;}
 .mooke_info a:link,.copyRight_info a:link {color: #000;}
@@ -139,6 +140,22 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .mooke_info a:hover {text-decoration: underline;color: #000;}
 .copyRight_info a {margin:0 8px;}
 .img_info img {margin: 30px 8px;}
+
+/*productsList部分*/
+.products {margin-top: 18px; }
+.productsList {border: 1px solid #ccc; width: 185px; height: 835px; color: #444; float: left; }
+.productsList div {border-bottom: 1px solid #ccc;}
+.products_main { height: 36px; line-height: 36px; text-align: center;}
+.products_phone dl { width: 100%; line-height: 26px;  margin-left: 25px; padding:5px 0; }
+.products_phone dt {font-weight: bold;}
+.products_phone a {display: inline-block;margin-right: 33px;}
+.products_phone a:link {color: #444;}
+.products_phone a:visited {color: #444;}
+.products_phone a:hover {text-decoration: underline;}
+
+
+
+
 
 
 
