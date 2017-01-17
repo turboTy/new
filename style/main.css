@@ -171,13 +171,15 @@ line-height: 40px;}
 .productsTitle .fr {height: 40px; width: 615px; border-bottom: 2px solid #ccc;
 line-height: 40px;}
 /*products*/
-.productsItem {width: 81%; height: 1500px; float: left; position: relative;}
-.products_demo { height: 455px;  font-family: "Microsoft YAHEI";}
-.products_top {margin: 5px 8px; position: relative; height: 250px; }
-.IXUS,.fujifilm {display: block; margin-top: 25px;}
-.EOS60D {margin-top: 20px;}
-.powershot {margin-top: 10px;}
-.products_bottom {position: absolute; bottom: 0;}
+.productsItem {width: 81%; height: 1600px; float: left; position: relative;}
+.products_demo { height: 485px;  font-family: "Microsoft YAHEI";margin-left: 15px;}
+.products_top { height: 280px; }
+.products_top .mid {height: 200px; width: 195px; vertical-align: middle; display: table-cell; text-align: center;}
+.products_demo img {vertical-align: middle;}
+.products_bottom {padding-left: 8px;}
+.products_bottom .span_num {display:inline-block; color: #c39; font-weight: bold; font-size: 14px; margin-top: 20px;}
+.products_bottom span>img {display: inline-block; margin-bottom: 3px;}
+
 
 
 
