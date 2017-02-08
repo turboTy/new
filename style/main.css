@@ -205,6 +205,7 @@ font-family: 'Microsoft YAHEI';}
 .scr_lists {font-size: 12px;}
 .scr_lists a:link {color: #1d7ad9;}
 .scr_lists a:visited {color: #1d7ad9;}
+.scr_lists .phone a {margin-right: 115px;}
 .limit {float: left; margin-right: 32px;}
 .scr_lists dt {width: 76px; margin-right: 40px; float: left; text-align: right;}
 .scr_lists .screening {float: left; width: 555px; }
