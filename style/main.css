@@ -200,7 +200,16 @@ font-family: 'Microsoft YAHEI';}
 .screening_img p {width: 105px; text-align: 78px; color: #777; margin-top: 12px; }
 .screening_img img {margin-top: 1px;}
 
-
+/*rightArea部分*/
+.screening .rightArea {width: 800px;}
+.scr_lists {font-size: 12px;}
+.scr_lists a:link {color: #1d7ad9;}
+.scr_lists a:visited {color: #1d7ad9;}
+.limit {float: left; margin-right: 32px;}
+.scr_lists dt {width: 76px; margin-right: 40px; float: left; text-align: right;}
+.scr_lists .screening {float: left; width: 555px; }
+.scr_lists li {width: 25%; float: left;}
+.screening .more {display: inline-block; color: #000; float: right;}
 
 
 
