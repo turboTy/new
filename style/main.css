@@ -141,9 +141,10 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 
 /*productsList部分*/
 .products {margin-top: 18px; }
-.productsList {border: 1px solid #ccc; width: 185px; height: 844px; color: #444; float: left; }
+.productsList {border: 1px solid #ccc; width: 185px; height: 844px; color: #000; float: left; 
+font-family: 'Microsoft YAHEI' }
 .productsList .div {border-bottom: 1px solid #ccc;}
-.products_main { height: 36px; line-height: 38px; text-align: center;}
+.products_main { height: 36px; line-height: 38px; text-align: center; font-size: 14px;}
 .products_education {border-bottom:;}
 /*.products_phone dl { width: 100%; line-height: 26px;  margin-left: 25px; padding:5px 0; }
 .products_phone dt {font-weight: bold;}
@@ -154,7 +155,7 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .productsList dl { width: 100%; line-height: 23px;  margin-left: 25px; padding:4px 0; }
 .productsList dt {font-weight: bold;}
 .productsList a {display: inline-block; width: 80px; }
-.productsList a:link {color: #444;}
+.productsList a:link {color: black;}
 .productsList a:visited {color: #444;}
 .productsList a:hover {text-decoration: underline;}
 /*banner_img部分*/
@@ -180,8 +181,24 @@ line-height: 40px;}
 .products_bottom .span_num {display:inline-block; color: #c39; font-weight: bold; font-size: 14px; margin-top: 20px;}
 .products_bottom span>img {display: inline-block; margin-bottom: 3px;}
 
-
-
+/*selection.html*/
+/*screeningList*/
+.screeningList {border: 1px solid #ccc; width: 185px; height: 844px; color: #000; float: left; 
+font-family: 'Microsoft YAHEI';}
+.productsList .div {border-bottom: 1px solid #ccc;}
+.screening_main {font-size:16px; text-align: center;line-height: 38px;}
+.screeningList .div {border-bottom: 1px solid #ccc;  background-color: #f0f0f0; }
+.screeningList dl { width: 100%; line-height: 23px;  margin-left: 25px; padding:4px 0; }
+.screeningList dt {font-weight: bold; font-size: 15px;}
+.screeningList a {display: inline-block; width: 80px; }
+.screeningList a:link {color: black;}
+.screeningList a:visited {color: #444;}
+.screeningList a:hover {text-decoration: underline;}
+/*screening_img 部分*/
+.screening_img .left {height: 78px; width: 75px; text-align: center;}
+.screening_img .right {width: 105px; height: 78px; text-align: left; }
+.screening_img p {width: 105px; text-align: 78px; color: #777; margin-top: 12px; }
+.screening_img img {margin-top: 1px;}
 
 
 
