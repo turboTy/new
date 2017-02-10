@@ -278,20 +278,46 @@ z-index: 2;}
 .intro_left img {margin-top: 20px;}
 .intro_right {float: right; width: 647px; padding: 0 20px; position: relative;}
 .intro_right h2 {margin-top: 20px; color: #222; margin-bottom: 10px;}
-.intro_right em {display: inline-block; color: #777; font-style: normal; height: 35px; line-height: 35px;}
+.intro_right em {display: inline-block; color: #444; font-style: normal; height: 35px; line-height: 35px;}
 .intro_right a {color: #333;}
 .intro_right .youhui em {width: 50px;}
 .intro_right .price {color: #ff2d2d; font-weight: bold; font-size: 22px;}
 .intro_right .usb {display: inline-block; padding-left: 62px; background: url(../images/introduction/man.gif)
 left center no-repeat; color: #666;}
-.intro_add {background-color: #f0f0f0; width: 645px; height: 240px; }
+.intro_add {background-color: #f0f0f0; width: 645px; height: 230px; padding-top: 10px;}
 .intro_add h4 {color: #777;}
 .intro_right .address em {padding-right: 30px; margin-left: 10px;}
 .intro_right .address a {display: inline-block; background: url(../images/screening/triangle.gif) 95% center no-repeat;
 padding:0 20px 0 10px; border: 1px solid #ccc; margin-right: 10px; line-height: 24px;}
 .intro_add .address,
 .intro_add .color,
-.intro_add .amount {height: 50px; padding-top: 15px;}
+.intro_add .amount {height: 45px; padding-top: 5px;}
+.intro_add .color a {display: inline-block; float: left; border: 1px solid #ccc; width: 82px; height: 35px;
+margin-right: 10px; text-align: center; color: #000; font-size: 13px; line-height: 34px;}
+.intro_add dt {float: left; margin: 0 8px 0 10px;}
+.intro_add .color {padding-bottom: 10px;}
+.intro_add .size {height: 60px;}
+.intro_add .size a {display: inline-block; border: 1px solid #ccc; height: 25px; line-height: 24px;
+padding: 0 5px; float: left; margin-right:10px; margin-bottom: 5px;}
+.intro_add .size em {height: 60px; line-height: 60px;}
+.intro_add .amount {padding-left: 10px; font-size: 14px; line-height: 32px;}
+.intro_add .amount em {font-size: 12px; margin-right: 32px;}
+.intro_add .amount .number {width: 50px; border-left: none; border-right: none;}
+.intro_add .amount a {display: inline-block; border: 1px solid #ccc; height: 32px; width: 14px; text-align: center;}
+.intro_right .selected {height: 60px; line-height: 60px; color: #444;}
+.intro_right .selected span {color: #1d7ad9;}
+.intro_right .button {text-align: center; width: 100%;  height: 90px;}
+.intro_right .button .buy,
+.intro_right .button .addCar {font-size: 20px; display: inline-block; width: 154px; height: 46px; border: 1px solid #ff8c00;
+background: url(../images/introduction/shopcar.gif) 10% center no-repeat; background-color: #ff8c00; color: #fff;
+padding-left: 25px; line-height: 46px; margin: 0 30px;}
+.intro_right .middle {display: inline-block; height: 88px; width: 2px; border-left: 1px solid #ccc; }
+.intro_right .button .buy,
+.intro_right .button .addCar,
+.intro_right .button .middle {vertical-align: middle;}
+.intro_right .attention {height: 40px; line-height: 40px; color: #777;}
+
+
 
 
 
