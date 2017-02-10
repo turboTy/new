@@ -265,11 +265,33 @@ z-index: 2;}
 .page .active {background-color: #1D7AD9; color: #fff;}
 
 /*********introduction.html**********/
-/**/
+/*userPosition部分*/
 .body_grey {background-color: #f0f0f0;}
-
-
-
+.userPosition a {color: #333; font-size: 12px; }
+.userPosition a:hover {text-decoration: underline;}
+.userPosition {line-height: 50px; height: 50px; margin-top: 20px; font-size: 0;}
+.userPosition span,
+.userPosition strong {font-size: 12px; font-style: normal;}
+/*introduction部分*/
+.introduction {height: 590px; border: 1px solid #ccc; background-color: #fff; font-family: "Microsoft YAHEI"}
+.intro_left {height: 590px; border-right: 1px solid #ccc; text-align: center; width: 310px; float: left;}
+.intro_left img {margin-top: 20px;}
+.intro_right {float: right; width: 647px; padding: 0 20px; position: relative;}
+.intro_right h2 {margin-top: 20px; color: #222; margin-bottom: 10px;}
+.intro_right em {display: inline-block; color: #777; font-style: normal; height: 35px; line-height: 35px;}
+.intro_right a {color: #333;}
+.intro_right .youhui em {width: 50px;}
+.intro_right .price {color: #ff2d2d; font-weight: bold; font-size: 22px;}
+.intro_right .usb {display: inline-block; padding-left: 62px; background: url(../images/introduction/man.gif)
+left center no-repeat; color: #666;}
+.intro_add {background-color: #f0f0f0; width: 645px; height: 240px; }
+.intro_add h4 {color: #777;}
+.intro_right .address em {padding-right: 30px; margin-left: 10px;}
+.intro_right .address a {display: inline-block; background: url(../images/screening/triangle.gif) 95% center no-repeat;
+padding:0 20px 0 10px; border: 1px solid #ccc; margin-right: 10px; line-height: 24px;}
+.intro_add .address,
+.intro_add .color,
+.intro_add .amount {height: 50px; padding-top: 15px;}
 
 
 
