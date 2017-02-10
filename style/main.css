@@ -289,6 +289,7 @@ left center no-repeat; color: #666;}
 .intro_right .address em {padding-right: 30px; margin-left: 10px;}
 .intro_right .address a {display: inline-block; background: url(../images/screening/triangle.gif) 95% center no-repeat;
 padding:0 20px 0 10px; border: 1px solid #ccc; margin-right: 10px; line-height: 24px;}
+/*intro_add部分*/
 .intro_add .address,
 .intro_add .color,
 .intro_add .amount {height: 45px; padding-top: 5px;}
@@ -302,20 +303,25 @@ padding: 0 5px; float: left; margin-right:10px; margin-bottom: 5px;}
 .intro_add .size em {height: 60px; line-height: 60px;}
 .intro_add .amount {padding-left: 10px; font-size: 14px; line-height: 32px;}
 .intro_add .amount em {font-size: 12px; margin-right: 32px;}
-.intro_add .amount .number {width: 50px; border-left: none; border-right: none;}
-.intro_add .amount a {display: inline-block; border: 1px solid #ccc; height: 32px; width: 14px; text-align: center;}
+.intro_add .amount .number {width: 50px; height: 32px; vertical-align: middle;vertical-align: middle;
+background-color: #f0f0f0; border-collapse: collapse; border: 1px solid #ccc; text-align: center;}
+.intro_add .amount a {display: inline-block; border: 1px solid #ccc; height: 32px; width: 14px; text-align: center;
+vertical-align: middle;}
+.intro_add .amount .subtract {border-right: none;}
+.intro_add .amount .add {border-left: none;}
 .intro_right .selected {height: 60px; line-height: 60px; color: #444;}
 .intro_right .selected span {color: #1d7ad9;}
 .intro_right .button {text-align: center; width: 100%;  height: 90px;}
 .intro_right .button .buy,
-.intro_right .button .addCar {font-size: 20px; display: inline-block; width: 154px; height: 46px; border: 1px solid #ff8c00;
+.intro_right .button .addCar {font-size: 20px; display: inline-block; width: 154px;  border: 1px solid #ff8c00;
 background: url(../images/introduction/shopcar.gif) 10% center no-repeat; background-color: #ff8c00; color: #fff;
-padding-left: 25px; line-height: 46px; margin: 0 30px;}
+padding-left: 25px; line-height: 46px; margin: 0 30px; height: 46px;}
 .intro_right .middle {display: inline-block; height: 88px; width: 2px; border-left: 1px solid #ccc; }
 .intro_right .button .buy,
 .intro_right .button .addCar,
 .intro_right .button .middle {vertical-align: middle;}
 .intro_right .attention {height: 40px; line-height: 40px; color: #777;}
+
 
 
 
