@@ -341,17 +341,30 @@ display: inline-block; border-bottom: 1px solid #ccc; width: 180px; background-c
 
 /*desc_right*/
 .desc_right {width: 790px;}
-.description {width: 100%; height: 600px; border: 1px solid #ccc; background-color: #fff;}
-.consultation {width: 100%; height: 480px; border: 1px solid #ccc; margin-top: 20px; background-color: #fff;}
-.right_title div {width: 394px; height: 40px; float: left; background-color: #f0f0f0; text-align: center;
-border-bottom: 1px solid #ccc; }
+.right_title {width: 100%; height: 40px;}
+.right_title div {width: 394px; height: 40px; float: left; background-color: #f0f0f0; text-align: center;}
+.tLeft,
+.tRight {border: 1px solid #ccc;}
+.tLeft {border-right: none;margin-right: -1px;}
 .right_title a {display: inline-block; text-align: center; width: 160px; line-height: 38px; font-size: 14px; color: #000; }
-.tLeft {border-right: 1px solid #ccc;}
 .tLeft a {background: url(../images/introduction/goods_intro.gif) 12% center no-repeat;  width: 135px;}
 .tRight a {background: url(../images/introduction/comment.gif) left center no-repeat; padding: 0 10px;}
-.right_title .active {background-color: #1d7ad9; color: #fff; font-weight: bold;}
+.right_title .active {background-color: #1d7ad9; color: #fff; font-weight: bold; border: 1px solid #1D7AD9;}
 .right_title .active a {background: url(../images/introduction/comment2.gif) left center no-repeat; color: #fff;}
+/*description部分*/
+.description {width: 788px; height: 1100px; border: 1px solid #ccc; background-color: #fff; border-top: none;}
+.description .img {text-align: center; width: 100%; height: 150px; padding: 40px 0;}
+.description .first {margin:0 auto; width: 740px; margin-bottom: 30px;}
+.description .tit {width: 70px; border-bottom: 2px solid #1d7ad9; height: 35px; color: #1d7ad9; 
+font: normal bold 16px/35px "Microsoft YAHEI";  margin-bottom: 15px;}
+.description .tit_grey {width: 665px; border-bottom: 2px solid #ccc; height: 35px; color: #666; line-height: 39px;
+padding-left: 5px;  margin-bottom: 15px;}
+.description .first p {font-size: 14px; color: #666; line-height: 1.8em;}
+.ipad_img img {background-position: 50% 90%;}
 
+/*.commentary部分*/
+.commentary,
+.consultation {width: 100%; height: 480px; border: 1px solid #ccc; margin-top: 20px; background-color: #fff;}
 
 
 
