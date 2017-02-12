@@ -398,6 +398,9 @@ width: 15px; height: 15px; margin-top: 10px;}
 /*consultation部分*/
 .consultation {width: 100%; height: 480px; border: 1px solid #ccc; margin-top: 20px; background-color: #fff;
 margin-bottom: 40px;}
+.desc_right .page {width: 600px; float: right; height: 40px; border-bottom: none; padding-top: 20px;}
+.desc_right .page a {margin: 0 1px;}
+.desc_right .page .active {color: red; background-color: #ddd; font-weight: bold;}
 
 
 
