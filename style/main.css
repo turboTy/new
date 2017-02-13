@@ -469,11 +469,31 @@ background: url(../images/shopcar/triangle.gif) right center no-repeat;}
 /*deliver部分*/
 .deliver {border: 1px solid #ccc; width: 998px; height: 350px; margin-top: 20px;}
 .deliver .receive_tit a {font: normal 12px/30px "Microsoft YAHEI"; float: right; margin-right: 35px; color: #1369c0;}
-
-
-
-
-
+.cart_tit {height: 34px; width: 100%; border-bottom: 1px solid #ccc; color: #555; line-height: 34px;}
+.cart_name {width: 440px; padding-left: 30px;}
+.cart_price {width: 138px; }
+.cart_cash {width: 138px; }
+.cart_num {width: 130px;}
+.cart_total {width: 122px;}
+.cart_cont {border-bottom: 1px solid #ccc; width: 100%; height: 90px; color: #555; padding-top: 10px;}
+.cart_name_right {margin-left: 20px;}
+.cart_name_right a {color: #555; }
+.cart_name_right p {color: #333; margin-top: 40px;}
+.cart_num p {margin-top: 40px;}
+.cart_total p {color: red; font-weight: bold; font-family: "Microsoft YAHEI";}
+.cart_bottom > a {color: #1d7ad9; margin: 10px 0 35px 30px; display: inline-block;}
+.cart_bottom > p {color: red; background: url(../images/shopcar/caution.gif) left center no-repeat; margin-left: 30px;
+padding-left: 25px;}
+.cart_tissue img {margin: 18px 20px 20px 30px;}
+.cart_tissue p {margin-top: 20px; color: #555; line-height: 1.5em;}
+.cart_bottom span {color: red; font-weight: bold;}
+/*account部分*/
+.account {margin-top: 20px; border: 1px solid #ccc; height: 175px;}
+.account_right {width: 178px; height: 76px; margin-top: 40px; margin-right: 25px;}
+.account p {font-size: 14px; color: #555;}
+.account span {font: normal bold 28px/28px "Microsoft YAHEI"; color: red;}
+.account a {color: #fff; display: inline-block; width: 75px; height: 35px; background-color: red; padding: 0 48px;
+font: normal 18px/35px "Microsoft YAHEI"; margin-top: 10px;}
 
 
 
