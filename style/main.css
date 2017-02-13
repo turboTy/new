@@ -374,12 +374,15 @@ position: relative; margin-top: 20px;}
 .speed_text li {display: inline-block; float: left; color: #fff; width: 74px; line-height: 18px;}
 .commentary .total {color: #555; display: inline-block; margin-top: 10px;}
 .commentary .all {margin-top: 60px; width: 100%; height: 35px; background-color: #f0f0f0; line-height: 35px;}
-.commentary .all .rank {float: right; height: 35px; line-height: 35px;}
+.commentary .all .rank {float: right; height: 35px; line-height: 35px; position: relative;}
+.commentary .rank div {width: 26px; height: 11px; position: absolute; top: -5px; right: 15px;}
+.commentary .rank .triangle {border-width: 2px; border-style: solid dashed dashed solid;  width: 0; height: 0;
+border-color: #e40003 transparent transparent #e40003; position: absolute; top: 11px; right: 22px;}
 .commentary .all dt,
 .commentary .all dd {display: inline-block; float: left; width: 90px; text-align: center;}
 .commentary .all a {display: inline-block; width: 78px; height: 20px; border: 1px solid #ccc; line-height: 20px; 
 text-align: center; color: #000; margin-top: 7px; border-right: none; background: url(../images/introduction/paixu.gif)
-90% center no-repeat; padding-right: 8px;}
+90% center no-repeat; padding-right: 8px; }
 .commentary .all dt {color: #1D7AD9; font-weight: bold; border-bottom: 3px solid #1D7AD9; width: 40px; 
 margin: 0 20px; height: 32px;}
 .commentary .vip {width: 100%; height: 120px; padding-top: 20px; color: #777;}
@@ -401,7 +404,25 @@ margin-bottom: 40px;}
 .desc_right .page {width: 600px; float: right; height: 40px; border-bottom: none; padding-top: 20px;}
 .desc_right .page a {margin: 0 1px;}
 .desc_right .page .active {color: red; background-color: #ddd; font-weight: bold;}
-
+.cons_title	{height: 35px; width: 100%; position: relative;}
+.cons_title_l {width: 130px; border: 1px solid #1D7AD9; border-bottom: none; color: #1369c0; font-size: 14px; 
+font-weight: bold; text-align: center;  line-height: 34px;}
+.cons_title_r {width: 659px; border-bottom: 1px solid #1D7AD9;height: 34px; position: absolute; top: 0; right: 0;}
+.cons_title_r a {float: right; color: #1369c0; display: inline-block; width: 100px; text-align: center; height: 34px;
+line-height: 34px;}
+.consultation>h4 {font: normal 13px/25px "Microsoft YAHEI"; display: inline-block; width: 712px; height: 48px; 
+background-color: #f0f0f0; margin: 15px 20px; color: #666; padding: 5px 20px;}
+.cons_vip {width: 725px; height: 124px; margin:10px 30px; font: normal 12px/2em "Microsoft YAHEI"; color: #777;}
+.cons_vip_l {width: 100px; text-align: center;}
+.cons_vip_r {width: 610px; }
+.cons_vip a {color: #777;}
+.cons_vip_r>p {text-indent: 5px;}
+.cons_vip_r em {float: right; font: normal normal 11px/2em "宋体"; color: #aaa;}
+.cons_vip_r .resp {width: 540px; padding: 15px 30px 25px 30px; height: 15px; background-color: #f0f0f0; 
+color: #000;}
+.cons_vip_r>h4 {float: left; color: #000;}
+.cons_vip_r .resp em {float: left; text-indent: 5px; color: #555;}
+.consultation .page {width: 400px;}
 
 
 
