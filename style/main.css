@@ -448,10 +448,9 @@ background: url(../images/shopcar/tri_blue.gif) 95% center no-repeat; border: 1p
 .receive .button {margin-left: 20px; width: 110px; height: 30px; background-color: #1d7ad9; border: 1px solid #1D7AD9;
 color: #fff; margin-top: 10px;}
 /*payment部分*/
-.payment {width: 998px; height: 135px; border: 1px solid #ccc; color: #111; margin-bottom: 10px;}
+.payment {width: 998px; height: 135px; border: 1px solid #ccc; color: #111; margin-bottom: 20px;}
 .payment .selection {height: 90px; width: 360px; padding: 10px 0 10px 30px;}
 .payment input {vertical-align: middle; margin-right: 10px;}
-.payment tr {}
 .payment td {padding: 0 5px; line-height: 20px; height: 20px;}
 .payment .wechat {background: url(../images/shopcar/wechat.gif) 2% center no-repeat; padding-left: 35px;}
 /*invoice部分*/
@@ -467,7 +466,9 @@ background: url(../images/shopcar/triangle.gif) right center no-repeat;}
 .invo_text {color: #aaa; height: 20px;}
 .invoice .submit input {height: 20px; color: #333; width: 70px; height: 25px; text-align: center; margin-top: 10px;}
 .invoice .save input {background-color: #1d7ad9; border: none; color: #eee;}
-
+/*deliver部分*/
+.deliver {border: 1px solid #ccc; width: 998px; height: 350px; margin-top: 20px;}
+.deliver .receive_tit a {font: normal 12px/30px "Microsoft YAHEI"; float: right; margin-right: 35px; color: #1369c0;}
 
 
 
