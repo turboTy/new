@@ -23,7 +23,7 @@ padding-left: 19px; font-weight: bold;}
 .search {width: 430px;padding-top: 23px; padding-left: 115px;}
 .searchText {width: 350px; height: 35px; padding: 0 5px;border: 0;}
 .searchBtn {width: 70px; height: 35px; font-size:14px; font-family:"Microsoft YAHEI","Î¢ÈíÑÅºÚ";
-background: #ff8c00;color: #FFF; border: 0;}
+background: #ff8c00;color: #FFF; border: 0; cursor: pointer;}
 
 /*shopCar*/
 .shopCar {width: 148px;height: 35px; margin:23px auto; background-color: #ff8c00; line-height: 35px;
@@ -508,14 +508,15 @@ padding: 0 70px 0 85px; position: relative; margin-bottom: 100px;}
 .login_user h4 {margin-top: 40px;}
 .username {background: url(../images/login/user_img.gif) 95% center no-repeat; border: 1px solid #ccc;}
 .login_pwd h4 {margin-top: 10px;}
-.password {background: url(../images/login/lock.gif) 95% center no-repeat; border: 1px solid #ccc;}
+.password {background: url(../images/login/lock.gif) 95% center no-repeat; border: 1px solid #ccc;  
+letter-spacing: 3px;}
 .auto_log {height: 70px; line-height: 70px;}
 .auto_log em {font: normal 12px/70px "Microsoft YAHEI"; margin-right: 10px;}
 .auto_log input {vertical-align: middle; margin-right: 2px;}
 .auto_log a {color: #111;}
 .auto_log a:hover {color: red;}
-.login_btn input {width: 304px; background-color: #f0f0f0; height: 33px; border: 1px solid #ccc; color: #555;
-font: bold 16px/30px "Microsoft YAHEI";}
+.login_btn input {width: 304px; background-color: #f0f0f0; height: 33px; border-collapse: collapse; color: #555;
+font: bold 16px/30px "Microsoft YAHEI"; cursor: pointer;}
 .coop {color: #999;}
 .coop h4 {margin-top: 35px; margin-bottom: 5px;}
 .coop a {color: #555; margin: 0 2px;}
@@ -523,6 +524,32 @@ font: bold 16px/30px "Microsoft YAHEI";}
 .coop .more {background: url(../images/login/tri_gray.gif) right center no-repeat; padding-right: 10px;}
 .free_reg {display: inline-block; position: absolute; right: 40px; top:360px; border: 1px solid #00a600; width: 110px;
  height: 28px; background-color: #00a600; text-align: center; line-height: 28px; color: #fff; font-size: 14px;}
+
+/*************register.html***************/
+.reg_box {width: 640px; height: 580px; border: 1px solid #ccc; margin:10px auto;}
+.reg_tbl {width: 395px; height: 315px; text-align: right; margin: 30px auto; font: normal 15px/70px "Microsoft YAHEI";
+color: #777;}
+.reg_tbl em {display: inline-block; font: normal bold 16px/70px "Microsoft YAHEI"; color: red; vertical-align: middle; 
+margin: 2px 10px 0 0;}
+/*.reg_tbl td {border: 1px solid green;}*/
+.reg_tbl input {width: 265px; height: 38px; padding-left: 5px; font: normal 15px/70px "Microsoft YAHEI"; color: #777;
+border: 1px solid #ccc;}
+.reg_user {background: url(../images/login/user_img.gif) 95% center no-repeat;}
+.reg_lock {background: url(../images/login/lock.gif) 95% center no-repeat;}
+.reg_submit {width: 395px; height: 90px; text-align: center; margin: 0 auto;}
+.reg_submit em {font: normal 12px/12px "Microsoft YAHEI"; vertical-align: middle;}
+.reg_submit a {color: #1369c0;}
+.reg_submit a:hover {text-decoration: underline;}
+.reg_submit input {vertical-align: middle; margin-right: 5px;}
+.reg_submit button {width: 270px; height: 40px; border: 1px solid #ccc; color: #555; margin-top: 30px;
+font: bold 16px/18px "Microsoft YAHEI"; cursor: pointer;}
+
+
+
+
+
+
+
 
 
 
