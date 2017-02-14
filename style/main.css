@@ -516,7 +516,7 @@ letter-spacing: 3px;}
 .auto_log a {color: #111;}
 .auto_log a:hover {color: red;}
 .login_btn input {width: 304px; background-color: #f0f0f0; height: 33px; border-collapse: collapse; color: #555;
-font: bold 16px/30px "Microsoft YAHEI"; cursor: pointer;}
+font: bold 16px/30px "Microsoft YAHEI"; cursor: pointer; border: 1px solid #ccc;}
 .coop {color: #999;}
 .coop h4 {margin-top: 35px; margin-bottom: 5px;}
 .coop a {color: #555; margin: 0 2px;}
