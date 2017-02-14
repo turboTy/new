@@ -478,10 +478,12 @@ background: url(../images/shopcar/triangle.gif) right center no-repeat;}
 .cart_cont {border-bottom: 1px solid #ccc; width: 100%; height: 90px; color: #555; padding-top: 10px;}
 .cart_name_right {margin-left: 20px;}
 .cart_name_right a {color: #555; }
+.cart_name_right a:hover {text-decoration: underline;}
 .cart_name_right p {color: #333; margin-top: 40px;}
 .cart_num p {margin-top: 40px;}
 .cart_total p {color: red; font-weight: bold; font-family: "Microsoft YAHEI";}
-.cart_bottom > a {color: #1d7ad9; margin: 10px 0 35px 30px; display: inline-block;}
+.cart_bottom > a {color: #1d7ad9; margin: 10px 0 35px 30px; display: inline-block; }
+.cart_bottom > a:hover {text-decoration: underline;}
 .cart_bottom > p {color: red; background: url(../images/shopcar/caution.gif) left center no-repeat; margin-left: 30px;
 padding-left: 25px;}
 .cart_tissue img {margin: 18px 20px 20px 30px;}
