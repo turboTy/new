@@ -36,14 +36,14 @@ font-family: "Microsoft YAHEI";color: #FFF;font-size: 14px;margin-right: 58px;}
 .navBox {height: 35px; background-color: #1369c0; color: #FFF;border-bottom: 1px solid #4593fd; }
 .navBox a:hover {text-decoration: underline;}
 .shopClass {width: 190px; position: relative; }
-.shopClass i {width: 11px; height: 7px;overflow: hidden;display: inline-block;margin-left: 11px;}
+/*.shopClass i {width: 11px; height: 7px;overflow: hidden;display: inline-block;margin-left: 11px;}*/
 .nav,.shopClass{font-family: "Microsoft YAHEI";}
 .nav {line-height: 35px}
 .nav li {float: left;}
 .nav a {height: 35px; display: inline-block; padding: 0 35px;color: #FFF; font-size: 13px;}
 .nav .active {background-color: #4593fd; }
-.navBox h3 {background: url(../images/icon/class_sj.jpg) right center no-repeat;line-height: 35px;
- text-align: center; }
+.navBox h3 {line-height: 35px; text-align: center; }
+.class_sj {display: inline-block; width: 17px; height: 13px; background-position: 0 -46px; margin-left: 20px;}
 .shopClass_show {background: url(../images/icon/show_sj.jpg) 165px center no-repeat; background-color: #4593fd;/*浅蓝*/
 height: 63px; width: 190px;  border-bottom:1px solid #5aa1fe;}
 .shopClass_item {padding: 10px 15px ; line-height: 22px;}
@@ -544,8 +544,8 @@ border: 1px solid #ccc;}
 .reg_submit button {width: 270px; height: 40px; border: 1px solid #ccc; color: #555; margin-top: 30px;
 font: bold 16px/18px "Microsoft YAHEI"; cursor: pointer;}
 
-
-
+/**********icon.gif**********/
+.icon {background-image: url(../images/icon/icon.gif); background-repeat: no-repeat;}
 
 
 
