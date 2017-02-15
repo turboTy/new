@@ -508,6 +508,8 @@ padding: 0 70px 0 85px; position: relative; margin-bottom: 100px;}
 .login_user h4 {margin-top: 40px;}
 .username {background: url(../images/login/user_img.gif) 95% center no-repeat; border: 1px solid #ccc;}
 .login_pwd h4 {margin-top: 10px;}
+.login_check h4 {margin-top: 10px;}
+.checkCode {border: 1px solid #ccc; background: url(../images/login/lock.gif) 95% center no-repeat;}
 .password {background: url(../images/login/lock.gif) 95% center no-repeat; border: 1px solid #ccc;  
 letter-spacing: 3px;}
 .auto_log {height: 70px; line-height: 70px;}
