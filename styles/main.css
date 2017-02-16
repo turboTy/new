@@ -498,26 +498,27 @@ padding-left: 25px;}
 font: normal 18px/35px "Microsoft YAHEI"; margin-top: 10px;}
 
 /*************login.html****************/
-.login_reg {width: 600px; }
-.login_reg .logo {margin-left: 60px;}
+.login_reg {width: 600px; margin:0 auto;}
+.login_reg .logo {margin-left: 70px;}
 .welcome_reg {font: normal 22px/80px "Microsoft YAHEI"; color: #fff; float: right; margin-left: 20px;}
 .login_box {width: 305px; height: 360px; border: 1px solid #ccc; margin: 0 auto; margin-top: 10px; 
-padding: 0 70px 0 85px; position: relative; margin-bottom: 100px;}
+padding: 0 65px 0 90px; position: relative; margin-bottom: 100px;}
 .login_box h4 {font: normal normal 13px/20px "Microsoft YAHEI"; color: #777;}
 .login_box input {height: 30px; padding-left: 5px;}
 .login_user h4 {margin-top: 40px;}
 .username {background: url(../images/login/user_img.gif) 95% center no-repeat; border: 1px solid #ccc;}
 .login_pwd h4 {margin-top: 10px;}
 .login_check h4 {margin-top: 10px;}
+.login_check img {float: right; margin-right: 26px;}
 .checkCode {border: 1px solid #ccc; background: url(../images/login/lock.gif) 95% center no-repeat;}
 .password {background: url(../images/login/lock.gif) 95% center no-repeat; border: 1px solid #ccc;  
 letter-spacing: 3px;}
-.auto_log {height: 70px; line-height: 70px;}
-.auto_log em {font: normal 12px/70px "Microsoft YAHEI"; margin-right: 10px;}
+.auto_log {height: 50px; line-height: 50px;}
+.auto_log em {font: normal 12px/50px "Microsoft YAHEI"; margin-right: 10px; vertical-align: middle;}
 .auto_log input {vertical-align: middle; margin-right: 2px;}
-.auto_log a {color: #111;}
+.auto_log a {color: #111; margin-right: 22px;}
 .auto_log a:hover {color: red;}
-.login_btn input {width: 304px; background-color: #f0f0f0; height: 33px; border-collapse: collapse; color: #555;
+.login_btn input {width: 277px; background-color: #f0f0f0; height: 33px; border-collapse: collapse; color: #555;
 font: bold 16px/30px "Microsoft YAHEI"; cursor: pointer; border: 1px solid #ccc;}
 .coop {color: #999;}
 .coop h4 {margin-top: 35px; margin-bottom: 5px;}
