@@ -1,8 +1,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link type="text/css" rel="stylesheet" href="./styles/main.css" charset="utf-8">
-	<link type="text/css" rel="stylesheet" href="./styles/reset.css"  charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="./styles/main.css?v=20170215">
+	<link type="text/css" rel="stylesheet" href="./styles/reset.css">
 	<title>后台登录页面</title>
 </head>
 <style>
