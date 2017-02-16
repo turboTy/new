@@ -1,8 +1,8 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	<link type="text/css" rel="stylesheet" href="./styles/main.css" charset="utf-8">
-	<link type="text/css" rel="stylesheet" href="./styles/reset.css"  charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="./styles/main.css?v=20170216">
+	<link type="text/css" rel="stylesheet" href="./styles/reset.css">
 	<title>后台登录页面</title>
 </head>
 <style>
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 		<div class="logoBar">
-			<div class="comWidth login_reg">
+			<div class="login_reg">
 				<div class="logo fl">
 					<a href="#"><img src="./images/icon/logo.jpg" alt="LOGO"></a>
 					<h3 class="welcome_reg">欢迎登录</h3>
@@ -42,7 +42,8 @@
 		</div>
 		<div class="login_check">
 			<h4>验证码</h4>
-			<input type="text" class="checkCode" size="38">
+			<input type="text" class="checkCode" size="20">
+			<img src="../lib/image.func.php" alt="verify">
 		</div>
 		<div class="auto_log">
 			<input type="checkbox" id="chk_auto"><label for="chk_auto"><em>自动登录</em></label>

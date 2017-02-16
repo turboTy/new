@@ -1,7 +1,7 @@
 <?php
 //通过GD库做验证码
 //创建画布
-function verifyimage($type=3,$length=4,$pixel=10,$line=2,$sess_name = "verify"){
+function verifyImage($type=3,$length=4,$pixel=10,$line=2,$sess_name = "verify"){
     session_start();
     include_once 'string.func.php';
     $width = 80;
@@ -45,4 +45,4 @@ function verifyimage($type=3,$length=4,$pixel=10,$line=2,$sess_name = "verify"){
     imagegif($image);
     imagedestroy($image);
 }
-verifyimage(3,4,20,3);
+verifyImage(3,4,20,3);
