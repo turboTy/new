@@ -1,5 +1,5 @@
 <?php
-
+require_once '../include.php';
 /**链接数据库的操作
  * @return mysqli
  * return resource
@@ -21,10 +21,10 @@ function connect(){
  */
 function insert($mysqli,$table,$array){
     $keys = join(",",array_keys($array));
-    $vals = join(",","'".array_values($array)."'");
+    $vals = "'".join("','",array_values($array))."'";
     $sql = "insert into {$table}($keys) values ({$vals})";
     $result = $mysqli->query($sql);
-    return mysqli_insert_id($result);
+    return mysqli_insert_id($mysqli);
 }
 
 /**删除数据操作

@@ -20,7 +20,8 @@ checkLogined();
             <h3 class="head_text fr">慕课电子商务后台管理系统</h3>
     </div>
     <div class="operation_user clearfix">
-       <!--   <div class="link fl"><a href="#">慕课</a><span>&gt;&gt;</span><a href="#">商品管理</a><span>&gt;&gt;</span>商品修改</div>-->
+       <!--   <div class="link fl"><a href="#">慕课</a><span>&gt;&gt;</span><a href="#">商品管理</a>
+       <span>&gt;&gt;</span>商品修改</div>-->
         <div class="link fr">
             <b>欢迎您
             <?php 
@@ -30,7 +31,10 @@ checkLogined();
                 echo $_COOKIE['adminName'];
             }
             ?>
-            </b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="icon icon_i">首页</a><span></span><a href="#" class="icon icon_j">前进</a><span></span><a href="#" class="icon icon_t">后退</a><span></span><a href="#" class="icon icon_n">刷新</a><span></span><a href="doAdminAction.php?act=logout" class="icon icon_e">退出</a>
+            </b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="icon icon_i">首页</a><span></span>
+            <a href="#" class="icon icon_j">前进</a><span></span><a href="#" class="icon icon_t">后退</a>
+            <span></span><a href="#" class="icon icon_n">刷新</a><span></span>
+            <a href="doAdminAction.php?act=logout" class="icon icon_e">退出</a>
         </div>
     </div>
     <div class="content clearfix">
@@ -81,8 +85,10 @@ checkLogined();
                     <li>
                         <h3><span onclick="show('menu5','change5')" id="change5">+</span>管理员管理</h3>
                         <dl id="menu5" style="display:none;">
-                        	<dd><a href="addAdmin.php" target="mainFrame">添加管理员</a></dd>
-                            <dd><a href="listAdmin.php" target="mainFrame">管理员列表</a></dd>
+                        	<dd>
+                                <a href="addAdmin.php?act=addAdmin" target="mainFrame" id="mainFrame">添加管理员</a>
+                            </dd>
+                            <dd><a href="listAdmin.php?act=listAdmin" target="mainFrame">管理员列表</a></dd>
                         </dl>
                     </li>
                     

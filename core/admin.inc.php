@@ -20,6 +20,19 @@ function checkLogined(){
     }
 }
 
+function addAdmin(){
+    $mysqli = connect();
+    $arr['username'] = $_POST['username'];
+    $arr['password'] = md5(sha1($_POST['password']));
+    $arr['email'] = $_POST['email'];
+    if(insert($mysqli,imooc_admin,$arr)){
+        $mes = "管理员添加成功!<br><a href='addAdmin.php'>继续添加</a>|<a href='listAdmin.php'>查看管理员列表</a>";
+    }else{
+        $mes = "管理员添加失败!<br><a href='addAdmin.php'>重新添加</a>";
+    }
+    return $mes;
+}
+
 /**
  * 注销管理员
  */
