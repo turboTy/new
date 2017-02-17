@@ -32,7 +32,7 @@
 		</div>
 	</div>
 	<div class="login_box">
-		<form action="./test.php" method="post">
+		<form action="./doLogin.php" method="post">
     		<div class="login_user">
     			<h4>管理员帐号</h4>
     			<input type="text" class="username" name="username" size="38">

@@ -19,11 +19,11 @@ function connect(){
  * @param array $array
  * return number
  */
-function insert($table,$array){
+function insert($mysqli,$table,$array){
     $keys = join(",",array_keys($array));
     $vals = join(",","'".array_values($array)."'");
     $sql = "insert into {$table}($keys) values ({$vals})";
-    $result = mysqli_query($sql);
+    $result = $mysqli->query($sql);
     return mysqli_insert_id($result);
 }
 
@@ -33,9 +33,9 @@ function insert($table,$array){
  * @param array $array
  * return number
  */
-function delete($table,$where = null){
+function delete($mysqli,$table,$where = null){
     $sql = "delete from {$table}".($where == null?null:" where ".$where);   
-    $result = mysqli_query($sql);
+    $result = $mysqli->query($sql);
     return mysqli_affected_rows($result);
 }
 
@@ -46,7 +46,7 @@ function delete($table,$where = null){
  * @param string $where
  * return number
  */
-function update($table,$array,$where = null,$str = null){
+function update($mysqli,$table,$array,$where = null,$str = null){
     foreach ($array as $key=>$val){
         if ($str == null){
             $sep = "";
@@ -56,7 +56,7 @@ function update($table,$array,$where = null,$str = null){
         $str .= $sep.$key."= '".$val."'";
     }
     $sql = "update {$table} set {$str}".($where == null?null:" where ".$where);
-    $result = mysqli_query($sql);
+    $result = $mysqli->query($sql);
     $num = mysqli_affected_rows($result);
 }
 
@@ -65,8 +65,8 @@ function update($table,$array,$where = null,$str = null){
  * @param string $result_type
  * @return Number
  */
-function fetchOne($sql,$result_type = MYSQLI_ASSOC){
-    $result = mysqli_query($sql);
+function fetchOne($mysqli,$sql,$result_type = MYSQLI_ASSOC){
+    $result = $mysqli->query($sql);
     $row = mysqli_fetch_array($result,$result_type);
     return $row;
 }
@@ -76,8 +76,8 @@ function fetchOne($sql,$result_type = MYSQLI_ASSOC){
  * @param string $result_type
  * @return array
  */
-function fetchAll($sql,$result_type = MYSQLI_ASSOC){
-    $result = mysqli_query($sql);
+function fetchAll($mysqli,$sql,$result_type = MYSQLI_ASSOC){
+    $result = $mysqli->query($sql);
     while (@$row = mysqli_fetch_array($result,$result_type)){
         $rows[] = $row;
     }
@@ -88,8 +88,8 @@ function fetchAll($sql,$result_type = MYSQLI_ASSOC){
  * @param string $sql
  * @return Number
  */
-function getResultNum($sql){
-    $result = mysqli_query($sql);
+function getResultNum($mysqli,$sql){
+    $result = $mysqli->query($sql);
     $row = mysqli_num_rows($result);
     return $row;
 }

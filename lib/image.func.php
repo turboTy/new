@@ -1,13 +1,11 @@
 <?php
 //通过GD库做验证码
 //创建画布
-function verifyImage($type=3,$length=4,$pixel=10,$line=2,$sess_name = "verify"){
+function verifyImage($type=1,$length=4,$pixel=10,$line=2,$sess_name = "verify"){
     session_start();
     include_once 'string.func.php';
     $width = 80;
     $height = 28;
-    $type = 3;
-    $length = 4;
     $image = imagecreatetruecolor($width,$height);
     $white = imagecolorallocate($image, 255, 255, 255);
     $black = imagecolorallocate($image, 0, 0, 0);
