@@ -35,11 +35,11 @@
 		<form action="./doLogin.php" method="post">
     		<div class="login_user">
     			<h4>管理员帐号</h4>
-    			<input type="text" class="username" name="username" size="38">
+    			<input type="text" class="username" name="username" size="35">
     		</div>
     		<div class="login_pwd">
     			<h4>密码</h4>
-    			<input type="password" class="password" name="password" size="38">
+    			<input type="password" class="password" name="password" size="35">
     		</div>
     		<div class="login_check">
     			<h4>验证码</h4>
@@ -47,8 +47,8 @@
     			<img src="./getVerify.php" alt="verify">
     		</div>
     		<div class="auto_log">
-    			<input type="checkbox" id="chk_auto"><label for="chk_auto"><em>自动登录</em></label>
-    			<a href="#" class="fr" >忘记密码？</a>
+    			<input type="checkbox" id="chk_auto" value="1" name="autoFlag"><label for="chk_auto">
+    			<em>自动登录（一周内自动登录）</em></label><a href="#" class="fr" >忘记密码？</a>
     		</div>
     		<div class="login_btn">
     			<input type="submit" name="submit" value="登　录">

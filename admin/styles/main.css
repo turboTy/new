@@ -506,10 +506,12 @@ padding: 0 65px 0 90px; position: relative; margin-bottom: 100px;}
 .login_box h4 {font: normal normal 13px/20px "Microsoft YAHEI"; color: #777;}
 .login_box input {height: 30px; padding-left: 5px;}
 .login_user h4 {margin-top: 40px;}
+.login_user input,
+.login_pwd input {width: 280px;}
 .username {background: url(../images/login/user_img.gif) 95% center no-repeat; border: 1px solid #ccc;}
 .login_pwd h4 {margin-top: 10px;}
 .login_check h4 {margin-top: 10px;}
-.login_check img {float: right; margin-right: 26px;}
+.login_check img {float: right; margin-right: 25px;}
 .checkCode {border: 1px solid #ccc; background: url(../images/login/lock.gif) 95% center no-repeat;}
 .password {background: url(../images/login/lock.gif) 95% center no-repeat; border: 1px solid #ccc;  
 letter-spacing: 3px;}
@@ -518,7 +520,7 @@ letter-spacing: 3px;}
 .auto_log input {vertical-align: middle; margin-right: 2px;}
 .auto_log a {color: #111; margin-right: 22px;}
 .auto_log a:hover {color: red;}
-.login_btn input {width: 277px; background-color: #f0f0f0; height: 33px; border-collapse: collapse; color: #555;
+.login_btn input {width: 280px; background-color: #f0f0f0; height: 33px; border-collapse: collapse; color: #555;
 font: bold 16px/30px "Microsoft YAHEI"; cursor: pointer; border: 1px solid #ccc;}
 .coop {color: #999;}
 .coop h4 {margin-top: 35px; margin-bottom: 5px;}

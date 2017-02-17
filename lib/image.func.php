@@ -27,13 +27,13 @@ function verifyImage($type=1,$length=4,$pixel=10,$line=2,$sess_name = "verify"){
     }
     //添加干扰点
     if ($pixel){
-        for ($i = 0; $i < 10; $i++){
+        for ($i = 0; $i < $pixel; $i++){
             imagesetpixel($image, mt_rand(1, $width - 1), mt_rand(1, $height - 1), $black);
         }
     }
     //添加干扰线
     if ($line){
-        for ($i = 0; $i < 1; $i++){
+        for ($i = 0; $i < $line; $i++){
             imageline($image, mt_rand(1, $width-1), mt_rand(1, $height), mt_rand(1, $width-1), 
                 mt_rand(1, $height), $black);
         }

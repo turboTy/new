@@ -1,6 +1,10 @@
 <?php 
 require_once '../include.php';
 checkLogined();
+// var_dump($_SESSION['adminId']);
+// echo "<br>";
+// var_dump($_COOKIE['adminId']);
+// exit();
 ?>
 <!doctype html>
 <html>
@@ -18,7 +22,14 @@ checkLogined();
     <div class="operation_user clearfix">
        <!--   <div class="link fl"><a href="#">慕课</a><span>&gt;&gt;</span><a href="#">商品管理</a><span>&gt;&gt;</span>商品修改</div>-->
         <div class="link fr">
-            <b>欢迎您 <?php echo $_SESSION['adminName']; ?>
+            <b>欢迎您
+            <?php 
+            if (isset($_SESSION['adminName'])){
+                echo $_SESSION['adminName']; 
+            }else if (isset($_COOKIE['adminNmae'])){
+                echo $_COOKIE['adminName'];
+            }
+            ?>
             </b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="icon icon_i">首页</a><span></span><a href="#" class="icon icon_j">前进</a><span></span><a href="#" class="icon icon_t">后退</a><span></span><a href="#" class="icon icon_n">刷新</a><span></span><a href="doAdminAction.php?act=logout" class="icon icon_e">退出</a>
         </div>
     </div>
