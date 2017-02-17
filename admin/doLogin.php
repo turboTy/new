@@ -8,7 +8,9 @@ if ($verify == $verify1){
     $sql = "select * from imooc_admin where username = '{$username}' and password = '{$password}'";
     $row = checkAdmin($sql);
     if ($row){
-        alertMes("登录成功", "test.php");
+        $_SESSION['adminName'] = $username;
+        $_SESSION['adminId'] = $row['id'];
+        alertMes("登录成功", "index.php");
     }else{
         alertMes("登录失败", "login_admin.php");
     }
