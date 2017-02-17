@@ -32,26 +32,28 @@
 		</div>
 	</div>
 	<div class="login_box">
-		<div class="login_user">
-			<h4>管理员帐号</h4>
-			<input type="text" class="username" size="38">
-		</div>
-		<div class="login_pwd">
-			<h4>密码</h4>
-			<input type="password" class="password" size="38">
-		</div>
-		<div class="login_check">
-			<h4>验证码</h4>
-			<input type="text" class="checkCode" size="20">
-			<img src="../lib/image.func.php" alt="verify">
-		</div>
-		<div class="auto_log">
-			<input type="checkbox" id="chk_auto"><label for="chk_auto"><em>自动登录</em></label>
-			<a href="#" class="fr" >忘记密码？</a>
-		</div>
-		<div class="login_btn">
-			<input type="button" value="登　录">
-		</div>
+		<form action="./test.php" method="post">
+    		<div class="login_user">
+    			<h4>管理员帐号</h4>
+    			<input type="text" class="username" name="username" size="38">
+    		</div>
+    		<div class="login_pwd">
+    			<h4>密码</h4>
+    			<input type="password" class="password" name="password" size="38">
+    		</div>
+    		<div class="login_check">
+    			<h4>验证码</h4>
+    			<input type="text" class="checkCode" name="verify" size="20">
+    			<img src="./getVerify.php" alt="verify">
+    		</div>
+    		<div class="auto_log">
+    			<input type="checkbox" id="chk_auto"><label for="chk_auto"><em>自动登录</em></label>
+    			<a href="#" class="fr" >忘记密码？</a>
+    		</div>
+    		<div class="login_btn">
+    			<input type="submit" name="submit" value="登　录">
+    		</div>
+    	</form>
 	</div>
 	<div class="bottomInfo">
 		<div class="mooke_info">

@@ -45,4 +45,3 @@ function verifyImage($type=3,$length=4,$pixel=10,$line=2,$sess_name = "verify"){
     imagegif($image);
     imagedestroy($image);
 }
-verifyImage(3,4,20,3);
