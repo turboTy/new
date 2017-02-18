@@ -12,8 +12,13 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>listAdmin</title>
 </head>
+<style>
+.add{width: 100px; height: 40px; background-color: #007979; border:1px solid #007979; margin-left: 62px; 
+	 margin-bottom: 20px; color: #fff; font: normal bold 16px/35px "Microsoft YAHEI"; cursor: pointer; }
+</style>
 <body>
 <h3>管理员列表</h3>
+		<input type="button" value="添　加" name="add" class="add" onclick="add()">
 		<table border = "1" width = "90%" align="center" style="border-collapse:collapse; 
             background-color: #f0f0f0;">
 			<tr  height='30'>
@@ -43,8 +48,10 @@
 					<td style="text-indent: 30px;"><?php echo $value['username'];?></td>
 					<td style="text-indent: 30px;"><?php echo $value['email'];?></td>
 					<td align="center">
-						<input type="button" name="editAdmin" value="修改" onclick="editAdmin(<?php echo $value['id']; ?>)">&nbsp;&nbsp;
-						<input type="button" name="deleteAdmin" value="删除">
+						<input type="button" name="editAdmin" value="修改" 
+						      onclick="editAdmin(<?php echo $value['id']; ?>)">&nbsp;&nbsp;
+						<input type="button" name="deleteAdmin" value="删除" 
+						      onclick="delAdmin(<?php echo $value['id'];  ?>)">
 					</td>
 				</tr>
 			<?php 
@@ -54,6 +61,14 @@
 <script language='javascript'>
 	function editAdmin(id){
 		window.location="editAdmin.php?id="+id;
+	}
+	function delAdmin(id){
+		if(window.confirm("确定要删除吗？删除之后不可恢复！！")){
+			window.location="doAdminAction.php?act=delAdmin&id="+id;
+		}
+	}
+	function add(){
+		window.location="addAdmin.php";
 	}
 </script>
 </body>

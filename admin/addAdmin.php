@@ -10,15 +10,15 @@
 		<table width="500" height="140" border="1" style="border-collapse: collapse; 
 		background-color:#f0f0f0;">
 			<tr>
-				<td>管理员名称</td>
+				<td align="right"><b>管理员名称：</b></td>
 				<td><input type="text" name="username" placeholder="管理员名称"></td>
 			</tr>
 			<tr>
-				<td>管理员密码</td>
+				<td align="right"><b>管理员密码：</b></td>
 				<td><input type="password" name="password" ></td>
 			</tr>
 			<tr>
-				<td>管理员邮箱</td>
+				<td align="right"><b>管理员邮箱：</b></td>
 				<td><input type="text" name="email" placeholder="管理员邮箱"></td>
 			</tr>
 			<tr>

@@ -17,6 +17,8 @@ if ($act == 'logout'){
     $mes = addAdmin();
 }elseif ($act == 'editAdmin'){
     $mes = editAdmin($id);
+}elseif ($act == 'delAdmin'){
+    $mes = delAdmin($id);
 }
 // var_dump($mes);
 // exit();

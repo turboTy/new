@@ -36,7 +36,7 @@ function insert($mysqli,$table,$array){
 function delete($mysqli,$table,$where = null){
     $sql = "delete from {$table}".($where == null?null:" where ".$where);   
     $result = $mysqli->query($sql);
-    return mysqli_affected_rows($result);
+    return mysqli_affected_rows($mysqli);
 }
 
 /**修改数据操作

@@ -36,6 +36,10 @@ function addAdmin(){
     return $mes;
 }
 
+/**编辑管理员信息
+ * @param unknown $id
+ * @return string
+ */
 function editAdmin($id){
     $mysqli = connect();
     $arr['username'] = $_POST['username'];
@@ -50,6 +54,19 @@ function editAdmin($id){
     return $mes;
 }
 
+/**删除管理员
+ * @param  int $id
+ * @return string
+ */
+function delAdmin($id){
+    $mysqli = connect();
+    if(delete($mysqli, "imooc_admin","id = {$id}")){
+        $mes = "删除成功!<br><a href='listAdmin.php'>返回管理员列表</a>";
+    }else{
+        $mes = "删除失败!<br><a href='listAdmin.php'>重新尝试</a>";
+    }
+    return $mes;
+}
 
 /**得到所有的管理员
  * @return mixed
