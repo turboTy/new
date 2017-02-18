@@ -46,7 +46,8 @@ function delete($mysqli,$table,$where = null){
  * @param string $where
  * return number
  */
-function update($mysqli,$table,$array,$where = null,$str = null){
+function update($mysqli,$table,$array,$where = null){
+    $str = null;
     foreach ($array as $key=>$val){
         if ($str == null){
             $sep = "";
@@ -57,7 +58,12 @@ function update($mysqli,$table,$array,$where = null,$str = null){
     }
     $sql = "update {$table} set {$str}".($where == null?null:" where ".$where);
     $result = $mysqli->query($sql);
-    $num = mysqli_affected_rows($result);
+//     $num = mysqli_affected_rows($mysqli);
+    if ($result) {
+        return mysqli_affected_rows($mysqli);
+    }else{
+        return false;
+    }
 }
 
 /**查询一条记录
@@ -67,7 +73,7 @@ function update($mysqli,$table,$array,$where = null,$str = null){
  */
 function fetchOne($mysqli,$sql,$result_type = MYSQLI_ASSOC){
     $result = $mysqli->query($sql);
-    $row = mysqli_fetch_array($result,$result_type);
+    $row = @mysqli_fetch_array($result,$result_type);
     return $row;
 }
 

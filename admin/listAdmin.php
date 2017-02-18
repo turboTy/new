@@ -33,18 +33,17 @@
 						<label for="c<?php echo $value['id']; ?>">
 							<?php 
 								if($value['id']<10){
-									$value['id'] = "00".$value['id'];
+									echo "00".$value['id'];
 								}elseif($value['id']<100){
-									$value['id'] = "0".$value['id'];
+									echo "0".$value['id'];
 								}
-								echo $value['id']; 
 							?>
 						</label>
 					</td>
-					<td align="center" ><?php echo $value['username'];?></td>
+					<td style="text-indent: 30px;"><?php echo $value['username'];?></td>
 					<td style="text-indent: 30px;"><?php echo $value['email'];?></td>
 					<td align="center">
-						<input type="button" name="editAdmin" value="修改">&nbsp;&nbsp;
+						<input type="button" name="editAdmin" value="修改" onclick="editAdmin(<?php echo $value['id']; ?>)">&nbsp;&nbsp;
 						<input type="button" name="deleteAdmin" value="删除">
 					</td>
 				</tr>
@@ -52,5 +51,10 @@
 			    }
 			?>
 		</table>
+<script language='javascript'>
+	function editAdmin(id){
+		window.location="editAdmin.php?id="+id;
+	}
+</script>
 </body>
 </html>

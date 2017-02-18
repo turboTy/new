@@ -8,18 +8,17 @@
 <?php
 require_once '../include.php';
 $act = $_GET['act'];
-// $act = 'listAdmin';
+$id = $_REQUEST['id'];
+// $act = 'editAdmin';
 $mysqli = connect();
 if ($act == 'logout'){
     logout();
 }elseif ($act == 'addAdmin'){
     $mes = addAdmin();
-}elseif ($act == 'listAdmin'){
-    $sql = "select * from imooc_admin";
-    $rows_admin = fetchAll($mysqli, $sql);
-    $_SESSION['rows_admin'] = $rows_admin;
+}elseif ($act == 'editAdmin'){
+    $mes = editAdmin($id);
 }
-// var_dump($_SESSION['rows_admin']);
+// var_dump($mes);
 // exit();
 if ($mes) {
 	echo $mes;

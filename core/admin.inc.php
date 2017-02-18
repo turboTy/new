@@ -36,12 +36,28 @@ function addAdmin(){
     return $mes;
 }
 
+function editAdmin($id){
+    $mysqli = connect();
+    $arr['username'] = $_POST['username'];
+    $arr['password'] = md5(sha1($_POST['password']));
+    $arr['email'] = $_POST['email'];
+    $res = update($mysqli, "imooc_admin", $arr,"id = {$id}");
+    if($res){
+        $mes = "修改成功!<br><a href='listAdmin.php'>返回管理员列表</a>";
+    }else{
+        $mes = "修改失败!<br><a href='editAdmin.php'>重新修改</a>";
+    }
+    return $mes;
+}
+
+
 /**得到所有的管理员
  * @return mixed
  */
 function getAllAdmin(){
     $mysqli = connect();
-    $rows = $mysqli->query("select * from imooc_admin");
+    $sql = "select * from imooc_admin";
+    $rows = fetchAll($mysqli, $sql);
     return $rows;
 }
 
