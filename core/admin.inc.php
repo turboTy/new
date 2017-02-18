@@ -20,6 +20,9 @@ function checkLogined(){
     }
 }
 
+/**添加管理员
+ * @return string
+ */
 function addAdmin(){
     $mysqli = connect();
     $arr['username'] = $_POST['username'];
@@ -31,6 +34,15 @@ function addAdmin(){
         $mes = "管理员添加失败!<br><a href='addAdmin.php'>重新添加</a>";
     }
     return $mes;
+}
+
+/**得到所有的管理员
+ * @return mixed
+ */
+function getAllAdmin(){
+    $mysqli = connect();
+    $rows = $mysqli->query("select * from imooc_admin");
+    return $rows;
 }
 
 /**

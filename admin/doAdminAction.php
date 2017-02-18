@@ -7,7 +7,7 @@
 <body>
 <?php
 require_once '../include.php';
-$act = $_REQUEST['act'];
+$act = $_GET['act'];
 // $act = 'listAdmin';
 $mysqli = connect();
 if ($act == 'logout'){
@@ -19,6 +19,8 @@ if ($act == 'logout'){
     $rows_admin = fetchAll($mysqli, $sql);
     $_SESSION['rows_admin'] = $rows_admin;
 }
+// var_dump($_SESSION['rows_admin']);
+// exit();
 if ($mes) {
 	echo $mes;
 }
