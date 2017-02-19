@@ -4,7 +4,12 @@
     if (!$rows){
         alertMes("没有管理员.请先添加!", 'addAdmin.php');
     }
-    
+    $arr = getAdminByPage(4);
+    $page = $arr['page'];
+    $totalPage = $arr['totalPage'];
+    $row = $arr['row'];
+    $totalRows = $arr['totalRows'];
+    $pageStr = showPage($page, $totalPage);
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
@@ -30,7 +35,7 @@
 			<?php
 // 				var_dump($rows);
 // 				exit();
-				foreach ($rows as $key=>$value){
+				foreach ($row as $value){
 		    ?>
 				<tr height='30'>
 					<td align="center" >
@@ -56,7 +61,12 @@
 				</tr>
 			<?php 
 			    }
+			    if ($totalRows > $pageSize) {
 			?>
+			    <tr height='30'>
+			        <td colspan='4'><?php echo $pageStr; ?></td> 
+			    </tr>
+			<?php }?>
 		</table>
 <script language='javascript'>
 	function editAdmin(id){

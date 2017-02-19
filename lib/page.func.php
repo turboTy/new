@@ -29,6 +29,13 @@ require_once '../include.php';
 //     echo "管理员邮箱:".$row['email']."<hr>";
 // }
 
+/**显示页码
+ * @param int $page
+ * @param int $totalPage
+ * @param string $where
+ * @param string $sep
+ * @return string
+ */
 function showPage($page,$totalPage,$where=null,$sep="&nbsp;"){
     $url = $_SERVER['PHP_SELF'];
     $where = ($where == null) ? null : "&" . $where;
