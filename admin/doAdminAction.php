@@ -9,7 +9,7 @@
 require_once '../include.php';
 $act = $_GET['act'];
 $id = $_REQUEST['id'];
-// $act = 'addCate';
+// $act = 'editCate';
 $mysqli = connect();
 if ($act == 'logout'){
     logout();
@@ -21,8 +21,11 @@ if ($act == 'logout'){
     $mes = delAdmin($id);
 }elseif ($act == 'addCate'){
     $mes = addCate();
+}elseif($act == 'editCate'){
+    $mes = editCate($id);
+}elseif ($act == 'delCate'){
+    $mes = delCate($id);
 }
-
 
 // var_dump($mes);
 // exit();

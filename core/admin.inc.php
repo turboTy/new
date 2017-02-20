@@ -100,9 +100,9 @@ function logout(){
  * @param number $pageSize
  * @return Ambigous <number, unknown>
  */
-function getAdminByPage($pageSize = 3){
+function getAdminByPage($pageSize = 3,$table){
     $mysqli = connect();
-    $sql = "select * from imooc_admin";
+    $sql = "select * from {$table}";
     $rows = fetchAll($mysqli, $sql);
     $url = $_SERVER['PHP_SELF'];
     $totalRows = getResultNum($mysqli, $sql);
@@ -119,7 +119,7 @@ function getAdminByPage($pageSize = 3){
         $page = $totalPage;
     }
     $offset = $pageSize * ($page-1);
-    $sql2 = "select * from imooc_admin limit {$offset}, {$pageSize}";
+    $sql2 = "select * from {$table} order by id asc limit {$offset}, {$pageSize}";
     $row = fetchAll($mysqli, $sql2);
     $arr['page'] = $page;
     $arr['totalPage'] = $totalPage;
