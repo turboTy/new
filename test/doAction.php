@@ -8,11 +8,26 @@ $type = $_FILES['myFile']['type'];
 $tmp_name = $_FILES['myFile']['tmp_name'];
 $error = $_FILES['myFile']['error'];
 $size = $_FILES['myFile']['size'];
-// $allowExt = array("gif","jpg","jpeg","png","wbmp");
-// $imgFlag= true;
-// $maxSize = 1512000;
+$ext = getExt($filename);
+$maxSize = 1500000;
+$filename = getUniName().".".$ext;
+$allowExt = array("gif","png","jpg","jpeg","wbmp");
 if ($error == 0){
-    $destination = "uploads/".$filename;
+    if (!in_array($ext, $allowExt)){
+        exit("非法文件类型");
+    }
+    if ($size > $maxSize){
+        exit("超出规定文件大小");
+    }
+    $path = 'uploads';
+    if (!file_exists($path)){
+        mkdir($path,0777,true);
+    }
+    $destination = $path."/".$filename;
+    $imgFlag = getimagesize($tmp_name);
+    if (!$imgFlag){
+        exit("不是真正的图片文件");
+    }
     if (is_uploaded_file($tmp_name)){
         if (move_uploaded_file($tmp_name, $destination)){
             $mes = "文件上传成功";
