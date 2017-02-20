@@ -18,7 +18,11 @@
 require_once "../include.php";
 ?>
 <div class="page">
-	<?php echo showPage($_REQUEST['page'],6); ?>
+	<?php 
+	   echo showPage($_REQUEST['page'],6);
+	   echo "<br>";
+	   print_r(phpinfo());
+	?>
 </div>
 </body>
 </html>
