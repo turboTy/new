@@ -5,7 +5,7 @@
 	<title>文件上传</title>
 </head>
 <body>
-	<form action="doAction.php" method="post" enctype="multipart/form-data">
+	<form action="doAction1.php" method="post" enctype="multipart/form-data">
 	    <input type="hidden" name="MAX_FILE_SIZE" value="1500000">
 		<input type="file" name="myFile">
 		<input type="submit" name="submit">

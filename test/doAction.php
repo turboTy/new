@@ -2,7 +2,7 @@
 require_once '../include.php';
 header("content-type:text/html;charset=utf-8");
 // $arr = $_POST;
-// var_dump($_FILES);
+var_dump($_FILES);exit;
 $filename = $_FILES['myFile']['name'];
 $type = $_FILES['myFile']['type'];
 $tmp_name = $_FILES['myFile']['tmp_name'];
