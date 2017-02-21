@@ -136,7 +136,7 @@ function uploadFiles($path='uploads',$allowExt=array("gif","jpeg","jpg","png","w
                     $mes = "文件不可写"; //UPLOAD_ERR_CANT_WRITE
                     break;
                 case 8:
-                    $mes = "由于PHP的扩展程序终止了上传"; //UPLOAD_ERR_EXTENSION
+                    $mes = "由于PHP的扩展程序终止了上传";  //UPLOAD_ERR_EXTENSION
                     break;
             }
             echo $mes;
