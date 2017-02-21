@@ -37,10 +37,3 @@ function getExt($filename){
 }
 
 
-
-
-
-
-
-
-

@@ -70,3 +70,30 @@ function uploadFile($fileInfo,$maxSize = 1500000,$allowExt = array("gif","png","
     }
     return $mes;
 }
+
+/**上传多个文件
+ * @return array
+ */
+function uploadInfo(){
+    $i = 0;
+    foreach($_FILES as $v){
+        if (is_string($v['name'])){
+            $info[$i] = $v;
+            $i++;
+        }else{
+            foreach ($v['name'] as $key=>$val){
+                $info[$i]['name'] = $v['name'][$i];
+                $info[$i]['type'] = $v['type'][$i];
+                $info[$i]['size'] = $v['size'][$i];
+                $info[$i]['tmp_name'] = $v['tmp_name'][$i];
+                $info[$i]['error'] = $v['error'][$i];
+                $i++;
+            }
+        }
+    }
+    return $info;
+}
+
+
+
+
