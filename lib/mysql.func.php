@@ -100,6 +100,12 @@ function getResultNum($mysqli,$sql){
     return $row;
 }
 
+function getInsertId(){
+    $mysqli = connect();
+    $id = mysqli_insert_id($mysqli);
+    return $id;
+}
+
 
 
 

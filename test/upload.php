@@ -5,12 +5,12 @@
 	<title>文件上传</title>
 </head>
 <body>
-	<form action="doAction3.php" method="post" enctype="multipart/form-data">
+	<form action="doAction2.php" method="post" enctype="multipart/form-data">
 	    <input type="hidden" name="MAX_FILE_SIZE" value="1500000">
 <!-- 		<input type="file" name="myFile[]"><br> -->
 <!-- 		<input type="file" name="myFile[]"><br> -->
 <!-- 		<input type="file" name="myFile[]"><br> -->
-<!-- 		<input type="file" name="myFile1"><br> -->
+		<input type="file" name="myFile1"><br>
 		<input type="file" name="myFile2"><br>
 		<input type="submit" name="submit">
 	</form>
