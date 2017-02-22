@@ -84,7 +84,8 @@ function uploadFiles($path='uploads',$allowExt=array("gif","jpeg","jpg","png","w
     }
     $i = 0;
     $files = uploadInfo();
-    foreach ($files as $fileinfo){
+//     var_dump($files);exit;
+    foreach ($files as $key => $fileinfo){
         if ($fileinfo['error']===UPLOAD_ERR_OK){
             //判断文件是否超出规定大小
             if ($fileinfo['size'] > $maxSize){
@@ -152,6 +153,7 @@ function uploadFiles($path='uploads',$allowExt=array("gif","jpeg","jpg","png","w
  */
 function uploadInfo(){
     $i = 0;
+//     var_dump($_FILES);exit;
     foreach($_FILES as $v){
         if (is_string($v['name'])){
             $info[$i] = $v;
