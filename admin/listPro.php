@@ -10,6 +10,8 @@ body {font-family: "microsoft yahei";}
 .fr {float: right;}
 .top_bar {width: 98%; height: 40px; line-height: 40px; margin-bottom: 10px;}
 .top_bar_l input {margin-top: 10px;}
+.page a {color: #666;text-decoration: none;}
+table td {text-indent: 10px;}
 </style>
 <body>
 <?php
@@ -71,8 +73,11 @@ $pageStr = showPage($page, $totalPage);
 				<th>操作</th>
 			</tr>
 			<?php foreach ($row as $pro):?>
-			<tr height='40'>
-				<td width="10%"><?php echo $pro['id'];?></td>
+			<tr height='40' >
+				<td width="10%">
+					<input type="checkbox" id="<?php echo $pro['id'];?>">
+					<label for="<?php echo $pro['id'];?>"><?php echo $pro['id'];?></label>
+				</td>
 				<td width="25%"><?php echo $pro['pName'];?></td>
 				<td width="15%"><?php echo $pro['cId'];?></td>
 				<td width="15%"><?php echo $pro['isShow'];?></td>
