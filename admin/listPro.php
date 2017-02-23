@@ -48,7 +48,7 @@ $pageStr = showPage($page, $totalPage);
 <form action="" method="post" enctype="multipart/form-data">
 	<div class="top_bar">
 		<div class="top_bar_l fl">
-			<input type="submit" value="添加商品" onclick="addPro()">
+			<input type="button" value="添加商品" onclick="addPro()">
 		</div>
 		<div class="top_bar_r fr">
 			<span>商品分类：</span>
@@ -82,7 +82,10 @@ $pageStr = showPage($page, $totalPage);
 				<td width="25%"><?php echo $pro['pName'];?></td>
 				<td width="15%"><?php echo $pro['cId'];?></td>
 				<td width="15%"><?php echo $pro['isShow'];?></td>
-				<td>操作</td>
+				<td align="center">
+					<input type="button" value="修改" onclick="editPro(<?php echo $pro['id'];?>)">&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="button" value="删除" onclick="delPro(<?php echo $pro['id'];?>)">
+				</td>
 			</tr>
 			<?php endforeach;?>
 		</table>
@@ -90,5 +93,16 @@ $pageStr = showPage($page, $totalPage);
 			<?php echo $pageStr;?>
 		</div>
 </form>
+<script language="javascript">
+	function addPro(){
+		window.location="addPro.php";
+	}
+	function editPro(id){
+		window.location="editPro.php?act=editPro&id="+id;
+	}
+	function delPro(id){
+		window.location="doAdminAction.php?id="+id;
+	}
+</script>
 </body>
 </html>

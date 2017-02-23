@@ -27,6 +27,8 @@ if ($act == 'logout'){
     $mes = delCate($id);
 }elseif ($act == 'addPro'){
     $mes = addPro();
+}elseif ($act == 'editPro'){
+    $mes = editPro($id);
 }
 
 // var_dump($mes);

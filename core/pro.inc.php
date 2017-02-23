@@ -106,3 +106,17 @@ function getProByPage($pageSize = 3,$sql){
     $arr['row'] = $row;
     return $arr;
 }
+
+function editPro($id){
+    $mysqli = connect();
+    $array = $_POST;
+//     var_dump($array);exit;
+    $res = update($mysqli, "imooc_pro", $array," id = {$id}");
+    if ($res){
+        $mes = "修改成功<br><a href='listPro.php'>返回列表</a>";
+    }else{
+        $mes = "修改失败<br><a href='editPro.php?id=$id'>返回修改</a>|<a href='listPro.php'>返回列表</a>";
+    }
+    return $mes;
+}
+
