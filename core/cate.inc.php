@@ -41,7 +41,7 @@ function editCate($id){
     }
     return $mes;
 }
-
+  
 function delCate($id){
     $mysqli = connect();
     if(delete($mysqli, "imooc_cate","id = {$id}")){

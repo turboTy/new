@@ -18,8 +18,8 @@ table td {text-indent: 10px;}
 <?php
 require_once "../include.php";
 $cates = getAllCate();
+// var_dump($cates);exit;
 // $pros = getAllPro();
-
 $proName = $_POST['proName'];
 $pName = $_POST;
 $searchText = $_POST['searchText'];
@@ -32,7 +32,7 @@ if ($proName == null){
 }elseif($proName == 2){
     $sql = "select * from imooc_pro where pSn = {$searchText}";
 }
-$arr = getProByPage(5, $sql);
+$arr = getProByPage(8, $sql);
 $page = $arr['page'];
 $row = $arr['row'];
 if ($row == null){
@@ -80,8 +80,21 @@ $pageStr = showPage($page, $totalPage);
 					<label for="<?php echo $pro['id'];?>"><?php echo $pro['id'];?></label>
 				</td>
 				<td width="25%"><?php echo $pro['pName'];?></td>
-				<td width="15%"><?php echo $pro['cId'];?></td>
-				<td width="15%"><?php echo $pro['isShow'];?></td>
+				<td width="15%"><?php 
+                                    $id = $pro['cId'];
+                                    foreach ($cates as $cate){
+                                        if ($id == $cate['id']){
+                                            echo $cate['cName'];
+                                        }
+                                    }
+				                 ?></td>
+				<td width="15%"><?php 
+				                    if($pro['isShow']){
+				                        echo "是";
+				                    }else{
+				                        echo "否";
+				                    }
+				                ?></td>
 				<td align="center">
 					<input type="button" value="修改" onclick="editPro(<?php echo $pro['id'];?>)">&nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="button" value="删除" onclick="delPro(<?php echo $pro['id'];?>)">
