@@ -100,9 +100,10 @@ function logout(){
  * @param number $pageSize
  * @return Ambigous <number, unknown>
  */
-function getAdminByPage($pageSize = 3,$table){
+function getAdminByPage($pageSize = 3,$table,$where = null){
     $mysqli = connect();
-    $sql = "select * from {$table}";
+    $sql = "select * from {$table}{$where}";
+//     var_dump($sql);exit;
     $rows = fetchAll($mysqli, $sql);
     $url = $_SERVER['PHP_SELF'];
     $totalRows = getResultNum($mysqli, $sql);
@@ -119,7 +120,7 @@ function getAdminByPage($pageSize = 3,$table){
         $page = $totalPage;
     }
     $offset = $pageSize * ($page-1);
-    $sql2 = "select * from {$table} order by id asc limit {$offset}, {$pageSize}";
+    $sql2 = "select * from {$table}{$where} order by id asc limit {$offset}, {$pageSize}";
     $row = fetchAll($mysqli, $sql2);
     $arr['page'] = $page;
     $arr['totalPage'] = $totalPage;

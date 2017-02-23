@@ -1,5 +1,8 @@
 <?php
 require_once '../include.php';
+/**新增商品
+ * @return string
+ */
 function addPro(){
     $arr = $_POST;
     $arr['pubTime'] = time();
@@ -46,3 +49,24 @@ function addPro(){
     }
     return $mes;  
 }
+
+/**得到所有的商品信息
+ * @return multitype:
+ */
+function getAllPro(){
+    $mysqli = connect();
+    $sql = "select * from imooc_pro";
+    $res = fetchAll($mysqli, $sql);
+    return $res;
+}
+
+// function getWhere($cond,$pName,$pSn){
+//     if ($cond == null){
+//         $where = null;
+//     }elseif ($cond == 1){
+//         $where = "pName = {$pName}";
+//     }elseif ($cond == 2){
+//         $where = "pSn = {$pSn}";
+//     }
+// }
+
