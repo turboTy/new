@@ -70,3 +70,39 @@ function getAllPro(){
 //     }
 // }
 
+
+/**得到商品信息页面的页码
+ * @param number $pageSize
+ * @param unknown $table
+ * @param string $where
+ * @return Ambigous <number, unknown>
+ */
+function getProByPage($pageSize = 3,$sql){
+    $mysqli = connect();
+    //     $sql = "select * from {$table}{$where}";
+    //     var_dump($sql);exit;
+    $rows = fetchAll($mysqli, $sql);
+    $url = $_SERVER['PHP_SELF'];
+//     var_dump($sql);exit;
+    $totalRows = getResultNum($mysqli, $sql);
+    $totalPage = ceil($totalRows/$pageSize);
+    // $page = $_REQUEST['page']?(int)$_REQUEST['page']:1;
+    if ($_REQUEST['page']){
+        $page = $_REQUEST['page'];
+    }else{
+        $page = 1;
+    }
+    if ($page<1 || $page == null || !is_numeric($page)){
+        $page = 1;
+    }elseif ($page>$totalPage){
+        $page = $totalPage;
+    }
+    $offset = $pageSize * ($page-1);
+    $sql2 = $sql." order by id asc limit {$offset}, {$pageSize}";
+    $row = fetchAll($mysqli, $sql2);
+    $arr['page'] = $page;
+    $arr['totalPage'] = $totalPage;
+    $arr['totalRows'] = $totalRows;
+    $arr['row'] = $row;
+    return $arr;
+}

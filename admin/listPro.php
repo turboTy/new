@@ -11,6 +11,7 @@ body {font-family: "microsoft yahei";}
 .top_bar {width: 98%; height: 40px; line-height: 40px; margin-bottom: 10px;}
 .top_bar_l input {margin-top: 10px;}
 .page a {color: #666;text-decoration: none;}
+.page a:hover {text-decoration: underline;}
 table td {text-indent: 10px;}
 </style>
 <body>
@@ -27,11 +28,11 @@ $wh = "cId = {$proCate}";
 if ($proName == null){
     $sql = "select * from imooc_pro";
 }elseif ($proName == 1){
-    $sql = "select * from imooc_pro where pName = {$searchText}";
+    $sql = "select * from imooc_pro where pName like '%$searchText%'";
 }elseif($proName == 2){
     $sql = "select * from imooc_pro where pSn = {$searchText}";
 }
-$arr = getAdminByPage(5, "imooc_pro",$where = " where ".$wh);
+$arr = getProByPage(5, $sql);
 $page = $arr['page'];
 $row = $arr['row'];
 if ($row == null){

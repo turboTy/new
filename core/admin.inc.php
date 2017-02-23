@@ -128,3 +128,6 @@ function getAdminByPage($pageSize = 3,$table,$where = null){
     $arr['row'] = $row;
     return $arr;
 }
+
+
+
