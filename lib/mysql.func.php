@@ -1,5 +1,5 @@
 <?php
-
+// require_once '../include.php';
 /**链接数据库的操作
  * @return mysqli
  * return resource
@@ -73,8 +73,12 @@ function update($mysqli,$table,$array,$where = null){
  * @return Number
  */
 function fetchOne($mysqli,$sql,$result_type = MYSQLI_ASSOC){
-    $result = $mysqli->query($sql);
-    $row = @mysqli_fetch_array($result,$result_type);
+    $result = mysqli_query($mysqli,$sql);
+//     var_dump($sql);exit;
+//     if ($result){echo "*****";exit;}
+    $row = mysqli_fetch_array($result,$result_type);
+//     $row = mysqli_fetch_assoc($result);
+//     var_dump($row);exit;
     return $row;
 }
 

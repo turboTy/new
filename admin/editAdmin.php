@@ -20,7 +20,7 @@ $arr = fetchOne($mysqli, $sql);
 		background-color:#f0f0f0;">
 		<tr>
 		<td>管理员名称</td>
-		<td><input type="text" name="username" placeholder="<?php echo $arr['username'];?>"></td>
+		<td><input type="text" name="username" value="<?php echo $arr['username'];?>"></td>
 		</tr>
 		<tr>
 		<td>管理员密码</td>
@@ -28,7 +28,7 @@ $arr = fetchOne($mysqli, $sql);
 		</tr>
 		<tr>
 		<td>管理员邮箱</td>
-		<td><input type="text" name="email" placeholder="<?php echo $arr['email'];?>"></td>
+		<td><input type="text" name="email" value="<?php echo $arr['email'];?>"></td>
 		</tr>
 		<tr>
 		<td colspan="2"><input type="submit" value="保存修改" name="submit"></td>

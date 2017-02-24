@@ -6,7 +6,10 @@ require_once '../include.php';
  */
 function checkAdmin($sql){
     $mysqli = connect();
-    return fetchOne($mysqli,$sql);
+//     global $mysqli;
+    $res = fetchOne($mysqli,$sql);
+//     var_dump($res);exit;
+    return $res;
 }
 
 /**检测管理员是否登录
