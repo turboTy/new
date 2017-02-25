@@ -107,6 +107,10 @@ function getProByPage($pageSize = 3,$sql){
     return $arr;
 }
 
+/**编辑商品分类信息
+ * @param  int $id
+ * @return string
+ */
 function editPro($id){
     $mysqli = connect();
     $array = $_POST;
@@ -116,6 +120,21 @@ function editPro($id){
         $mes = "修改成功<br><a href='listPro.php'>返回列表</a>";
     }else{
         $mes = "修改失败<br><a href='editPro.php?id=$id'>返回修改</a>|<a href='listPro.php'>返回列表</a>";
+    }
+    return $mes;
+}
+
+/**删除商品信息
+ * @param int $id
+ * @return string
+ */
+function delPro($id){
+    $mysqli = connect();
+    $result = delete($mysqli, 'imooc_pro'," id = '$id'");
+    if ($result){
+        $mes = "删除成功<br><a href='listPro.php'>返回列表</a>";
+    }else{
+        $mes = "删除失败<br><a href='listPro.php'>重新删除</a>";
     }
     return $mes;
 }

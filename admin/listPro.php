@@ -23,14 +23,22 @@ $cates = getAllCate();
 $proName = $_POST['proName'];
 $pName = $_POST;
 $searchText = $_POST['searchText'];
-$proCate = $_POST['proCate']==null?10:$_POST['proCate'];
-$wh = "cId = {$proCate}";
+$proCate = $_POST['proCate'];
+if ($proCate){
+    if ($proName == null){
+        $wh = " where cId = '$proCate'";
+    }else{
+        $wh = " and cId = '$proCate'";
+    }
+}else{
+    $wh = null;
+}
 if ($proName == null){
-    $sql = "select * from imooc_pro";
+    $sql = "select * from imooc_pro".$wh;
 }elseif ($proName == 1){
-    $sql = "select * from imooc_pro where pName like '%$searchText%'";
+    $sql = "select * from imooc_pro where pName like '%$searchText%'".$wh;
 }elseif($proName == 2){
-    $sql = "select * from imooc_pro where pSn = {$searchText}";
+    $sql = "select * from imooc_pro where pSn = {$searchText}".$wh;
 }
 $arr = getProByPage(8, $sql);
 $page = $arr['page'];
@@ -53,6 +61,7 @@ $pageStr = showPage($page, $totalPage);
 		<div class="top_bar_r fr">
 			<span>商品分类：</span>
 			<select name="proCate"  >
+				<option value="">选择商品分类</option>
 			<?php  foreach ($cates as $cate):?>
 				<option value="<?php echo $cate['id']; ?>"><?php echo $cate['cName'];?></option>
 			<?php endforeach; ?>
@@ -64,7 +73,6 @@ $pageStr = showPage($page, $totalPage);
 			<input type="text" name="searchText" placeholder="请输入搜索条件"><input type="submit" value="搜索">
 		</div>
 	</div>
-	
 		<table border="1" style="border-collapse:collapse; background-color:#f0f0f0; width:98%;">
 			<tr height='40'>
 				<th width="10%">编号</th>
@@ -114,7 +122,7 @@ $pageStr = showPage($page, $totalPage);
 		window.location="editPro.php?act=editPro&id="+id;
 	}
 	function delPro(id){
-		window.location="doAdminAction.php?id="+id;
+		window.location="doAdminAction.php?act=delPro&id="+id;
 	}
 </script>
 </body>

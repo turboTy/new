@@ -26,7 +26,7 @@ function getAllCate(){
 }
 
 /**编辑分类
- * @param unknown $id
+ * @param int $id
  * @return string
  */
 function editCate($id){
@@ -42,6 +42,10 @@ function editCate($id){
     return $mes;
 }
   
+/**删除分类
+ * @param int $id
+ * @return string
+ */
 function delCate($id){
     $mysqli = connect();
     if(delete($mysqli, "imooc_cate","id = {$id}")){

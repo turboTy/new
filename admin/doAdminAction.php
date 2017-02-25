@@ -29,6 +29,8 @@ if ($act == 'logout'){
     $mes = addPro();
 }elseif ($act == 'editPro'){
     $mes = editPro($id);
+}elseif ($act == 'delPro'){
+    $mes = delPro($id);
 }
 
 // var_dump($mes);
