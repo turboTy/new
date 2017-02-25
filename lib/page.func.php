@@ -1,33 +1,5 @@
 <?php
 require_once '../include.php';
-// $mysqli = connect();
-// $sql = "select * from imooc_admin";
-// $rows = fetchAll($mysqli, $sql);
-// $url = $_SERVER['PHP_SELF'];
-// // var_dump($rows);
-// $pageSize = 3;
-// $totalRows = getResultNum($mysqli, $sql);
-// $totalPage = ceil($totalRows/$pageSize);
-// // $page = $_REQUEST['page']?(int)$_REQUEST['page']:1;
-// if ($_REQUEST['page']){
-//     $page = $_REQUEST['page'];
-// }else{
-//     $page = 1;
-// }
-// if ($page<1 || $page == null || !is_numeric($page)){
-//     $page = 1;
-// }elseif ($page>$totalPage){
-//     $page = $totalPage;
-// }
-// // var_dump($page);
-// // exit();
-// $offset = $pageSize * ($page-1); 
-// $sql2 = "select * from imooc_admin limit {$offset}, {$pageSize}";
-// $rows = fetchAll($mysqli, $sql2);
-// foreach ($rows as $row){
-//     echo "管理员名称:".$row['username']."<br>";
-//     echo "管理员邮箱:".$row['email']."<hr>";
-// }
 
 /**显示页码
  * @param int $page

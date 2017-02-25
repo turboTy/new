@@ -18,12 +18,15 @@ table td {text-indent: 10px;}
 <?php
 require_once "../include.php";
 $cates = getAllCate();
-// var_dump($cates);exit;
-// $pros = getAllPro();
 $proName = $_POST['proName'];
 $pName = $_POST;
 $searchText = $_POST['searchText'];
 $proCate = $_POST['proCate'];
+$cId = $_REQUEST['cId'];
+if ($cId){
+    $proCate = $cId;
+}
+//判断如果选择了分类名称,则显示该分类下得所有商品,默认为没有选择分类
 if ($proCate){
     if ($proName == null){
         $wh = " where cId = '$proCate'";
@@ -33,6 +36,7 @@ if ($proCate){
 }else{
     $wh = null;
 }
+//判断如果搜索框内有查询条件,则根据查询条件搜索所有相符的信息,查询条件默认为空
 if ($proName == null){
     $sql = "select * from imooc_pro".$wh;
 }elseif ($proName == 1){
@@ -43,15 +47,13 @@ if ($proName == null){
 $arr = getProByPage(8, $sql);
 $page = $arr['page'];
 $row = $arr['row'];
+
 if ($row == null){
-//     alertMes("该分类下没有商品,请先添加", "addPro.php");
     $row = array();
 }
 $totalRows = $arr['totalRows'];
 $totalPage = $arr['totalPage'];
-// $pros = fetchAll($mysqli, $sql);
-// var_dump($row);exit;
-$pageStr = showPage($page, $totalPage);
+$pageStr = showPage($page, $totalPage, "&cId=$cId");
 ?>
 <form action="" method="post" enctype="multipart/form-data">
 	<div class="top_bar">
@@ -121,8 +123,11 @@ $pageStr = showPage($page, $totalPage);
 	function editPro(id){
 		window.location="editPro.php?act=editPro&id="+id;
 	}
+	
 	function delPro(id){
-		window.location="doAdminAction.php?act=delPro&id="+id;
+		if(window.confirm('您确定要删除该商品吗?删除后不可恢复!')){
+			window.location="doAdminAction.php?act=delPro&id="+id;
+		}
 	}
 </script>
 </body>

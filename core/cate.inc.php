@@ -48,12 +48,17 @@ function editCate($id){
  */
 function delCate($id){
     $mysqli = connect();
-    if(delete($mysqli, "imooc_cate","id = {$id}")){
-        $mes = "删除成功<br><a href='listCate.php'>返回分类列表</a>";
+    $res = checkProExist($id);
+    if (!$res){
+        if(delete($mysqli, "imooc_cate","id = {$id}")){
+            $mes = "删除成功<br><a href='listCate.php'>返回分类列表</a>";
+        }else{
+            $mes = "删除失败,请重新尝试!<br><a href='listCate.php'>返回分类列表</a>";
+        }
+        return $mes;
     }else{
-        $mes = "删除失败,请重新尝试!<br><a href='listCate.php'>返回分类列表</a>";
+        alertMes("该分类下有商品信息,请先删除该分类下的所有商品信息", 'listPro.php?cId='.$id);
     }
-    return $mes;
 }
 
     

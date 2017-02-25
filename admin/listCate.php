@@ -25,7 +25,7 @@
 	 margin-bottom: 20px; color: #fff; font: normal bold 16px/35px "Microsoft YAHEI"; cursor: pointer; }
 </style>
 <body>
-<h3>管理员列表</h3>
+<h3>分类列表</h3>
 		<input type="button" value="添　加" name="add" class="add" onclick="add()">
 		<table border = "1" width = "90%" align="center" style="border-collapse:collapse; 
             background-color: #f0f0f0;">

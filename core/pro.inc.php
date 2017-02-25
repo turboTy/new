@@ -139,3 +139,10 @@ function delPro($id){
     return $mes;
 }
 
+
+function checkProExist($id){
+    $mysqli = connect();
+    $sql = "select * from imooc_pro where cId = '$id'";
+    $res = fetchAll($mysqli, $sql);
+    return $res;
+}
