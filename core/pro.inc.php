@@ -113,13 +113,25 @@ function editPro($id){
  */
 function delPro($id){
     $mysqli = connect();
-    foreach ($id as $cId):
-        $result = delete($mysqli, 'imooc_pro'," id = '$cId'");
-    endforeach;
+    $result = delete($mysqli, 'imooc_pro'," id = '$id'");
     if ($result){
         $mes = "删除成功<br><a href='listPro.php'>返回列表</a>";
     }else{
         $mes = "删除失败<br><a href='listPro.php'>重新删除</a>";
+    }
+    return $mes;
+}
+
+function delPros($id){
+    $mysqli = connect();
+    $arr = explode(",", $id);
+    foreach ($arr as $value){
+        $res = delete($mysqli, 'imooc_pro', " id = '$value'");
+    }
+    if ($res){
+        $mes = "批量删除成功<br><a href='listPro.php>返回列表</a>'";
+    }else{
+        $mes = "删除失败<br><a href='listPro.php'>重新尝试</a>";
     }
     return $mes;
 }

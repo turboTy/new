@@ -12,6 +12,8 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<title>添加商品</title>
 </head>
+<style>
+</style>
 <body>
 	<h3>添加商品</h3>
 	<form action="doAdminAction.php?act=addPro" method="post" enctype="multipart/form-data"> 
@@ -57,7 +59,6 @@
 				<td align="right" width="16%">商品图像</td>
 				<td style="text-indent:10px;">
 					<input type="file" value="添加附件" name="thumbs1" >
-					<input type="file" value="添加附件" name="thumbs2" >
 				</td>
 			</tr>
 			<tr height="28">

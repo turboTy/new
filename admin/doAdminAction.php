@@ -31,6 +31,8 @@ if ($act == 'logout'){
     $mes = editPro($id);
 }elseif ($act == 'delPro'){
     $mes = delPro($id);
+}elseif ($act == 'delPros'){
+    $mes = delPros($id);
 }
 
 // var_dump($mes);

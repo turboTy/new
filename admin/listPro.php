@@ -14,9 +14,15 @@ body {font-family: "microsoft yahei";}
 .fr {float: right;}
 .top_bar {width: 98%; height: 40px; line-height: 40px; margin-bottom: 10px;}
 .top_bar_l input {margin-top: 10px;}
+.top_bar_l input {height: 29px;width: 120px; font: normal 14px/26px "microsoft yahei"; color: #fff; 
+background-color: #666; border: 1px solid #666; cursor: pointer;}
 .page a {color: #666;text-decoration: none;}
 .page a:hover {text-decoration: underline;}
 table td {text-indent: 10px;}
+.btn {width: 70px; height: 26px; cursor: pointer;}
+.delPros {height: 40px; width: 8%;}
+.delPros input {height: 29px;width: 120px; font: normal 14px/26px "microsoft yahei"; color: #fff; 
+background-color: #666; border: 1px solid #666; cursor: pointer;}
 </style>
 <body>
 <?php
@@ -57,6 +63,8 @@ if ($row == null){
 $totalRows = $arr['totalRows'];
 $totalPage = $arr['totalPage'];
 $pageStr = showPage($page, $totalPage, "&cId=$cId");
+// var_dump($_POST['checkbox']);
+
 ?>
 <div id="showDetail" style="display:none;">
 	
@@ -92,7 +100,7 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 			<?php $prosId = ""; foreach ($row as $pro):?>
 			<tr height='40' >
 				<td>
-					<input type="checkbox" id="<?php echo $pro['id'];?>">
+					<input type="checkbox" name="checkbox" value="<?php echo $pro['id'];?>" id="<?php echo $pro['id'];?>">
 					<label for="<?php echo $pro['id'];?>">
 						<?php 
 							echo $pro['id']; 
@@ -102,6 +110,7 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 							    $sep = ",";
 							}
 							$prosId .= $sep.$pro['id'];
+							
 						?>
 					</label>
 				</td>
@@ -122,12 +131,12 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 				                    }
 				                ?></td>
 				<td align="center">
-					<input type="button" value="详情"
+					<input type="button" value="详情" class="btn"
 					onclick="showDetail(<?php echo $pro['id'];?>,'<?php echo $pro['pName'];?>')">
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="button" value="修改" onclick="editPro(<?php echo $pro['id'];?>)">
+					<input type="button" value="修改" class="btn" onclick="editPro(<?php echo $pro['id'];?>)">
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<input type="button" value="删除" onclick="delPro(<?php echo $pro['id'];?>)">
+					<input type="button" value="删除" class="btn" onclick="delPro(<?php echo $pro['id'];?>)">
 					<div id="showDetail<?php echo $pro['id']; ?>" style="display:none;">
                     	<table class="table" cellspacing="0" cellpadding="0">
                     		<tr>
@@ -203,11 +212,15 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 				</td>
 			</tr>
 			<?php endforeach;?>
+			
 		</table>
-		<div class="page">
-			<?php echo $pageStr;?>
-		</div>
 </form>
+<div class="delPros">
+	<input type="button" value="批量删除" onclick="delPros()">
+</div>
+<div class="page">
+	<?php echo $pageStr;?>
+</div>
 <script type="text/javascript">
 	function showDetail(id,t){
 		$("#showDetail"+id).dialog({
@@ -228,7 +241,6 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 	}
 </script>
 <script language="javascript">
-	
 	function addPro(){
 		window.location="addPro.php";
 	}
@@ -240,12 +252,28 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 			window.location="doAdminAction.php?act=delPro&id="+id;
 		}
 	}
-	function delPros(id){
-		if(window.confirm('您确定要删除这些商品吗?删除后不可恢复!')){
-			window.location="doAdminAction.php?act=delPros&id="+id;
-			alert(id);
+	function delPros(){
+		var str = document.getElementsByName('checkbox');
+		var objarray = str.length;
+		var id = "";
+		for (var i = 0; i < objarray; i++) {
+			if (str[i].checked == true){
+				if (id == "") {
+					var sep = "";
+				}else{
+					var sep = ",";
+				}
+				id += sep+str[i].value;
+			};
 		}
-	}
+		if (id == "") {
+				alert("请选择要删除的商品");
+			}else{
+				if(window.confirm('您确定要删除这些商品吗?删除后不可恢复!')){
+					window.location="doAdminAction.php?act=delPros&id="+id;
+				}
+			}
+		}
 </script>
 </body>
 </html>
