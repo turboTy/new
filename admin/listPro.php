@@ -246,7 +246,6 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 			alert(id);
 		}
 	}
-
 </script>
 </body>
 </html>
