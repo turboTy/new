@@ -21,8 +21,6 @@ function addPro(){
     }
     $mysqli = connect();
     $pId = insert($mysqli,"imooc_pro", $arr);
-//     var_dump($arr);exit;
-//     $pId = getInsertId();
     if ($pId){
         foreach ($upFiles as $upfile){
             $arr1['pid'] = $pId; 
@@ -60,16 +58,6 @@ function getAllPro(){
     return $res;
 }
 
-// function getWhere($cond,$pName,$pSn){
-//     if ($cond == null){
-//         $where = null;
-//     }elseif ($cond == 1){
-//         $where = "pName = {$pName}";
-//     }elseif ($cond == 2){
-//         $where = "pSn = {$pSn}";
-//     }
-// }
-
 
 /**得到商品信息页面的页码
  * @param number $pageSize
@@ -79,14 +67,10 @@ function getAllPro(){
  */
 function getProByPage($pageSize = 3,$sql){
     $mysqli = connect();
-    //     $sql = "select * from {$table}{$where}";
-    //     var_dump($sql);exit;
     $rows = fetchAll($mysqli, $sql);
     $url = $_SERVER['PHP_SELF'];
-//     var_dump($sql);exit;
     $totalRows = getResultNum($mysqli, $sql);
     $totalPage = ceil($totalRows/$pageSize);
-    // $page = $_REQUEST['page']?(int)$_REQUEST['page']:1;
     if ($_REQUEST['page']){
         $page = $_REQUEST['page'];
     }else{
@@ -114,7 +98,6 @@ function getProByPage($pageSize = 3,$sql){
 function editPro($id){
     $mysqli = connect();
     $array = $_POST;
-//     var_dump($array);exit;
     $res = update($mysqli, "imooc_pro", $array," id = {$id}");
     if ($res){
         $mes = "修改成功<br><a href='listPro.php'>返回列表</a>";
@@ -130,7 +113,9 @@ function editPro($id){
  */
 function delPro($id){
     $mysqli = connect();
-    $result = delete($mysqli, 'imooc_pro'," id = '$id'");
+    foreach ($id as $cId):
+        $result = delete($mysqli, 'imooc_pro'," id = '$cId'");
+    endforeach;
     if ($result){
         $mes = "删除成功<br><a href='listPro.php'>返回列表</a>";
     }else{
@@ -138,7 +123,6 @@ function delPro($id){
     }
     return $mes;
 }
-
 
 function checkProExist($id){
     $mysqli = connect();

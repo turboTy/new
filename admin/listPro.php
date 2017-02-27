@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<link rel="stylesheet" href="scripts/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" />
+	<script src="scripts/jquery-ui/js/jquery-1.10.2.js"></script>
+	<script src="scripts/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
+	<script src="scripts/jquery-ui/js/jquery-ui-1.10.4.custom.min.js"></script>
 	<title>添加商品</title>
 </head>
 <style>
@@ -44,10 +48,9 @@ if ($proName == null){
 }elseif($proName == 2){
     $sql = "select * from imooc_pro where pSn = {$searchText}".$wh;
 }
-$arr = getProByPage(8, $sql);
+$arr = getProByPage(5, $sql);
 $page = $arr['page'];
 $row = $arr['row'];
-
 if ($row == null){
     $row = array();
 }
@@ -55,6 +58,9 @@ $totalRows = $arr['totalRows'];
 $totalPage = $arr['totalPage'];
 $pageStr = showPage($page, $totalPage, "&cId=$cId");
 ?>
+<div id="showDetail" style="display:none;">
+	
+</div>
 <form action="" method="post" enctype="multipart/form-data">
 	<div class="top_bar">
 		<div class="top_bar_l fl">
@@ -78,19 +84,29 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 		<table border="1" style="border-collapse:collapse; background-color:#f0f0f0; width:98%;">
 			<tr height='40'>
 				<th width="10%">编号</th>
-				<th width="25%">商品名称</th>
+				<th width="35%">商品名称</th>
 				<th width="15%">商品分类</th>
-				<th width="15%">是否上架</th>
+				<th width="10%">是否上架</th>
 				<th>操作</th>
 			</tr>
-			<?php foreach ($row as $pro):?>
+			<?php $prosId = ""; foreach ($row as $pro):?>
 			<tr height='40' >
-				<td width="10%">
+				<td>
 					<input type="checkbox" id="<?php echo $pro['id'];?>">
-					<label for="<?php echo $pro['id'];?>"><?php echo $pro['id'];?></label>
+					<label for="<?php echo $pro['id'];?>">
+						<?php 
+							echo $pro['id']; 
+							if ($prosId == ""){
+							    $sep = "";
+							}else{
+							    $sep = ",";
+							}
+							$prosId .= $sep.$pro['id'];
+						?>
+					</label>
 				</td>
-				<td width="25%"><?php echo $pro['pName'];?></td>
-				<td width="15%"><?php 
+				<td><?php echo $pro['pName'];?></td>
+				<td><?php 
                                     $id = $pro['cId'];
                                     foreach ($cates as $cate){
                                         if ($id == $cate['id']){
@@ -98,7 +114,7 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
                                         }
                                     }
 				                 ?></td>
-				<td width="15%"><?php 
+				<td><?php 
 				                    if($pro['isShow']){
 				                        echo "是";
 				                    }else{
@@ -106,8 +122,84 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 				                    }
 				                ?></td>
 				<td align="center">
-					<input type="button" value="修改" onclick="editPro(<?php echo $pro['id'];?>)">&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="button" value="详情"
+					onclick="showDetail(<?php echo $pro['id'];?>,'<?php echo $pro['pName'];?>')">
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<input type="button" value="修改" onclick="editPro(<?php echo $pro['id'];?>)">
+					&nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="button" value="删除" onclick="delPro(<?php echo $pro['id'];?>)">
+					<div id="showDetail<?php echo $pro['id']; ?>" style="display:none;">
+                    	<table class="table" cellspacing="0" cellpadding="0">
+                    		<tr>
+                    			<td width="20%" align="right">商品名称：</td>
+                    			<td><?php echo $pro['pName'];?></td>
+                    		</tr>
+                    		<tr>
+                    			<td width="20%"  align="right">商品类别：</td>
+                    			<td><?php 
+                    			         $id = $pro['cId'];
+                                         foreach ($cates as $cate){
+                                            if ($id == $cate['id']){
+                                              echo $cate['cName'];
+                                            }
+                                         }
+                                    ?></td>
+                    		</tr>
+                    		<tr>
+                    			<td width="20%"  align="right">商品货号：</td>
+                    			<td><?php echo $pro['pSn'];?></td>
+                    		</tr>
+                    		<tr>
+                    			<td width="20%"  align="right">商品数量：</td>
+                    			<td><?php echo $pro['pNum'];?></td>
+                    		</tr>
+                    		<tr>
+                    			<td  width="20%"  align="right">商品价格：</td>
+                    			<td><?php echo $pro['mPrice'];?></td>
+                    		</tr>
+                    		<tr>
+                    			<td  width="20%"  align="right">会员价格：</td>
+                    			<td><?php echo $pro['iPrice'];?></td>
+                    		</tr>
+                    		<tr>
+                    			<td width="20%"  align="right">是否上架：</td>
+                    			<td>
+                    			<?php 
+                    				$show=($pro['isShow']==1)?"上架":"下架";
+									echo $show;
+                    			?>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<td width="20%"  align="right">是否热卖：</td>
+                    			<td>
+                    			<?php 
+                    				$hot=($pro['isShow']==1)?"热卖":"促销";
+									echo $hot;
+                    			?>
+                    			</td>
+                    		</tr>
+                    		<tr>
+                    			<td width="20%"  align="right">商品图片：</td>
+                    			<td>
+                    				<?php 
+                    				$images=getImgByProId($pro['id']);
+                    				if($images == null){
+                    				    echo "此商品没有上传图片";
+                    				}else{
+                    				    foreach($images as $img){
+                    				        echo "<img src='./uploads/img_50/{$img['albumPath']}' alt=''/>&nbsp;";
+                    				    }
+                    				}
+                    				?>
+                    			</td>
+                    		</tr> 
+                    	</table>
+                    	<span style="display:block;width:80%; border-top:1px solid #ccc; ">
+                    	<b>商品描述</b><br>
+                    	<?php echo $pro['pDesc'];?>
+                    	</span>
+                    </div>
 				</td>
 			</tr>
 			<?php endforeach;?>
@@ -116,19 +208,45 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 			<?php echo $pageStr;?>
 		</div>
 </form>
+<script type="text/javascript">
+	function showDetail(id,t){
+		$("#showDetail"+id).dialog({
+			height: "auto",
+			width: "auto",
+			position: {
+				my: "center",
+				at: "center",
+				collision: "fit"
+			},
+			modal: false,
+			draggable: true,
+			resizable: true,
+			title: "商品名称"+t,
+			show: "slide",
+			hide: "explode"
+		});
+	}
+</script>
 <script language="javascript">
+	
 	function addPro(){
 		window.location="addPro.php";
 	}
 	function editPro(id){
 		window.location="editPro.php?act=editPro&id="+id;
 	}
-	
 	function delPro(id){
 		if(window.confirm('您确定要删除该商品吗?删除后不可恢复!')){
 			window.location="doAdminAction.php?act=delPro&id="+id;
 		}
 	}
+	function delPros(id){
+		if(window.confirm('您确定要删除这些商品吗?删除后不可恢复!')){
+			window.location="doAdminAction.php?act=delPros&id="+id;
+			alert(id);
+		}
+	}
+
 </script>
 </body>
 </html>

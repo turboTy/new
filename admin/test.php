@@ -1,14 +1,17 @@
-
-
 <?php 
-    $p = "admin";
-    echo sha1(md5($p));
-    echo "<br>";
-//     echo md5(sha1($p));
-    echo hash_hmac('sha256', $p, 'a');
-?>
-	
-	
+// $arr = array(0,1,2,3,4);
+// $ids = "";
+// foreach ($arr as $id){
+//     if ($ids == ""){
+//         $sep = "";
+//     }else{
+//         $sep = ",";
+//     }
+//     $ids .= $sep.$id;
+// }
+$id = 1;
+$ids = explode(" ", $id);
+echo $ids;
 	
 	
 	

@@ -74,11 +74,7 @@ function update($mysqli,$table,$array,$where = null){
  */
 function fetchOne($mysqli,$sql,$result_type = MYSQLI_ASSOC){
     $result = mysqli_query($mysqli,$sql);
-//     var_dump($sql);exit;
-//     if ($result){echo "*****";exit;}
     $row = mysqli_fetch_array($result,$result_type);
-//     $row = mysqli_fetch_assoc($result);
-//     var_dump($row);exit;
     return $row;
 }
 
@@ -104,11 +100,6 @@ function getResultNum($mysqli,$sql){
     $row = mysqli_num_rows($result);
     return $row;
 }
-
-// function getInsertId(){
-//     $id = mysqli_insert_id($mysqli);
-//     return $id;
-// }
 
 
 
