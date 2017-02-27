@@ -14,9 +14,9 @@ body {font-family: "microsoft yahei";}
 .fr {float: right;}
 .top_bar {width: 98%; height: 40px; line-height: 40px; margin-bottom: 10px;}
 .top_bar_l input {margin-top: 10px;}
-.top_bar_l input {height: 29px;width: 120px; font: normal 14px/26px "microsoft yahei"; color: #fff; 
+.top_bar_l input {height: 29px; width: 120px; font: normal 14px/26px "microsoft yahei"; color: #fff; 
 background-color: #666; border: 1px solid #666; cursor: pointer;}
-.page a {color: #666;text-decoration: none;}
+.page a {color: #666; text-decoration: none;}
 .page a:hover {text-decoration: underline;}
 table td {text-indent: 10px;}
 .btn {width: 70px; height: 26px; cursor: pointer;}
