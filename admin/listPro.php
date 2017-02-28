@@ -54,7 +54,7 @@ if ($proName == null){
 }elseif($proName == 2){
     $sql = "select * from imooc_pro where pSn = {$searchText}".$wh;
 }
-$arr = getProByPage(5, $sql);
+$arr = getProByPage(8, $sql);
 $page = $arr['page'];
 $row = $arr['row'];
 if ($row == null){
