@@ -122,6 +122,10 @@ function delPro($id){
     return $mes;
 }
 
+/**删除商品
+ * @param unknown $id
+ * @return string
+ */
 function delPros($id){
     $mysqli = connect();
     $arr = explode(",", $id);
@@ -136,9 +140,25 @@ function delPros($id){
     return $mes;
 }
 
+/**检测商品是否存在
+ * @param int $id
+ * @return multitype:
+ */
 function checkProExist($id){
     $mysqli = connect();
     $sql = "select * from imooc_pro where cId = '$id'";
+    $res = fetchAll($mysqli, $sql);
+    return $res;
+}
+
+
+/**根据分类id得到4个商品的信息
+ * @param unknown $id
+ * @return multitype:
+ */
+function getProsByCate($id){
+    $mysqli = connect();
+    $sql = "select * from imooc_pro where cId = {$id} limit 4";
     $res = fetchAll($mysqli, $sql);
     return $res;
 }

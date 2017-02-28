@@ -33,7 +33,7 @@
 				<li class="mb_10"><input type="password"  name="password" class="login_input password_icon"></li>
 				<li class="l_tit">验证码</li>
 				<li class="mb_10"><input type="text"  name="verify" class="login_input password_icon"></li>
-				<img src="getVerify.php" alt="" />
+				<img src="getVerify.php"  />
 				<li class="autoLogin"><input type="checkbox" id="a1" class="checked" name="autoFlag" value="1"><label for="a1">自动登陆(一周内自动登陆)</label></li>
 				<li><input type="submit" value="" class="login_btn"></li>
 			</ul>

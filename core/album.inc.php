@@ -14,9 +14,20 @@ function addAlbum($arr){
     return $mes;
 }
 
+/**根据商品id获取图片
+ * @param int $id
+ * @return multitype:
+ */
 function getImgByProId($id){
     $mysqli = connect();
     $sql = "select a.albumPath from imooc_album a where pId ={$id}";
     $row = fetchAll($mysqli, $sql);
     return $row;
+}
+
+function getOneAlbum($pId){
+    $mysqli = connect();
+    $sql = "select * from imooc_album where pid ={$pId}";
+    $res = fetchOne($mysqli, $sql);
+    return $res;
 }

@@ -94,9 +94,10 @@ background: url(../images/icon/triangle.jpg) 78px center no-repeat;}
 overflow: hidden;}
 .banner_num .active {background-color: #F70;}
 /*banner_title*/
-.banner_title {height: 75px;clear: right;}
+.banner_title {height: 70px;clear: right; margin-top: 20px;}
 .banner_title h1 {display: inline-block;background: url(../images/banner/banner_title.jpg) left center no-repeat;
-width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "Microsoft YAHEI"; font-weight: normal;}
+width: 180px; height: 66px; line-height: 80px;font-family: "Microsoft YAHEI"; font-weight: normal;
+padding-left: 50px;}
 .banner_title a {display: inline-block;height: 10px; margin-top: 40px; font-size: 13px;}
 .banner_title a:link {color: #000;}
 .banner_title a:visited {color: #000;}
@@ -118,7 +119,7 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .elec_goodsItem {width: 201px; height:397px; font-family: "Microsoft YAHEI";border-right: 1px solid #ccc;}
 .elec_goodsItem .top {height: 286px;border-bottom: 1px solid #ccc; }
 .elec_goodsItem>.top a {display: inline-block;margin-top: 45px;}
-.elec_goodsItem>.top h3 {font-size: 16px; margin-top: 20px;}
+.elec_goodsItem>.top h3 {font-size: 16px; margin-top: 20px; height: 40px;}
 .elec_goodsItem>.top P {font-size: 14px; color: #F70;line-height: 21px;}
 .elec_goodsItem .bottom {margin-top:10px;}
 .elec_goodsItem>.bottom h4 {display: inline-block;margin-top: 20px;color:#f70;margin-right: 10px;}
@@ -128,6 +129,7 @@ width: 186px; height: 66px; text-align: center; line-height: 80px;font-family: "
 .elec_goodsItem>.bottom2 a {margin-top: 10px;margin-left:10px;}
 .elec_goodsItem>.bottom3 a {margin-top: 5px;margin-left:10px;}
 .elec_goodsItem>.bottom4 a {margin-top: 25px;}
+.elec_goodsItem .top img {display: inline-block; height: 150px; width: 150px;}
 
 /*bottomInfo部分*/
 .bottomInfo {height: 220px;background-color: #ccc; clear: both; margin-top: 30px;}

@@ -1,16 +1,17 @@
 <?php 
 require_once './include.php';
+$cates = getAllCate();
+
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="./styles/reset.css">
-	<link rel="stylesheet" href="./styles/main.css">
+	<link rel="stylesheet" href="./styles/main.css?v=20170228">
 	<title>慕课电商</title>
 </head>
 <body>
-
 	<div>
 		<div class="topBar">
 			<div class="comWidth">
@@ -161,8 +162,9 @@ require_once './include.php';
 	</div>
 <!-- 	顶部信息区 -->
 	
+<?php foreach ($cates as $cate): ?>
 	<div class="banner_title comWidth">
-		<h1 class="fl">家用电器</h1>
+		<h1 class="fl"><?php echo $cate['cName']; ?></h1>
 		<a href="#" class="fr">更多&gt;&gt;</a>
 	</div>
 	<div class="elec_goods comWidth">
@@ -177,11 +179,18 @@ require_once './include.php';
 			</div>
 		</div>
 		<div class="elec_goodsList fr">
+		<?php 
+		      $id = $cate['id'];
+		      $pros = getProsByCate($id);
+		      foreach ($pros as $pro):
+		          $pId = $pro['id'];
+		          $img = getOneAlbum($pId); 
+	    ?>
 			<div class="elec_goodsItem fl">
 				<div class="top">
-					<a href="#"><img src="./images/goods/goods_HTC.jpg" alt="HTC"></a>
-					<h3>HTC新渴望8系列</h3>
-					<p>1899元</p>
+					<a href="#"><img src="<?php echo "./admin/uploads/img_220/".$img['albumPath']; ?>" alt="HTC"></a>
+					<h3><?php echo $pro['pName'];  ?></h3>
+					<p><?php echo "￥".$pro['iPrice']; ?></p>
 				</div>
 				<div class="bottom bottom1">
 					<a href="#" class="fl"><img src="./images/goods/goods_camera.jpg" alt="camera"></a>
@@ -189,46 +198,48 @@ require_once './include.php';
 					<p>￥149.00</p>
 				</div>
 			</div>
-			<div class="elec_goodsItem fl">
-				<div class="top">
-					<a href="#"><img src="./images/goods/goods_HTC.jpg" alt="HTC"></a>
-					<h3>HTC新渴望8系列</h3>
-					<p>1899元</p>
-				</div>
-				<div class="bottom bottom2">
-					<a href="#" class="fl"><img src="./images/goods/goods_samsung.jpg" alt="camera"></a>
-					<h4 class="fr">SAMSUNG三星<br/>GALAXY Grand2</h4>
-					<p>￥2000.00</p>
-				</div>
-			</div>
-			<div class="elec_goodsItem fl">
-				<div class="top">
-					<a href="#"><img src="./images/goods/goods_HTC.jpg" alt="HTC"></a>
-					<h3>HTC新渴望8系列</h3>
-					<p>1899元</p>
-				</div>
-				<div class="bottom bottom3">
-					<a href="#" class="fl"><img src="./images/goods/goods_ipad2.jpg" alt="camera"></a>
-					<h4 class="fr">全网底价 苹果　<br/>ipad mini1　</h4>
-					<p>￥1888.00</p>
-				</div>
-			</div>
-			<div class="elec_goodsItem fl">
-				<div class="top">
-					<a href="#"><img src="./images/goods/goods_HTC.jpg" alt="HTC"></a>
-					<h3>HTC新渴望8系列</h3>
-					<p>1899元</p>
-				</div>
-				<div class="bottom bottom4">
-					<div>
-						<a href="#" class="fl"><img src="./images/goods/goods_ipad.jpg" alt="camera"></a>
-						<h4 class="fr">Apple苹果 全新<br/>Retine屏MacBoo</h4>
-						<p>￥20020.00</p>
-					</div>
-				</div>
-			</div>
+		<?php endforeach;?>
+<!-- 			<div class="elec_goodsItem fl"> -->
+<!-- 				<div class="top"> -->
+<!-- 					<a href="#"><img src="./images/goods/goods_HTC.jpg" alt="HTC"></a> -->
+<!-- 					<h3>HTC新渴望8系列</h3> -->
+<!-- 					<p>1899元</p> -->
+<!-- 				</div> -->
+<!-- 				<div class="bottom bottom2"> -->
+<!-- 					<a href="#" class="fl"><img src="./images/goods/goods_samsung.jpg" alt="camera"></a> -->
+<!-- 					<h4 class="fr">SAMSUNG三星<br/>GALAXY Grand2</h4> -->
+<!-- 					<p>￥2000.00</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			<div class="elec_goodsItem fl"> -->
+<!-- 				<div class="top"> -->
+<!-- 					<a href="#"><img src="./images/goods/goods_HTC.jpg" alt="HTC"></a> -->
+<!-- 					<h3>HTC新渴望8系列</h3> -->
+<!-- 					<p>1899元</p> -->
+<!-- 				</div> -->
+<!-- 				<div class="bottom bottom3"> -->
+<!-- 					<a href="#" class="fl"><img src="./images/goods/goods_ipad2.jpg" alt="camera"></a> -->
+<!-- 					<h4 class="fr">全网底价 苹果　<br/>ipad mini1　</h4> -->
+<!-- 					<p>￥1888.00</p> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
+<!-- 			<div class="elec_goodsItem fl"> -->
+<!-- 				<div class="top"> -->
+<!-- 					<a href="#"><img src="./images/goods/goods_HTC.jpg" alt="HTC"></a> -->
+<!-- 					<h3>HTC新渴望8系列</h3> -->
+<!-- 					<p>1899元</p> -->
+<!-- 				</div> -->
+<!-- 				<div class="bottom bottom4"> -->
+<!-- 					<div> -->
+<!-- 						<a href="#" class="fl"><img src="./images/goods/goods_ipad.jpg" alt="camera"></a> -->
+<!-- 						<h4 class="fr">Apple苹果 全新<br/>Retine屏MacBoo</h4> -->
+<!-- 						<p>￥20020.00</p> -->
+<!-- 					</div> -->
+<!-- 				</div> -->
+<!-- 			</div> -->
 		</div>
 	</div>
+<?php endforeach; ?>
 	
 <!-- 	底部信息区         -->
 	<div class="bottomInfo">
