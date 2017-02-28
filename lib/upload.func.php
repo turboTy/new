@@ -1,5 +1,5 @@
 <?php
-require_once '../include.php';
+// require_once '../include.php';
 header("content-type:text/html;charset=utf-8");
 /**上传单个文件
  * @param array $fileInfo
@@ -153,7 +153,6 @@ function uploadFiles($path='uploads',$allowExt=array("gif","jpeg","jpg","png","w
  */
 function uploadInfo(){
     $i = 0;
-//     var_dump($_FILES);exit;
     foreach($_FILES as $v){
         if (is_string($v['name'])){
             $info[$i] = $v;

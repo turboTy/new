@@ -1,5 +1,5 @@
 <?php
-require_once '../include.php';
+// require_once '../include.php';
 /**添加图片
  * @param array $arr
  * @return string

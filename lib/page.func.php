@@ -1,5 +1,5 @@
 <?php
-require_once '../include.php';
+// require_once '../include.php';
 
 /**显示页码
  * @param int $page

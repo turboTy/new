@@ -1,5 +1,5 @@
 <?php
-require_once '../include.php';
+// require_once '../include.php';
 /**检测管理员是否存在
  * @param unknown $sql
  * @return Number

@@ -1,5 +1,5 @@
 <?php
-require_once '../include.php';
+// require_once '../include.php';
 /**新增商品
  * @return string
  */
@@ -22,7 +22,7 @@ function addPro(){
     $mysqli = connect();
     $pId = insert($mysqli,"imooc_pro", $arr);
     if ($pId){
-        foreach ($upFiles as $upfile){
+       foreach ($upFiles as $upfile){
             $arr1['pid'] = $pId; 
             $arr1['albumPath'] = $upfile['name'];
             $msg = addAlbum($arr1);

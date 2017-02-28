@@ -1,3 +1,6 @@
+<?php 
+require_once './include.php';
+?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
@@ -7,6 +10,7 @@
 	<title>慕课电商</title>
 </head>
 <body>
+
 	<div>
 		<div class="topBar">
 			<div class="comWidth">
@@ -155,6 +159,8 @@
 			<a href="#" class="active"></a><a href="#"></a>
 		</div>
 	</div>
+<!-- 	顶部信息区 -->
+	
 	<div class="banner_title comWidth">
 		<h1 class="fl">家用电器</h1>
 		<a href="#" class="fr">更多&gt;&gt;</a>
@@ -164,7 +170,7 @@
 			<ul class="elec_img">
 				<li><a href="#"><img src="./images/goods/elecBanner_pad.jpg" alt="ipad"></a></li>
 				<li><a href="#"><img src="./images/goods/elecBanner_pad2.jpg" alt="ipad"></a></li>
-				<li><a href="#"><img src="./images/goods/elecbanner_pad3.jpg" alt="ipad"></a></li>
+				<li><a href="#"><img src="./images/goods/elecBanner_pad3.jpg" alt="ipad"></a></li>
 			</ul>
 			<div class="elec_num">
 				<a href="#" class="active"></a><a href="#"></a><a href="#"></a>
@@ -223,69 +229,8 @@
 			</div>
 		</div>
 	</div>
-	<div class="banner_title comWidth">
-		<h1 class="fl">食品酒水</h1>
-		<a href="#" class="fr">更多&gt&gt</a>
-	</div>
-	<div class="foods_goods comWidth">
-		<div class="elec_banner">
-			<ul class="elec_img">
-				<li><a href="#"><img src="./images/goods/foodsBanner_1.jpg" alt="foods"></a></li>
-			</ul>
-		</div>
-		<div class="elec_goodsList fr">
-			<div class="elec_goodsItem fl">
-				<div class="top">
-					<a href="#"><img src="./images/goods/goods_food.jpg" alt="HTC"></a>
-					<h3>3月美食狂享购</h3>
-					<p>50元</p>
-				</div>
-				<div class="bottom">
-					<a href="#" class="fl"><img src="./images/goods/goods_medicine.jpg" alt="camera"></a>
-					<h4 class="fr">NFC技术一碰轻松<br/>配对!接触屏幕</h4>
-					<p>￥149.00</p>
-				</div>
-			</div>
-			<div class="elec_goodsItem fl">
-				<div class="top">
-					<a href="#"><img src="./images/goods/goods_food.jpg" alt="HTC"></a>
-					<h3>3月美食狂享购</h3>
-					<p>40元</p>
-				</div>
-				<div class="bottom">
-					<a href="#" class="fl"><img src="./images/goods/goods_medicine.jpg" alt="camera"></a>
-					<h4 class="fr">SAMSUNG三星<br/>GALAXY Grand2</h4>
-					<p>￥2000.00</p>
-				</div>
-			</div>
-			<div class="elec_goodsItem fl">
-				<div class="top">
-					<a href="#"><img src="./images/goods/goods_food.jpg" alt="HTC"></a>
-					<h3>3月美食狂享购</h3>
-					<p>80元</p>
-				</div>
-				<div class="bottom">
-					<a href="#" class="fl"><img src="./images/goods/goods_medicine.jpg" alt="camera"></a>
-					<h4 class="fr">全网底价 苹果　<br/>ipad mini1　</h4>
-					<p>￥1888.00</p>
-				</div>
-			</div>
-			<div class="elec_goodsItem fl">
-				<div class="top">
-					<a href="#"><img src="./images/goods/goods_food.jpg" alt="HTC"></a>
-					<h3>3月美食狂享购</h3>
-					<p>20元</p>
-				</div>
-				<div class="bottom">
-					<div>
-						<a href="#" class="fl"><img src="./images/goods/goods_medicine.jpg" alt="camera"></a>
-						<h4 class="fr">Apple苹果 全新<br/>Retine屏MacBoo</h4>
-						<p>￥20020.00</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
+<!-- 	底部信息区         -->
 	<div class="bottomInfo">
 		<div class="mooke_info">
 			<a href="#">慕课简介</a>|<a href="#">慕课公告</a>|<a href="#">招贤纳士</a>|<a href="#">联系我们</a>|<a href="#">客服热线： 400-675-1234</a>
