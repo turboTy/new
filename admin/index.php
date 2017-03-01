@@ -16,11 +16,9 @@ checkLogined();
 
 <body>
     <div class="head">
-            <h3 class="head_text fr">电子商务后台管理系统</h3>
+            <h3 class="head_text fr">后台管理系统</h3>
     </div>
     <div class="operation_user clearfix">
-       <!--   <div class="link fl"><a href="#">慕课</a><span>&gt;&gt;</span><a href="#">商品管理</a>
-       <span>&gt;&gt;</span>商品修改</div>-->
         <div class="link fr">
             <b>欢迎您
             <?php 
@@ -66,15 +64,6 @@ checkLogined();
                         </dl>
                     </li>
                     <li>
-                        <h3><span  onclick="show('menu3','change3')" id="change3" >+</span>订单管理</h3>
-                        <dl id="menu3" style="display:none;">
-                            <dd><a href="#">订单修改</a></dd>
-                            <dd><a href="#">订单又修改</a></dd>
-                            <dd><a href="#">订单总是修改</a></dd>
-                            <dd><a href="#">测试内容你看着改</a></dd>
-                        </dl>
-                    </li>
-                    <li>
                         <h3><span onclick="show('menu4','change4')" id="change4">+</span>用户管理</h3>
                         <dl id="menu4" style="display:none;">
                         	<dd><a href="addUser.php" target="mainFrame">添加用户</a></dd>
@@ -94,7 +83,7 @@ checkLogined();
                          <li>
                         <h3><span onclick="show('menu6','change6')" id="change6">+</span>商品图片管理</h3>
                         <dl id="menu6" style="display:none;">
-                            <dd><a href="listProImages.php" target="mainFrame">商品图片列表</a></dd>
+                            <dd><a href="listProImages.php" target="mainFrame">图片列表</a></dd>
                         </dl>
                     </li>
                 </ul>

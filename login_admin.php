@@ -34,7 +34,7 @@
 	<div class="login_box">
 		<div class="login_user">
 			<h4>管理员帐号</h4>
-			<input type="text" class="username" size="38">
+			<input type="text" class="username" size="38" autocomplete="off">
 		</div>
 		<div class="login_pwd">
 			<h4>密码</h4>

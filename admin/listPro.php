@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<!-- 	以下调用dialog -->
 	<link rel="stylesheet" href="scripts/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css" />
 	<script src="scripts/jquery-ui/js/jquery-1.10.2.js"></script>
 	<script src="scripts/jquery-ui/js/jquery-ui-1.10.4.custom.js"></script>
@@ -19,6 +20,9 @@ background-color: #666; border: 1px solid #666; cursor: pointer;}
 .page a {color: #666; text-decoration: none;}
 .page a:hover {text-decoration: underline;}
 table td {text-indent: 10px;}
+table {position: relative; font-family: "microsoft yahei";}
+.tbl_img {position: absolute; top: 25px; left: 400px;}
+.tbl_img img {height: 150px; width: 150px;}
 .btn {width: 70px; height: 26px; cursor: pointer;}
 .delPros {height: 40px; width: 8%;}
 .delPros input {height: 29px;width: 120px; font: normal 14px/26px "microsoft yahei"; color: #fff; 
@@ -138,9 +142,9 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<input type="button" value="删除" class="btn" onclick="delPro(<?php echo $pro['id'];?>)">
 					<div id="showDetail<?php echo $pro['id']; ?>" style="display:none;">
-                    	<table class="table" cellspacing="0" cellpadding="0">
+                    	<table class="table" cellspacing="0" cellpadding="0" >
                     		<tr>
-                    			<td width="20%" align="right">商品名称：</td>
+                    			<td width="20%" align="right" >商品名称：</td>
                     			<td><?php echo $pro['pName'];?></td>
                     		</tr>
                     		<tr>
@@ -188,8 +192,7 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
                     			?>
                     			</td>
                     		</tr>
-                    		<tr>
-                    			<td width="20%"  align="right">商品图片：</td>
+                    		<tr class="tbl_img">
                     			<td>
                     				<?php 
                     				$images=getImgByProId($pro['id']);
@@ -197,7 +200,7 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
                     				    echo "此商品没有上传图片";
                     				}else{
                     				    foreach($images as $img){
-                    				        echo "<img src='./uploads/img_50/{$img['albumPath']}' alt=''/>&nbsp;";
+                    				        echo "<img src='./uploads/img_220/{$img['albumPath']}' alt=''/>&nbsp;";
                     				    }
                     				}
                     				?>
@@ -225,7 +228,7 @@ $pageStr = showPage($page, $totalPage, "&cId=$cId");
 	function showDetail(id,t){
 		$("#showDetail"+id).dialog({
 			height: "auto",
-			width: "auto",
+			width: "700",
 			position: {
 				my: "center",
 				at: "center",

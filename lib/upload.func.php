@@ -128,9 +128,9 @@ function uploadFiles($path='uploads',$allowExt=array("gif","jpeg","jpg","png","w
                 case 3:
                     $mes = "文件部分被上传"; //UPLOAD_ERR_PARTIAL
                     break;
-                case 4:
-                    $mes = "没有文件"; //UPLOAD_ERR_NO_FILE
-                    break;
+//                 case 4:
+//                     $mes = "没有文件"; //UPLOAD_ERR_NO_FILE
+//                     break;
                 case 6:
                     $mes = "没有临时目录";//UPLOAD_ERR_NO_TMP_DIR;
                     break;
