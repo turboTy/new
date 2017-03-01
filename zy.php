@@ -1,8 +1,8 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<script src="yourUrl/md5.min.js"></script>  
 	<title>turboty的个人空间</title>
 </head>
 <style>
@@ -11,19 +11,18 @@
     .login>input {background-color: #5cadad; border: 1px solid #81c0c0; color: #fff; margin-right: 1px;}
 </style>
 <body>
+	<form action="" method="post">
 		<div class="login">
-			<input type="text" id="login" size="6"><input type="button" value="确定" onclick="login()">
+			<input type="text" name="text" size="6" autocomplete="off" ><input type="submit" name="submit" value="确定">
 		</div>
-<script language="javascript">
-	function login(){
-		var pwd = document.getElementById('login').value;
-		var hash = md5("pwd");
-		if (hash == "91dcd186da2ac2b4e62bf4b2ec29f812") {
-			window.location = "./admin/login_admin.php";
-		}else{
-			alert('错误');
-		}
+	</form>
+<?php
+if ($_POST['submit']) {
+	$pwd = md5($_POST['text']);
+	if ($_POST['text'] != "" && $pwd == "91dcd186da2ac2b4e62bf4b2ec29f812") {
+		echo "<script language='javascript'>window.location='./admin/login_admin.php'</script>";
 	}
-</script>
+}
+?>
 </body>
 </html>

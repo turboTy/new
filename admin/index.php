@@ -16,7 +16,6 @@ checkLogined();
 
 <body>
     <div class="head">
-            <div class="logo fl"><a href="#"></a></div>
             <h3 class="head_text fr">电子商务后台管理系统</h3>
     </div>
     <div class="operation_user clearfix">
