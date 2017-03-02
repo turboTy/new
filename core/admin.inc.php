@@ -6,10 +6,10 @@
  */
 function checkAdmin($sql){
     $mysqli = connect();
-//     global $mysqli;
     $res = fetchOne($mysqli,$sql);
-//     var_dump($res);exit;
-    return $res;
+    if ($res) {
+        return $res;
+    }
 }
 
 /**检测管理员是否登录

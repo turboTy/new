@@ -1,6 +1,7 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-	<meta charset=utf-8>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link type="text/css" rel="stylesheet" href="./styles/main.css">
 	<link type="text/css" rel="stylesheet" href="./styles/reset.css">
 	<title>后台登录页面</title>
@@ -10,7 +11,7 @@
 	/*.login_check input {border: 1px solid #ccc; background: url(./images/login/lock.gif) 95% center no-repeat;}*/
 </style>
 <body>
-	<div class="headerBar">
+	<div>
 		<div class="topBar">
 			<div class="comWidth">
 				<div class="leftArea">
@@ -25,7 +26,7 @@
 		<div class="logoBar">
 			<div class="login_reg">
 				<div class="logo fl">
-					<a href="#"><img src="./images/icon/logo.jpg" alt="LOGO"></a>
+					<a href="#"></a>
 					<h3 class="welcome_reg">欢迎登录</h3>
 				</div>
 			</div>
@@ -71,6 +72,7 @@
 			<a href="#"><img src="./images/bottom/bottom.jpg" alt=""></a>
 		</div>
 	</div>
+<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js" ></script>
 <script type="text/javascript">
 	document.getElementById("submit").onclick = function(){
 		var username = document.getElementById("username");
@@ -89,35 +91,67 @@
 			verify.focus();
 			return false;
 		}
-		var request = new XMLHttpRequest();
-		request.open("POST","doLogin.php");
-		var data =  "username="+document.getElementById("username").value+
-					"&password="+document.getElementById("password").value+
-					"&verify="+document.getElementById("verify").value+
-					"&autoFlag="+document.getElementById("autoFlag").value;
-		request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-		request.send(data);
-		request.onreadystatechange=function(){
-			if (request.readyState == 4) {
-				if (request.status == 200) {
-					var res = JSON.parse(request.responseText);
-					if (res.verify) {	
-						alert(res.verifyMsg);
-					}else{
-						alert(res.verifyMsg);
-						document.getElementById('verify').focus();
-					}
-					if (res.pwd) {
-						alert(res.pwdMsg);
-					}else{
-						alert(res.pwdMsg);
-						document.getElementById('username').focus();
-					}
-					// window.location.href = "index.php";
-				}
-			}
-		}
 	}
+// $(document).ready(function(){
+	$("#submit").click(function(){
+		$.ajax({
+			type: "POST",
+			url: "doLogin.php",
+			data: {
+				username: $("#username").val(),
+				password: $("#password").val(),
+				verify: $("#verify").val(),
+				autoFlag: $("#autoFlag").val(),
+			},
+			dataType: "json",
+			success:function(data){
+				if (data.verify) {
+					alert(data.verifyMsg);
+					$("#verify").focus();
+					return false;
+				}
+				if (data.pwd) {
+					alert(data.pwdMsg)
+				}else{
+					alert(data.pwdMsg);
+				}
+			},
+			error:function(jqXHR){
+				alert("发生错误:"+jqXHR.status);
+			}
+		})
+	});
+// })
+		// var request = new XMLHttpRequest();
+		// request.open("POST","doLogin.php");
+		// var data =  "username="+document.getElementById("username").value+
+		// 			"&password="+document.getElementById("password").value+
+		// 			"&verify="+document.getElementById("verify").value+
+		// 			"&autoFlag="+document.getElementById("autoFlag").value;
+		// request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		// request.send(data);
+		// request.onreadystatechange=function(){
+		// 	if (request.readyState == 4) {
+		// 		if (request.status == 200) {
+		// 			var res = JSON.parse(request.responseText);
+		// 			if (res.verify) {	
+		// 				alert(res.verifyMsg);
+		// 			}else{
+		// 				alert(res.verifyMsg);
+		// 				document.getElementById('verify').focus();
+		// 			}
+		// 			if (res.pwd) {
+		// 				alert(res.pwdMsg);
+		// 				window.location.href = "index.php";
+		// 			}else{
+		// 				alert(res.pwdMsg);
+		// 				document.getElementById('username').focus();
+		// 				return false;
+		// 			}
+		// 		}
+		// 	}
+		// }
+	
 </script>
 </body>
 </html>

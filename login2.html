@@ -1,16 +1,13 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
-	<meta charset=utf-8>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link type="text/css" rel="stylesheet" href="./styles/main.css">
 	<link type="text/css" rel="stylesheet" href="./styles/reset.css">
 	<title>后台登录页面</title>
 </head>
-<style>
-	/*.login_check {margin-top: 10px;}*/
-	/*.login_check input {border: 1px solid #ccc; background: url(./images/login/lock.gif) 95% center no-repeat;}*/
-</style>
 <body>
-	<div class="headerBar">
+	<div>
 		<div class="topBar">
 			<div class="comWidth">
 				<div class="leftArea">
@@ -25,7 +22,7 @@
 		<div class="logoBar">
 			<div class="login_reg">
 				<div class="logo fl">
-					<a href="#"><img src="./images/icon/logo.jpg" alt="LOGO"></a>
+					<a href="#"></a>
 					<h3 class="welcome_reg">欢迎登录</h3>
 				</div>
 			</div>
@@ -71,53 +68,37 @@
 			<a href="#"><img src="./images/bottom/bottom.jpg" alt=""></a>
 		</div>
 	</div>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.js"></script>
 <script type="text/javascript">
-	document.getElementById("submit").onclick = function(){
-		var username = document.getElementById("username");
-		var password = document.getElementById("password");
-		var verify = document.getElementById("verify");
-		if (username.value == "") {
-			alert("管理员帐号不能为空");
-			username.focus();
-			return false;
-		}else if(password.value == ""){
-			alert("管理员密码不能为空");
-			password.focus();
-			return false;
-		}else if(verify.value == ""){
-			alert("验证码不能为空");
-			verify.focus();
-			return false;
-		}
-		var request = new XMLHttpRequest();
-		request.open("POST","doLogin.php");
-		var data =  "username="+document.getElementById("username").value+
-					"&password="+document.getElementById("password").value+
-					"&verify="+document.getElementById("verify").value+
-					"&autoFlag="+document.getElementById("autoFlag").value;
-		request.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-		request.send(data);
-		request.onreadystatechange=function(){
-			if (request.readyState == 4) {
-				if (request.status == 200) {
-					var res = JSON.parse(request.responseText);
-					if (res.verify) {	
-						alert(res.verifyMsg);
-					}else{
-						alert(res.verifyMsg);
-						document.getElementById('verify').focus();
-					}
-					if (res.pwd) {
-						alert(res.pwdMsg);
-					}else{
-						alert(res.pwdMsg);
-						document.getElementById('username').focus();
-					}
-					// window.location.href = "index.php";
+	// document.getElementById('submit').click=function(){
+
+	// }
+	$("#submit").click(function(){
+		$.ajax({
+			type: 'post',
+			data: {
+				username:$("#username").value,
+				password:$("#password").value,
+				verify:$("#verify").value,
+				autoFlag:$("#autoFlag").value,
+			},
+			dataType: "json",
+			url:"doLogin.php",
+			success:function(data){
+				if (data.verify) {
+					alert(data.verifyMsg);
+				};
+				if (data.pwd) {
+					alert(data.pwdMsg);
+				}else{
+					alert(data.pwdMsg);
 				}
+			},
+			error:function(jqXHR){
+				alert("错误"+jqXHR.status);
 			}
-		}
-	}
+		})
+	})
 </script>
 </body>
 </html>
