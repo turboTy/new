@@ -6,7 +6,7 @@
         alertMes("没有商品分类,请添加!", "addCate.php");
     }
     $table = "imooc_cate";
-    $pageSize = 3;
+    $pageSize = 4;
     $arr = getAdminByPage($pageSize,$table);
     $page = $arr['page'];
     $totalPage = $arr['totalPage'];

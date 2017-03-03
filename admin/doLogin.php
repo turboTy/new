@@ -2,6 +2,7 @@
 require_once '../include.php';
 header("content-type:application/json;charset=utf-8");
 $username = $_POST['username'];
+$username = addslashes($username);   //防止sql注入
 $password =md5(sha1($_POST['password']));
 $verify1 = strtolower($_POST['verify']);
 $verify = strtolower($_SESSION['verify']);

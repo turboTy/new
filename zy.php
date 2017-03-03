@@ -13,7 +13,7 @@
 <body>
 	<form action="" method="post">
 		<div class="login">
-			<input type="text" name="text" size="6" autocomplete="off" ><input type="submit" name="submit" value="确定">
+			<input type="password" name="text" size="6" autocomplete="off" ><input type="submit" name="submit" value="确定">
 		</div>
 	</form>
 <?php

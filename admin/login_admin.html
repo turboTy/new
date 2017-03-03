@@ -48,7 +48,7 @@
     			<img src="getVerify.php"  onclick="this.src=this.src+'?'+Math.random">
     		</div>
     		<div class="auto_log">
-    			<input type="checkbox" id="autoFlag" value="1" name="autoFlag"><label for="chk_auto">
+    			<input type="checkbox" id="autoFlag" value="1" name="autoFlag"><label for="autoFlag">
     			<em>自动登录（一周内自动登录）</em></label><a href="#" class="fr" >忘记密码？</a>
     		</div>
     		<div class="login_btn">
@@ -112,6 +112,7 @@
 				}
 				if (data.pwd) {
 					alert(data.pwdMsg)
+					window.location.href="index.php";
 				}else{
 					alert(data.pwdMsg);
 				}

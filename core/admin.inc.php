@@ -19,7 +19,7 @@ function checkLogined(){
 //     if ((!isset($_SESSION['adminId']) || $_SESSION['adminId'] == "") 
 //             && (!isset($_COOKIE['adminId']) || $_COOKIE['adminId'] == "")){
     if ($_SESSION['adminId'] == "" && $_COOKIE['adminId'] == ""){
-        alertMes("请先登录", "login_admin.php");
+        alertMes("请先登录", "login_admin.html");
     }
 }
 
@@ -96,7 +96,7 @@ function logout(){
         setcookie('adminId',"",time()-1);
     }
     session_destroy();
-    header("location:login_admin.php");
+    header("location:login_admin.html");
 }
 
 /**得到管理员列表的当前页码($page),总页码($totalPage),总记录条数($totalRows)以及当前页码下的管理员信息($row);
