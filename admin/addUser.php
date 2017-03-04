@@ -54,12 +54,9 @@ document.getElementById("submit").onclick = function(){
 			document.getElementById("checkPwd").focus();
 			return false;
 		};
-	}
-	$("#submit").click(function(){
 		$.ajax({
 			type: "POST",
 			url: "doAdminAction.php?act=addUser",
-// 			url: "doLogin.php?act=addUser",
 			dataType: "json",
 			data :{
 				username: $("#username").val(),
@@ -83,15 +80,17 @@ document.getElementById("submit").onclick = function(){
 				}
 				if (data.add) {
 					alert(data.add_msg);
+					window.location.href="listUser.php";
 				}else{
 					alert(data.add_msg);
+					window.location.reload();
 				}
 			},
 			error:function(jqXHR){
 				alert("错误"+jqXHR.status);
 			}
 		})
-	})
+	}
 </script>
 </body>
 </html>
