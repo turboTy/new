@@ -28,9 +28,10 @@ checkLogined();
                 echo $_COOKIE['adminName'];
             }
             ?>
-            </b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="icon icon_i">首页</a><span></span>
-            <a href="#" class="icon icon_j">前进</a><span></span><a href="#" class="icon icon_t">后退</a>
-            <span></span><a href="#" class="icon icon_n">刷新</a><span></span>
+            </b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index2.php" class="icon icon_i">首页</a><span></span>
+            <a onclick="window.history.go(-1)" class="icon icon_j">后退</a><span></span>
+            <a onclick="window.history.go(1)" class="icon icon_t">前进</a>
+            <span></span><a onclick="reload()" class="icon icon_n">刷新</a><span></span>
             <a href="doAdminAction.php?act=logout" class="icon icon_e">退出</a>
         </div>
     </div>
@@ -47,7 +48,7 @@ checkLogined();
         <!--左侧列表-->
         <div class="menu">
             <div class="cont">
-                <div class="title">管理员</div>
+                <div class="title">操作列表</div>
                 <ul class="mList">
                     <li>
                         <h3><span onclick="show('menu1','change1')" id="change1">+</span>商品管理</h3>
@@ -79,13 +80,6 @@ checkLogined();
                             <dd><a href="listAdmin.php?act=listAdmin" target="mainFrame">管理员列表</a></dd>
                         </dl>
                     </li>
-                    
-                         <li>
-                        <h3><span onclick="show('menu6','change6')" id="change6">+</span>商品图片管理</h3>
-                        <dl id="menu6" style="display:none;">
-                            <dd><a href="listProImages.php" target="mainFrame">图片列表</a></dd>
-                        </dl>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -106,6 +100,9 @@ checkLogined();
     		         menu.style.display='none';
     		    }
         }
+        // function reload(){
+        //     var name = 
+        // }
     </script>
 </body>
 </html>

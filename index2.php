@@ -8,7 +8,7 @@ $cates = getAllCate();
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 	<link rel="stylesheet" href="./styles/reset.css">
-	<link rel="stylesheet" href="./styles/main.css?v=20170228">
+	<link rel="stylesheet" href="./styles/main.css?v=20170303">
 	<title>慕课电商</title>
 </head>
 <body>
@@ -17,17 +17,17 @@ $cates = getAllCate();
 			<div class="comWidth">
 				<div class="leftArea">
 					<!-- <img src="./images/icon/star.jpg" alt="收藏慕课网" style="vertical-align:middle;"> -->
-					<a href="#" class="collection">收藏慕课</a>
+					<a href="#" class="collection">收藏</a>
 				</div>
 				<div class="rightArea">
-					欢迎来到慕课网! <a href="#">[登陆]</a><a href="#">[免费注册]</a>
+					欢迎! <a href="#">[登陆]</a><a href="#">[免费注册]</a>
 				</div>
 			</div>
 		</div>
 		<div class="logoBar">
 			<div class="comWidth">
-				<div class="logo fl">
-					<a href="#"><img src="./images/icon/logo.jpg" alt="LOGO"></a>
+				<div class="logo fl" >
+					<a href="#"><img src="" ></a>
 				</div>
 				<div class="search fl">
 					<input type="text" class="searchText fl" >

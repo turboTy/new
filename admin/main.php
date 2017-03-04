@@ -29,7 +29,7 @@
 	<table width="70%" border="1" cellpadding="5" cellspacing="0" bgcolor="#cccccc">
 		<tr>
 			<th>系统名称</th>
-			<td>慕课网电子商城</td>
+			<td>电子商城</td>
 		</tr>
 		<tr>
 			<th>开发团队</th>
@@ -37,11 +37,11 @@
 		</tr>
 		<tr>
 			<th>公司网址</th>
-			<td><a href="http://www.imooc.com">http://www.imooc.com</a></td>
+			<td><a href="http://www.turboty.xyz">http://www.turboty.xyz</a></td>
 		</tr>
 		<tr>
 			<th>成功案例</th>
-			<td>慕课网</td>
+			<td>XXXX</td>
 		</tr>
 	</table>
 </center>

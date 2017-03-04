@@ -17,10 +17,10 @@ padding-left: 19px; font-weight: bold;}
 
  /*logo*/
 .logoBar {height:85px; background-color: #1D7AD9;}
-.logo {padding-left:41px; padding-top:13px;}
+.logo {padding-left:41px; padding-top:13px; }
 
 /*search*/
-.search {width: 430px;padding-top: 23px; padding-left: 115px;}
+.search {width: 430px;padding-top: 23px; padding-left: 185px;}
 .searchText {width: 350px; height: 35px; padding: 0 5px;border: 0;}
 .searchBtn {width: 70px; height: 35px; font-size:14px; font-family:"Microsoft YAHEI","Î¢ÈíÑÅºÚ";
 background: #ff8c00;color: #FFF; border: 0; cursor: pointer;}
