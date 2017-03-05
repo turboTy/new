@@ -1,15 +1,15 @@
 <?php 
-require_once '../include.php';
-$mysqli = connect();
-$arr['username'] = $_POST['username'];
-$arr['password'] = sha1(md5($_POST['password']));
-$arr['sex'] = $_POST['sex'];
-$arr['face'] = $_POST['email'];
-$arr['regTime'] = time();
-$rows=insert($mysqli, imooc_user, $arr);
-if ($rows){
-    echo '{"a":true,"b":"成功"}';
-}else{
-    echo '{"a":false,"b":"'.$rows.'失败"}';
-}
+// $url = "http://www.sina.com.cn/abc/de/fg.php?id=1";
+// $urlArr = parse_url($url);
+// $urlStr = $urlArr['path'];
+// $arr = explode(".", $urlStr);
+// echo $arr[1];
+
+// $arr = explode("?", $url);
+// $str = substr($arr[0],-4);
+// echo $str;
+$a = '1234567890';
+$b = strrev($a);
+$b = chunk_split($b,3,",");
+echo substr(strrev($b),-13);
 ?>
