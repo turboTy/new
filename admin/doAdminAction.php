@@ -30,7 +30,7 @@ if ($act == 'logout'){
 }elseif ($act == 'addUser'){
     $mes = addUser();
 }elseif ($act == 'editUser'){
-    $mes = editUser($id);
+    $mes = editUser();
 }elseif ($act == 'delUser'){
     $mes = delUser($id);
 }

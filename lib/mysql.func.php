@@ -57,9 +57,7 @@ function update($mysqli,$table,$array,$where = null){
         $str .= $sep.$key."= '".$val."'";
     }
     $sql = "update {$table} set {$str}".($where == null?null:" where ".$where);
-//     var_dump($sql);exit;
     $result = $mysqli->query($sql);
-//     $num = mysqli_affected_rows($mysqli);
     if ($result) {
         return mysqli_affected_rows($mysqli);
     }else{

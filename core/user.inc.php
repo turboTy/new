@@ -53,19 +53,25 @@ function checkRes(){
 }
 
 
-function editUser($id){
+function editUser(){
     $mysqli = connect();
+    $id = $_POST['id'];
     $arr['username'] = addslashes($_POST['username']);
     $arr['password'] = sha1(md5($_POST['password']));
     $arr['sex'] = $_POST['sex'];
     $arr['face'] = $_POST['email'];
-    $res = update($mysqli, imooc_user, $arr," id = {$id}");
-    if ($res){
-        $mes = "修改成功<br><a href='listUser.php'>返回列表</a>";
+    $mes = checkRes();
+    if (isset($mes)){
+        return $mes;
+        exit();
     }else{
-        $mes = "修改失败<br><a href='editUser.php?id=$id'>重新修改</a>";
+        if (update($mysqli, "imooc_user", $arr," id = {$id}")){
+            $mes = '{"edit":true,"edit_msg":"修改成功"}';
+        }else{
+            $mes = '{"edit":false,"edit_msg":"修改失败'.$arr['sex'].',请重新尝试"}';
+        }
+        return $mes;
     }
-    return $mes;
 }
 
 function delUser($id){

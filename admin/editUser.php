@@ -15,7 +15,9 @@ $row = fetchOne($mysqli, $sql);
 ?>
 <h3>编辑用户</h3>
 	<!-- <form action="" method="post"> -->
-		<table width="500" height="140" border="1" style="border-collapse: collapse; background-color:#f0f0f0;">
+		<table width="500" height="140" border="1" style="border-collapse: collapse; 
+            background-color:#f0f0f0;">
+            <input type="hidden" id="id" value="<?php echo $id;?>">
 			<tr>
 				<td align="right"><b>用户名称：</b></td>
 				<td><input type="text" name="username" id="username" autocomplete="off" 
@@ -69,9 +71,10 @@ document.getElementById("submit").onclick = function(){
 		};
 		$.ajax({
 			type: "POST",
-			url: "doAdminAction.php?act=addUser",
+			url: "doAdminAction.php?act=editUser",
 			dataType: "json",
 			data :{
+				id: $("#id").val(),
 				username: $("#username").val(),
 				password: $("#password").val(),
 				checkPwd: $("#checkPwd").val(),
@@ -91,11 +94,11 @@ document.getElementById("submit").onclick = function(){
 					alert(data.msg);
 					return false;
 				}
-				if (data.add) {
-					alert(data.add_msg);
+				if (data.edit) {
+					alert(data.edit_msg);
 					window.location.href="listUser.php";
 				}else{
-					alert(data.add_msg);
+					alert(data.edit_msg);
 					window.location.reload();
 				}
 			},
