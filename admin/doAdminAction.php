@@ -29,6 +29,10 @@ if ($act == 'logout'){
     $mes = delPros($id);
 }elseif ($act == 'addUser'){
     $mes = addUser();
+}elseif ($act == 'editUser'){
+    $mes = editUser($id);
+}elseif ($act == 'delUser'){
+    $mes = delUser($id);
 }
 
 // var_dump($mes);

@@ -2,15 +2,24 @@
 <html lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>添加用户</title>
+	<title>编辑用户</title>
 </head>
 <body>
-<h3>添加用户</h3>
+<?php 
+require_once '../include.php';
+$id = $_REQUEST['id'];
+$mysqli = connect();
+$sql = "select * from imooc_user where id ={$id}";
+$row = fetchOne($mysqli, $sql);
+// var_dump($row);exit;
+?>
+<h3>编辑用户</h3>
 	<!-- <form action="" method="post"> -->
 		<table width="500" height="140" border="1" style="border-collapse: collapse; background-color:#f0f0f0;">
 			<tr>
 				<td align="right"><b>用户名称：</b></td>
-				<td><input type="text" name="username" id="username" autocomplete="off" placeholder="用户名称"></td>
+				<td><input type="text" name="username" id="username" autocomplete="off" 
+				        value="<?php echo $row['username'];?>"></td>
 			</tr>
 			<tr>
 				<td align="right"><b>用户密码：</b></td>
@@ -23,17 +32,21 @@
 			<tr>
 				<td align="right"><b>性　　别：</b></td>
 				<td>
-					<input type="radio" name="sex" value="1" checked="checked">男
-					<input type="radio" name="sex" value="2">女
-					<input type="radio"  name="sex" value="3">保密
+					<input type="radio" name="sex" value="1" 
+					   <?php if ($row['sex']=="男"){echo "checked";}?>>男
+					<input type="radio" name="sex" value="2" 
+					   <?php if ($row['sex']=="女"){echo "checked";}?>>女
+					<input type="radio"  name="sex" value="3" 
+					   <?php if ($row['sex']=="保密"){echo "checked";}?>>保密
 				</td>
 			</tr>
 			<tr>
 				<td align="right"><b>用户邮箱：</b></td>
-				<td><input type="text" name="email" id="email" autocomplete="off"  placeholder="用户邮箱"></td>
+				<td><input type="text" name="email" id="email" autocomplete="off" 
+				    value = "<?php echo $row['face'];?>"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><input type="submit" id="submit" value="添加用户" name="submit" ></td>
+				<td colspan="2"><input type="submit" id="submit" value="保存修改" name="submit" ></td>
 			</tr>
 		</table>
 	<!-- </form> -->

@@ -53,6 +53,32 @@ function checkRes(){
 }
 
 
+function editUser($id){
+    $mysqli = connect();
+    $arr['username'] = addslashes($_POST['username']);
+    $arr['password'] = sha1(md5($_POST['password']));
+    $arr['sex'] = $_POST['sex'];
+    $arr['face'] = $_POST['email'];
+    $res = update($mysqli, imooc_user, $arr," id = {$id}");
+    if ($res){
+        $mes = "修改成功<br><a href='listUser.php'>返回列表</a>";
+    }else{
+        $mes = "修改失败<br><a href='editUser.php?id=$id'>重新修改</a>";
+    }
+    return $mes;
+}
+
+function delUser($id){
+    $mysqli = connect();
+    $res = delete($mysqli, imooc_user," id = {$id}");
+    if ($res){
+        $mes = "删除成功<br><a href='listUser.php'>返回列表</a>";
+    }else{
+        $mes = "删除失败<br><a href='listUser.php?id=$id'>重新删除</a>";
+    }
+    return $mes;
+}
+
 
 
 

@@ -23,19 +23,18 @@
 	 margin-bottom: 20px; color: #fff; font: normal bold 16px/35px "Microsoft YAHEI"; cursor: pointer; }
 </style>
 <body>
-<h3>管理员列表</h3>
+<h3>用户列表</h3>
 		<input type="button" value="添　加" name="add" class="add" onclick="add()">
 		<table border = "1" width = "90%" align="center" style="border-collapse:collapse; 
             background-color: #f0f0f0;">
 			<tr  height='30'>
-				<th width="15%">管理员编号</th>
-				<th width="20%">管理员名称</th>
-				<th width="30%">管理员邮箱</th>
+				<th width="15%">用户编号</th>
+				<th width="20%">用户名称</th>
+				<th width="8%">性别</th>
+				<th width="30%">用户邮箱</th>
 				<th>操作</th>
 			</tr>
 			<?php
-// 				var_dump($rows);
-// 				exit();
 				foreach ($row as $value){
 		    ?>
 				<tr height='30'>
@@ -52,12 +51,13 @@
 						</label>
 					</td>
 					<td style="text-indent: 30px;"><?php echo $value['username'];?></td>
-					<td style="text-indent: 30px;"><?php echo $value['email'];?></td>
+					<td style="text-indent: 30px;"><?php echo $value['sex'];?></td>
+					<td style="text-indent: 30px;"><?php echo $value['face'];?></td>
 					<td align="center">
-						<input type="button" name="editAdmin" value="修改" 
-						      onclick="editAdmin(<?php echo $value['id']; ?>)">&nbsp;&nbsp;
-						<input type="button" name="deleteAdmin" value="删除" 
-						      onclick="delAdmin(<?php echo $value['id'];  ?>)">
+						<input type="button" name="editUser" value="修改" 
+						      onclick="editUser(<?php echo $value['id']; ?>)">&nbsp;&nbsp;
+						<input type="button" name="deleteUser" value="删除" 
+						      onclick="delUser(<?php echo $value['id'];  ?>)">
 					</td>
 				</tr>
 			<?php 
@@ -65,21 +65,21 @@
 			    if ($totalRows > $pageSize) {
 			?>
 			    <tr height='30'>
-			        <td colspan='4'><?php echo $pageStr; ?></td> 
+			        <td colspan='5'><?php echo $pageStr; ?></td> 
 			    </tr>
 			<?php }?>
 		</table>
 <script language='javascript'>
-	function editAdmin(id){
-		window.location="editAdmin.php?id="+id;
+	function editUser(id){
+		window.location="editUser.php?id="+id;
 	}
-	function delAdmin(id){
+	function delUser(id){
 		if(window.confirm("确定要删除吗？删除之后不可恢复！！")){
-			window.location="doAdminAction.php?act=delAdmin&id="+id;
+			window.location="doAdminAction.php?act=delUser&id="+id;
 		}
 	}
 	function add(){
-		window.location="addAdmin.php";
+		window.location="addUser.php";
 	}
 </script>
 </body>
