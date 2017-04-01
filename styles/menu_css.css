@@ -1,0 +1,53 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input {margin:0;padding: 0;}
+body {font-size:14px; font-family: "Microsoft yahei";}
+img {border:none;}
+li {list-style:none;}
+input,select,textarea {outline:none;}
+textarea {resize:none;}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+/*header 部分*/
+.header {
+	height: 50px;
+	background-color: white;
+	line-height: 50px;
+}
+
+.header .container,
+.header .container>div {
+ 	height: 100%;
+}
+
+.header .col-md-3>a {
+	color: #666;
+	text-decoration: none;
+}
+
+.header .col-md-3>a:hover {
+	color: #222;
+}
+
+.header .col-md-5 span {
+	font-size: 20px;
+}
+
+.header_txt {
+	padding: 0 20px;
+}
+
+
+/*main部分*/
+.main {
+	height: 500px;
+	background-color: #6f5499;
+}
+
+
+
