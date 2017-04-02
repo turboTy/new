@@ -1,0 +1,87 @@
+<!Doctype>
+<html>
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+	    <title>功能列表</title>
+
+	    <!-- Bootstrap -->
+	    <link href="styles/bootstrap.min.css" rel="stylesheet">
+		<link href="styles/menu.css" rel="stylesheet">
+		<link href="styles/menu_eat.css" rel="stylesheet">
+		<title>想想吃什么？</title>
+		<style type="text/css">
+			body{margin:0;padding:0;font-size:12px;font-family: "microsoft yahei";}
+			#wrap{margin:0px;padding:0px;width:100%;height:100%;text-align:center;}
+			#w-header{height:100px;width:100%;border:1px solid gray;background:#6f5499;}
+			.h-navi{height:30px;line-height:30px;}
+			#w-content{height:600px;width:80%;margin:0 auto;border-left:1px solid gray;border-right:1px solid gray;padding-left: 17px;}
+			.c-item{border:1px solid #6f5499;float:left;height:25px;line-height:25px;margin:15px 5px 10px 10px;width:122px;}
+			#w-foot{width:100%;border:1px solid gray;background:#6f5499;padding:10px;color:#eee;}
+			#w-header h3{color:#eee;}
+		</style>
+		<script type="text/javascript">
+			var str = ["皇牌烧鸭饭14","豉油鸡饭15","盐焗鸡饭15","白切鸡饭15","蜜汁叉烧饭15","烧排骨饭16","叉烧拼烧鸭饭17","叉烧拼鸡饭17",
+				"叉烧拼烧骨饭19","至尊烧鹅饭19","卤味双宝饭13","卤味三宝饭15","葱油鸡饭15","口水鸡饭15","剁椒水库鱼15","葱油淋水库鱼15","水煮肥肠饭15",
+				"野山椒藕尖腊肉饭16","毛血旺饭16","麻辣牛肉饭16","酸汤肥牛饭16","香菇肉片饭14","回锅肉饭14","金牌红烧肉饭14","金针菇肉片饭15",
+				"支竹猪肚饭15","支竹烧肉饭15","凉瓜肉片饭15","豉汁排骨饭15","酸菜大肠饭15","梅菜扣肉饭16","红烧带鱼饭14","椒盐海虾饭14",
+				"川味乌江鱼饭15","红烧鱼块饭15","豆角茄子大碗饭14","酸辣鸡杂大碗饭16","其它等等..."];
+			var strdom = '';
+			var index = '';
+			var key = 0;
+			var ms = 40;
+			
+			(function(){
+				for(i in str)
+				{
+					strdom += '<div class="c-item c-sel'+i+'">'+str[i]+'</div>';
+				}
+			})();
+			
+			window.onload = function()
+			{
+				document.getElementById("w-content").innerHTML = strdom;
+				
+				function setSelect()
+				{
+					key = Math.ceil(Math.random()*str.length-1);
+					if(index)index.style.background = "#fff";
+					index = document.getElementsByClassName("c-sel"+key)[0];
+					index.style.background = "pink";
+					ms += 10;
+					//console.log(ms);
+					if(ms == 400)
+					{
+						index.style.background = "#6f5499";
+						index.style.color = "#fff";
+						ms = 40;
+						return false;
+					}
+					setTimeout(setSelect, ms);
+				}
+			
+				document.getElementById("getval").onclick = function()
+				{
+					setSelect();
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="w-header">
+				<h3>想想吃什么？</h3>
+				<div class="h-navi">
+					<div class="h-navi-item"><input type="button" class="btn btn-default" id="getval" value="Go..."></div>
+				</div>
+			</div>
+			<div id="w-content"></div>
+			<div id="w-foot">版权所有：汉码爆破组!!!<br><br><br></div>
+		</div>
+	</body>
+</html>
+
+
+
