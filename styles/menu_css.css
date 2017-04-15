@@ -49,11 +49,21 @@ textarea {resize:none;}
 	text-align: center;
 }
 
-.header_txt>a {
+.header .dropdown {
+	height: 50px;
+}
+
+.header .dropdown-toggle {
+	text-decoration: none;
+	height: 50px;
+}
+
+.header_txt>a,
+ .dropdown>a {
+	width: 100%;
+	height: 50px!important;
 	display: inline-block;
 	text-decoration: none;
-	width: 100%;
-	height: 100%;
 }
 
 .header_txt :hover {
