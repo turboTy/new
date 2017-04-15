@@ -24,11 +24,18 @@
 	   			<div class="col-md-5 col-md-offset-1">
 	   				<div class="header_txt fl"><a href="#"><span>D</span>uomen</a></div>
 	   				<div class="header_txt fl"><a href="#"><span>E</span>ric</a></div>
-	   				<div class="header_txt fl"><a href="#"><span>T</span>oy</a></div>
+	   				<div class="header_txt fl" onmousemove="document.getElementById('dropdown-menu').style.display='block'">
+	   					<li class="dropdown" id="dropdown-menu">
+	   						<a href="#" role="button" id="drop" class-"dropdown-toggle" data-toggle="dropdown" ><span>T</span>oy</a><span class="caret"></span>
+	   						<ul class="dropdown-menu" role="menu" aria-labelledby="drop">
+	   							
+	   						</ul>
+	   					</li>
+	   				</div>
 	   				<div class="header_txt fl"><a href="#"><span>A</span>llen</a></div>
 	   			</div>
 	   			<div class="col-md-2 col-md-offset-3">
-	   				<a href="./admin/login_admin.html">[管理员登录]</a>&nbsp;
+	   				<a href="./admin/login_admin.php">[管理员登录]</a>&nbsp;
 	   				<a href="#" onclick="register()">[注册]</a>
 	   			</div>
 	   			<div class="col-md-1">&nbsp;</div>

@@ -18,7 +18,7 @@
 			#w-header{height:100px;width:100%;border:1px solid gray;background:#6f5499;}
 			.h-navi{height:30px;line-height:30px;}
 			#w-content{height:600px;width:80%;margin:0 auto;border-left:1px solid gray;border-right:1px solid gray;padding-left: 17px;}
-			.c-item{border:1px solid #6f5499;float:left;height:25px;line-height:25px;margin:15px 5px 10px 10px;width:122px;}
+			.c-item{border:1px solid #6f5499;float:left;height:25px;line-height:25px;margin:15px 5px 10px 10px;width:12.5%;}
 			#w-foot{width:100%;border:1px solid gray;background:#6f5499;padding:10px;color:#eee;}
 			#w-header h3{color:#eee;}
 		</style>
@@ -74,12 +74,20 @@
 			<div id="w-header">
 				<h3>想想吃什么？</h3>
 				<div class="h-navi">
-					<div class="h-navi-item"><input type="button" class="btn btn-default" id="getval" value="Go..."></div>
+					<div class="h-navi-item">
+						<input type="button" class="btn btn-default" id="getval" value="Go...">&nbsp;&nbsp;&nbsp;&nbsp;
+						<input type="button" class="btn btn-default" onclick="back()" value="Back to Menu">
+					</div>
 				</div>
 			</div>
 			<div id="w-content"></div>
 			<div id="w-foot">版权所有：汉码爆破组!!!<br><br><br></div>
 		</div>
+		<script type="text/javascript">
+			function back(){
+				window.location.href="menu.html";
+			}
+		</script>
 	</body>
 </html>
 
