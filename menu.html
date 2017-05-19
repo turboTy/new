@@ -22,20 +22,20 @@
    		<div class="container">
    			<div class="row">
 	   			<div class="col-md-5 col-md-offset-1">
-	   				<div class="header_txt fl"><a href="#"><span>D</span>uomen</a></div>
-	   				<div class="header_txt fl"><a href="#"><span>E</span>ric</a></div>
-	   				<div class="header_txt fl" >
+	   				<div class="header_txt fl" id="header_txt1"><a href="#"><span>D</span>uomen</a></div>
+	   				<div class="header_txt fl" id="header_txt2"><a href="#"><span>E</span>ric</a></div>
+	   				<div class="header_txt fl" id="header_txt3">
 	   					<li class="dropdown">
 	   						<a href="#" role="button" id="drop" class-"dropdown-toggle" data-toggle="dropdown" rel="tooltip" title="点击查看列表">
 	   						<span>T</span>oy&nbsp;<span class="caret"></span></a>
 	   						<ul class="dropdown-menu" role="menu" aria-labelledby="drop"  id="dropdown-menu">
-	   							<li><a href="toy/photowall.html" tabindex="-1" target="_blank">照片墙</a></li>
+	   							<li><a href="toy/photowall2.html" tabindex="-1" target="_blank">照片墙</a></li>
 	   							<li><a href="#" tabindex="-1" target="_blank">菜单二</a></li>
 	   							<li><a href="#" tabindex="-1" target="_blank">菜单三</a></li>
 	   						</ul>
 	   					</li>
 	   				</div>
-	   				<div class="header_txt fl"><a href="#"><span>A</span>llen</a></div>
+	   				<div class="header_txt fl" id="header_txt4"><a href="#"><span>A</span>llen</a></div>
 	   			</div>
 	   			<div class="col-md-2 col-md-offset-3">
 	   				<a href="./admin/login_admin.php">[管理员登录]</a>&nbsp;
@@ -51,17 +51,17 @@
 	   		<div class="container">
 	   			<div class="row">
 	   				<div class="col-md-3 col-md-offset-2">
-	   					<div class="main-top-eat" onclick="eat()">
+	   					<div class="main-top-eat"  id="gn-list1" onclick="eat()">
 	   						<p><span>点</span>&nbsp;餐功能</p>
 	   					</div>
 	   				</div>
 	   				<div class="col-md-2">
-	   					<div class="main-top-eat">
+	   					<div class="main-top-eat" id="gn-list2">
 	   						<p><span>T</span>EXT</p>
 	   					</div>
 	   				</div>
 	   				<div class="col-md-3">
-	   					<div class="main-top-eat">
+	   					<div class="main-top-eat" id="gn-list3">
 	   						<p><span>T</span>EXT</p>
 	   					</div>
 	   				</div>
@@ -69,17 +69,17 @@
 	   			</div>
 	   			<div class="row">
 	   				<div class="col-md-3 col-md-offset-2">
-	   					<div class="main-top-eat">
+	   					<div class="main-top-eat" id="gn-list4">
 	   						<p><span>T</span>EXT</p>
 	   					</div>
 	   				</div>
 	   				<div class="col-md-2">
-	   					<div class="main-top-eat">
+	   					<div class="main-top-eat" id="gn-list5">
 	   						<p><span>T</span>EXT</p>
 	   					</div>
 	   				</div>
 	   				<div class="col-md-3">
-	   					<div class="main-top-eat">
+	   					<div class="main-top-eat" id="gn-list6">
 	   						<p><span>T</span>EXT</p>
 	   					</div>
 	   				</div>
@@ -117,6 +117,36 @@
     function eat(){
     	window.location.href='eat.html';
     }
+    $("#header_txt1").mouseover(function(){
+    	$(".main").css('background-color','#6f5499');
+    	$(".main-top-eat").css('background-color','#6f5499');
+    });
+    $("#header_txt2").mouseover(function(){
+    	$(".main").css('background-color','#f98f8f');
+    	$(".main-top-eat").css('background-color','#f98f8f');
+    });
+    $("#header_txt3").mouseover(function(){
+    	$(".main").css('background-color','#04a9af');
+    	$(".main-top-eat").css('background-color','#04a9af');
+    });
+    $("#header_txt4").mouseover(function(){
+    	$(".main").css('background-color','#0588be');
+    	$(".main-top-eat").css('background-color','#0588be');
+    });
+    
+    $(".main-top-eat").mouseover(function(){
+    	var id = $(this).attr('id');
+    	var color = $(".main").css('background-color');
+    	$("#"+id).css('background-color','#fff');
+    	$("#"+id+" p").css('color',color);
+    	// alert(id);
+    })
+    $(".main-top-eat").mouseout(function(){
+    	var id = $(this).attr('id');
+    	var color = $(".main").css('background-color');
+    	$("#"+id).css('background-color',color);
+    	$("#"+id+" p").css('color','#fff');
+    })
 </script>
   </body>
 </html>

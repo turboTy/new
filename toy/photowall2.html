@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+    	<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>TOY`S HOME</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Slicebox - 3D Image Slider with Fallback" />
+        <meta name="keywords" content="jquery, css3, 3d, webkit, fallback, slider, css3, 3d transforms, slices, rotate, box, automatic" />
+		<meta name="author" content="Pedro Botelho for Codrops" />
+
+		<link href="../styles/bootstrap.min.css" rel="stylesheet">
+		<link href="../styles/menu_css.css" rel="stylesheet">  <!-- your css -->
+
+		<!-- <link rel="shortcut icon" href="../favicon.ico">  -->
+        <link rel="stylesheet" type="text/css" href="../css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../css/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="../css/custom.css" />
+		<style>
+		.top-banner {
+			background-color: rgba(255, 255, 255, 0.55);
+			display: none;
+		}
+		h1 {
+			margin-top: 100px;
+			font-family: 'Microsoft Yahei';
+			font-size: 36px;
+			color: #019157;
+		}		
+		</style>		
+		<script type="text/javascript" src="../js/modernizr.custom.46884.js"></script>
+	</head>
+	<body>
+				<div class="pw-header">
+			        <div class="container">
+			          <div class="row">
+			            <div class="col-md-3 col-md-offset-1 home-title">
+			              <p class="home-txt">TOY`S HOME</p>
+			            </div>
+			            <div class="col-md-5">
+			              <p>Some Commemorative Photos About Niuxiaozhu : )</p>
+			            </div>
+			            <div class="col-md-3 home-btn">
+			              <button type="button" class="btn btn-primary fl"  data-toggle="button">Menu Lists</button>
+			              <button type="button" class="btn btn-primary fl"  data-toggle="button">Back</button>
+			            </div>
+			          </div>
+			        </div>
+			    </div>				
+		<div class="container">
+
+			<div class="wrapper">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="http://www.cnblogs.com/lhb25/" target="_blank"><img src="../images/4.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Affectionate Decision Maker</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.cnblogs.com/lhb25/" target="_blank"><img src="../images/3.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Brave Astronaut</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.cnblogs.com/lhb25/" target="_blank"><img src="../images/slider-1.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Creative Lifesaver</h3>
+						</div>
+					</li>
+<!-- 					<li>
+						<a href="http://www.cnblogs.com/lhb25/" target="_blank"><img src="../images/5.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Faithful Investor</h3>
+						</div>
+					</li> -->
+					<li>
+						<a href="http://www.cnblogs.com/lhb25/" target="_blank"><img src="../images/6.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Groundbreaking Artist</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.cnblogs.com/lhb25/" target="_blank"><img src="../images/slider-2.jpg" alt="image2"/></a>
+						<div class="sb-description">
+							<h3>Honest Entertainer</h3>
+						</div>
+					</li>
+					<li>
+						<a href="http://www.cnblogs.com/lhb25/" target="_blank"><img src="../images/7.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Selfless Philantropist</h3>
+						</div>
+					</li>
+				</ul>
+
+				<div id="shadow" class="shadow"></div>
+
+				<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+
+				<div id="nav-options" class="nav-options">
+					<span id="navPlay">Play</span>
+					<span id="navPause">Pause</span>
+				</div>
+
+			</div><!-- /wrapper -->
+
+			<div class="bz-text">
+				<p class="fl">此图片轮播借鉴于作者<a href="http://www.cnblogs.com/lhb25/" target="_blank"><em>梦想天空</em></a> 发表的博客《网站项目必备--12款经典白富美型jQuery图片轮播插件》中的效果</p>
+				<a href="http://www.cnblogs.com/lhb25/archive/2013/01/06/jquery-image-carousel-effect.html" target="_blank">
+				<button type="button" class="btn btn-success">View More</button></a>
+			</div>
+
+			<div class="footer-banner" style="width:728px; margin:30px auto">
+				
+			</div>
+		</div>
+		<script type="text/javascript" src="http://cdn.staticfile.org/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.slicebox.js"></script>
+		<script type="text/javascript">
+			$(".btn-primary:last").click(function(){
+			   window.location.href = "../index.php";
+			});
+			$(".btn-primary:first").click(function(){
+			   window.location.href = "../menu.html";
+			});
+
+			$(function() {
+				var Page = (function() {
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$navOptions = $( '#nav-options' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$navOptions.show();
+								$shadow.show();
+
+							},
+							orientation : 'h',
+							cuboidsCount : 3
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+							$( '#navPlay' ).on( 'click', function() {
+								
+								slicebox.play();
+								return false;
+
+							} );
+
+							$( '#navPause' ).on( 'click', function() {
+								
+								slicebox.pause();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+	</body>
+</html>	
